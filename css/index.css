@@ -1,4 +1,11 @@
 body {
     width: 393px;
+    height: 100vh;
+    margin: 0;
+}
+
+#backgroundImageDiv {
+    width: 100%;
+    height: 100%;
 }
 
