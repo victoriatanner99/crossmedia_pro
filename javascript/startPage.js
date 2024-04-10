@@ -1,6 +1,9 @@
 "use strict";
 
-let body = document.querySelector("body");
-let backgroundImageDiv = document.createElement("div");
-backgroundImageDiv.setAttribute("id", "backgroundImageDiv");
-body.appendChild(backgroundImageDiv);
+function renderStartPage() {
+    let body = document.querySelector("body");
+    let startPageBackgroundDiv = document.createElement("div");
+    startPageBackgroundDiv.setAttribute("id", "startPageBackground");
+    body.appendChild(startPageBackgroundDiv);
+}
+
