@@ -44,6 +44,24 @@ function saveUsername(event) {
 }
 
 function explainTheGame(event) {
-    
+    if(!document.querySelector("div#overlayStartPage")) {
+        let overlay = document.createElement("div");
+        overlay.setAttribute("id", "overlayStartPage");
+        document.querySelector("body").appendChild(overlay);
+        document.querySelector("div#topQuestionButton").style.zIndex = 1;
+
+        let infoContainer = document.createElement("div");
+        infoContainer.setAttribute("id", "infoContainerStartPage");
+        overlay.appendChild(infoContainer);
+        infoContainer.innerHTML = 
+        `
+        <p id="firstParagraphInfoBox">Lassemajas <br> detektivspel är <br> framtaget av studenter <br> på Malmö Universitet</p> 
+        <p id="secondParagraphInfoBox">Tryck på registrera för <br> att börja spela</p>
+        `
+
+    } else {
+        document.querySelector("div#overlayStartPage").remove();
+    }
+   
 }
 
