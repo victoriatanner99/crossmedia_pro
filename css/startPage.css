@@ -116,3 +116,71 @@ p#secondParagraphInfoBox {
     margin: 23px 0 0 0;
 }
 
+div#createUsernameContainer {
+    height: 729.78px;
+    width: 372.66px;
+    background-image: url("../images/Group\ 5_512w.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 81.22px;
+    left: 11px;
+}
+
+div#createUsernameContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+img#policeStartPage {
+    height: 206.93px;
+    width: 207.75px;
+    margin: 100.78px 78px 0 78px;
+}
+
+h2#chooseUsernameStartPage {
+    font-family: "Butterfinger Serif";
+    font-size: 28px;
+    margin: 14.07px 65px 0 65px;
+    text-align: center;
+
+    width: 257px;
+    height: 48px;
+}
+
+.usernameInputs {
+    height: 50px;
+    width: 254px;
+    border: 2px solid #D7D7D7;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(44, 44, 44, 0.57);
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+input#firstNameInput {
+    margin: 30px 65px 0 65px;
+}
+
+input#lastNameInput {
+    margin: 10px 65px 0 65px;
+}
+
+button#saveUsernameButton {
+    margin: 61px 125px 0 125px;
+    height: 55.57px;
+    width: 131.72px;
+    background-color: #3981A2;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    font-family: "Butterfinger Serif";
+    font-size: 22px;
+}
+

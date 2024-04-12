@@ -32,6 +32,7 @@ function renderStartPage() {
 
     let registerButton = document.createElement("button");
     registerButton.setAttribute("id", "registerButton");
+    registerButton.setAttribute("type", "button");
     registerButton.textContent = "Registrera";
     welcomeContainer.appendChild(registerButton);
 
@@ -40,6 +41,24 @@ function renderStartPage() {
 }
 
 function saveUsername(event) {
+    document.querySelector("div#lasseMajaImageContainerStartP").remove();
+    document.querySelector("div#welcomeContainer").remove();
+    let createUsernameContainer = document.createElement("div");
+    createUsernameContainer.setAttribute("id", "createUsernameContainer");
+    document.querySelector("div#startPageBackground").appendChild(createUsernameContainer);
+
+    createUsernameContainer.innerHTML = 
+    `
+    <img src="images/polismaster\ 1_512w.png" id="policeStartPage">
+    <h2 id="chooseUsernameStartPage">Välj <br> användarnamn</h2>
+    <input type="text" id="firstNameInput" placeholder="Förnamn">
+    <input type="text" id="lastNameInput" placeholder="Efternamn">
+    <button type="button" id="saveUsernameButton"></button>
+    `;
+
+    document.querySelector("#firstNameInput").classList.add("usernameInputs");
+    document.querySelector("#lastNameInput").classList.add("usernameInputs");
+    document.querySelector("button#saveUsernameButton").textContent = "Klar";
 
 }
 
