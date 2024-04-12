@@ -36,11 +36,10 @@ function renderStartPage() {
     registerButton.textContent = "Registrera";
     welcomeContainer.appendChild(registerButton);
 
-    registerButton.addEventListener("click", saveUsername);
-
+    registerButton.addEventListener("click", displayRegisterInputs);
 }
 
-function saveUsername(event) {
+function displayRegisterInputs(event) {
     document.querySelector("div#lasseMajaImageContainerStartP").remove();
     document.querySelector("div#welcomeContainer").remove();
     let createUsernameContainer = document.createElement("div");
@@ -60,6 +59,28 @@ function saveUsername(event) {
     document.querySelector("#lastNameInput").classList.add("usernameInputs");
     document.querySelector("button#saveUsernameButton").textContent = "Klar";
 
+    document.querySelector("button#saveUsernameButton").addEventListener("click", saveUsername);
+
+}
+
+function saveUsername(event) {
+    let nameOfUser = document.querySelector("input#firstNameInput").value;
+    let potentialLastName = document.querySelector("input#lastNameInput").value;
+    console.log(nameOfUser);
+    console.log(potentialLastName);
+
+    if(nameOfUser === "") {
+        console.log("Den första rutan måste fyllas i");
+    } else {
+        if(potentialLastName === "") {
+            window.localStorage.setItem("username", `${nameOfUser.trim()}`);
+            console.log(localStorage.getItem("username"));
+        } else {
+            let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
+            window.localStorage.setItem("username", fullNameToSave);
+            console.log(localStorage.getItem("username"));
+        }
+    }
 }
 
 function explainTheGame(event) {

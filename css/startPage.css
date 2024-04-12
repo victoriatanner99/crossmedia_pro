@@ -155,6 +155,7 @@ h2#chooseUsernameStartPage {
     width: 254px;
     border: 2px solid #D7D7D7;
     border-radius: 6px;
+    font-family: "Inter";
     font-size: 16px;
     color: rgba(44, 44, 44, 0.57);
     box-sizing: border-box;
