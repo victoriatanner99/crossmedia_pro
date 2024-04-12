@@ -99,8 +99,6 @@ div#infoContainerStartPage {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     position: absolute;
@@ -108,12 +106,13 @@ div#infoContainerStartPage {
     left: 115px;
 }
 
-div#firstParagraphStartPage {
+p#firstParagraphInfoBox {
     margin: 50px 0 0 0;
+    height: 78px;
 
 }
 
-div#secondParagraphStartPage {
+p#secondParagraphInfoBox {
     margin: 23px 0 0 0;
 }
 

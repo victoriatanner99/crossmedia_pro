@@ -55,9 +55,10 @@ function explainTheGame(event) {
         overlay.appendChild(infoContainer);
         infoContainer.innerHTML = 
         `
-        <p id="firstParagraphInfoBox">Lassemajas <br> detektivspel är <br> framtaget av studenter <br> på Malmö Universitet</p> 
+        <p id="firstParagraphInfoBox">Lassemajas <br> detektivspel är <br> 
+        framtaget av studenter <br> på Malmö Universitet</p> 
         <p id="secondParagraphInfoBox">Tryck på registrera för <br> att börja spela</p>
-        `
+        `;
 
     } else {
         document.querySelector("div#overlayStartPage").remove();
