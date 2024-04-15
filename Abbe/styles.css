@@ -1,0 +1,65 @@
+/* Bas styling för sidan */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Lekfullt typsnitt */
+    background-color: #f0f8ff; /* Ljus blå, som en klar himmel */
+    color: #333333; /* Mörk text för bra kontrast */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #ffa500; /* Ljus orange */
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.1); /* Lägger till en liten skugga för djup */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Runda hörn för ett mjukare intryck */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Lägger till skugga för att lyfta fram containern */
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50; /* Grön färg för knappar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase; /* Gör texten större och mer synlig */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* En aning mörkare grön när man hovrar */
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd; /* Ljus grå kant */
+    border-radius: 5px;
+    width: calc(100% - 24px); /* Justerar bredden för att matcha padding */
+}
+
+h1 {
+    color: #2a2a2a; /* Mörkare grå färg för rubriker */
+}
+
+/* Tidsvisare styling */
+#currentTime, #totalTime {
+    font-weight: bold;
+    color: #ffa500; /* Orange för att matcha headern */
+}
