@@ -14,7 +14,44 @@ div#introPageContainerOverlay {
     left: 0;
 }
 
-img#leafsImage {
-    height:458px;
+img#leafsImageIntroPage {
+    height: 458px;
     width: 496px;
+
+    position: absolute;
+    top: 0;
+    left: -103px;
+}
+
+img#lasseMajaSignIntroPage {
+    height: 199px;
+    width: 357px;
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+}
+
+img#lasseMajaImageIntroPage {
+    width: 260px;
+    height: 333px;
+
+    position: absolute;
+    top: 519px;
+    left: 113px;
+    z-index: 1;
+}
+
+div#speechBubbleIntroPage {
+    width:  260px;
+    height: 152px;
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 377px;
+    left: 21px;
+    z-index: 1;
 }
