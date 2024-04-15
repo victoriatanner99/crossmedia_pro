@@ -72,11 +72,15 @@ function saveUsername(event) {
     } else {
         if(potentialLastName === "") {
             window.localStorage.setItem("username", `${nameOfUser.trim()}`);
+            console.log(localStorage.getItem("username"));
         } else {
             let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
             window.localStorage.setItem("username", fullNameToSave);
+            console.log(localStorage.getItem("username"));
         }
     }
+
+    renderIntroPage();
 }
 
 function explainTheGame(event) {
