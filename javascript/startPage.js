@@ -103,6 +103,5 @@ function explainTheGame(event) {
     } else {
         document.querySelector("div#overlayStartPage").remove();
     }
-   
 }
 
