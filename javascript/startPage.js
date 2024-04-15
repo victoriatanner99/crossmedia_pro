@@ -66,19 +66,15 @@ function displayRegisterInputs(event) {
 function saveUsername(event) {
     let nameOfUser = document.querySelector("input#firstNameInput").value;
     let potentialLastName = document.querySelector("input#lastNameInput").value;
-    console.log(nameOfUser);
-    console.log(potentialLastName);
 
     if(nameOfUser === "") {
         console.log("Den första rutan måste fyllas i");
     } else {
         if(potentialLastName === "") {
             window.localStorage.setItem("username", `${nameOfUser.trim()}`);
-            console.log(localStorage.getItem("username"));
         } else {
             let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
             window.localStorage.setItem("username", fullNameToSave);
-            console.log(localStorage.getItem("username"));
         }
     }
 }
