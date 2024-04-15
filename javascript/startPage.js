@@ -68,7 +68,7 @@ function saveUsername(event) {
     let potentialLastName = document.querySelector("input#lastNameInput").value;
 
     if(nameOfUser === "") {
-        console.log("Den första rutan måste fyllas i");
+        return;
     } else {
         if(potentialLastName === "") {
             window.localStorage.setItem("username", `${nameOfUser.trim()}`);
