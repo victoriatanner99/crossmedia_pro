@@ -49,7 +49,7 @@ function displayRegisterInputs(event) {
     createUsernameContainer.innerHTML = 
     `
     <img src="images/polismaster\ 1_512w.png" id="policeStartPage">
-    <h2 id="chooseUsernameStartPage">Välj <br> användarnamn</h2>
+    <h2 id="chooseUsernameStartPage">Välj <br> Användarnamn</h2>
     <input type="text" id="firstNameInput" placeholder="Förnamn">
     <input type="text" id="lastNameInput" placeholder="Efternamn">
     <button type="button" id="saveUsernameButton"></button>
@@ -97,7 +97,7 @@ function explainTheGame(event) {
         `
         <p id="firstParagraphInfoBox">Lassemajas <br> detektivspel är <br> 
         framtaget av studenter <br> på Malmö Universitet</p> 
-        <p id="secondParagraphInfoBox">Tryck på registrera för <br> att börja spela</p>
+        <p id="secondParagraphInfoBox">Tryck på registrera för <br> att börja spela!</p>
         `;
 
     } else {
