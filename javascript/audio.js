@@ -6,7 +6,9 @@ window.onload = function() {
     const audio = new Audio('audio/ballad.mp3');
     const currentTimeElement = document.getElementById('currentTime');
     const totalTimeElement = document.getElementById('totalTime');
-    const container = document.querySelector('.container');
+    const playButton = document.getElementById('playButton');
+
+    playButton.classList.add('vibrating'); // Starta vibrationen när sidan laddas
 
     audio.addEventListener('loadedmetadata', () => {
         totalTimeElement.textContent = formatTime(audio.duration);
@@ -17,17 +19,18 @@ window.onload = function() {
     });
 
     audio.addEventListener('ended', () => {
-        container.innerHTML += `<button id="nextPageButton">Gå till nästa sida</button>`;
-        document.getElementById('nextPageButton').addEventListener('click', () => {
-            window.location.href = 'next.html'; 
-        });
+        playButton.classList.add('vibrating'); // Återaktivera vibrationen när ljudet är klart
     });
 
-    document.getElementById('playButton').addEventListener('click', function() {
+    playButton.addEventListener('click', function() {
         if (audio.paused) {
             audio.play().catch(error => console.error("Kunde inte spela upp ljudet: ", error));
+            this.classList.remove('vibrating'); // Stoppa vibrationen när ljudet spelas
+            this.src = './images/phone_.png';
         } else {
             audio.pause();
+            this.classList.add('vibrating'); // Starta vibrationen när ljudet pausas
+            this.src = './images/phone_.png';
         }
     });
 };

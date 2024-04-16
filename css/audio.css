@@ -1,0 +1,46 @@
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Runda hörn för ett mjukare intryck */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Lägger till skugga för att lyfta fram containern */
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+#playButton {
+    width: 100px;
+    cursor: pointer;
+    /* animation: none; */
+}
+
+.vibrating {
+    animation: vibrate 0.3s linear infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, 2px); }
+    50% { transform: translate(0, 2px); }
+    75% { transform: translate(2px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+
+button {
+    background-color: #4CAF50; /* Grön färg för knappar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase; /* Gör texten större och mer synlig */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* En aning mörkare grön när man hovrar */
+}
