@@ -1,42 +1,37 @@
-window.onload = function() {
-    const params = new URLSearchParams(window.location.search);
-    const username = params.get('username');
-    document.getElementById('usernameDisplay').textContent = username;
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audioPlayer');
+    const textContainer = document.getElementById('textContainer');
+    const vibratingIcon = document.getElementById('vibratingIcon');
+    const fullText = "Hej på dig, det dags att ha roligt lite. Om du vill fortsätta spela med mig du måste ringa Karin Fahren på ett telefonnummer där de tre sista siffrorna saknas. Karins telefonnummer är 0712345678.";
+    const words = fullText.split(' ');
+    let currentWordIndex = 0;
 
-    const audio = new Audio('audio/ballad.mp3');
-    const currentTimeElement = document.getElementById('currentTime');
-    const totalTimeElement = document.getElementById('totalTime');
-    const playButton = document.getElementById('playButton');
+    // Startar vibrations-effekten när sidan laddas
+    vibratingIcon.classList.add('vibrating');
 
-    playButton.classList.add('vibrating'); // Starta vibrationen när sidan laddas
-
-    audio.addEventListener('loadedmetadata', () => {
-        totalTimeElement.textContent = formatTime(audio.duration);
-    });
-
-    audio.addEventListener('timeupdate', () => {
-        currentTimeElement.textContent = formatTime(audio.currentTime);
-    });
-
-    audio.addEventListener('ended', () => {
-        playButton.classList.add('vibrating'); // Återaktivera vibrationen när ljudet är klart
-    });
-
-    playButton.addEventListener('click', function() {
+    // Hantera klick på ikonen för att spela/pausa ljud och växla vibration
+    vibratingIcon.addEventListener('click', () => {
         if (audio.paused) {
-            audio.play().catch(error => console.error("Kunde inte spela upp ljudet: ", error));
-            this.classList.remove('vibrating'); // Stoppa vibrationen när ljudet spelas
-            this.src = './images/phone_.png';
+            audio.play();
+            vibratingIcon.classList.remove('vibrating'); // Stoppa vibrationen
+            showTextContinuously(); // Starta textvisningen
         } else {
             audio.pause();
-            this.classList.add('vibrating'); // Starta vibrationen när ljudet pausas
-            this.src = './images/phone_.png';
+            vibratingIcon.classList.add('vibrating'); // Starta vibrationen
+            textContainer.textContent = ''; // Rensar texten vid paus
+            currentWordIndex = 0; // Återställer ordindexet
         }
     });
-};
 
-function formatTime(time) {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-}
+    function showTextContinuously() {
+        const intervalTime = audio.duration / words.length * 1000; // Beräkna tid per ord
+        const intervalId = setInterval(() => {
+            if (audio.paused || audio.ended || currentWordIndex >= words.length) {
+                clearInterval(intervalId);
+            } else {
+                textContainer.textContent += words[currentWordIndex] + ' ';
+                currentWordIndex++;
+            }
+        }, intervalTime);
+    }
+});

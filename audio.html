@@ -10,9 +10,12 @@
         <span id="usernameDisplay"></span>
     </div>
     <div class="container">
-        <h1>Välkommen!</h1>
-        <img id="playButton" src="./images/phone_.png" alt="Spela/Pausa">
-        <div>Tid: <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span></div>
+        <img id="vibratingIcon" src="./images/phone_.png" alt="Vibrating Icon" class="playButton">
+        <div id="textContainer"></div>
+        <audio id="audioPlayer" controls>
+            <source src="./audio/ballad.mp3" type="audio/mpeg">
+            
+        </audio>
     </div>
     <script src="./javascript/audio.js"></script>
 </body>
