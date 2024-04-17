@@ -29,4 +29,25 @@ function renderIntroPage() {
     let speechBubble = document.createElement("div");
     speechBubble.setAttribute("id", "speechBubbleIntroPage");
     introPageContainer.appendChild(speechBubble);
+
+    dynamicSpeechBubble(speechBubble);
+}
+
+function dynamicSpeechBubble(speechBubble) {
+    
+    let firstStringArray = "Hej! Lasse & Maja här, från LasseMajas Detektivbyrå!".split(" ");
+
+    let i = 0;
+    let speechBubbleInterval = setInterval(function() {
+        if(i === firstStringArray.length) {
+            let continueArrow = document.createElement("img");
+            continueArrow.setAttribute("id", "continueArrowIntroPage");
+            continueArrow.setAttribute("src", "images/arrow_512h.png");
+            document.querySelector("div#introPageContainer").appendChild(continueArrow);
+            clearInterval(speechBubbleInterval);
+        } else {
+            speechBubble.innerHTML += firstStringArray[i] + " ";
+        }
+        i++;
+    }, 300);
 }

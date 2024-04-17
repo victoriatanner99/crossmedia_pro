@@ -2,6 +2,8 @@ div#introPageContainer {
     width: 100%;
     height: 100%;
     background-color: #D6E7E3;
+
+    position: relative;
 }
 
 div#introPageContainerOverlay {
@@ -49,9 +51,34 @@ div#speechBubbleIntroPage {
     border: solid #888586 5px;
     border-radius: 15px;
     box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    padding: 31px 20px;
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
 
     position: absolute;
-    top: 377px;
-    left: 21px;
+    top: 378px;
+    left: 24px;
     z-index: 1;
+}
+
+img#continueArrowIntroPage {
+    z-index: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 454px;
+    left: 198px;
+    height: 78px;
+    width: 70px;
+
+    /*
+    Värden från Figma nedan (som inte funkar):
+    height: 61.67px;
+    width: 81.83px;
+    position: absolute;
+    top: 528.94px;
+    left: 198px;
+    */
 }

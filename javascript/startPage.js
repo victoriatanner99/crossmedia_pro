@@ -67,14 +67,21 @@ function saveUsername(event) {
     let nameOfUser = document.querySelector("input#firstNameInput").value;
     let potentialLastName = document.querySelector("input#lastNameInput").value;
 
-    if(nameOfUser === "") {
+    if(nameOfUser === "" || nameOfUser === " ") {
         return;
     } else {
         if(potentialLastName === "") {
-            window.localStorage.setItem("username", `${nameOfUser.trim()}`);
+            nameOfUser = nameOfUser.trim();
+            window.localStorage.setItem("username", `${nameOfUser}`);
+            if(nameOfUser === "") {
+                return;
+            }
             console.log(localStorage.getItem("username"));
         } else {
             let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
+            if(fullNameToSave === " ") {
+                return;
+            }
             window.localStorage.setItem("username", fullNameToSave);
             console.log(localStorage.getItem("username"));
         }
