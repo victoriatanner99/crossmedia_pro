@@ -63,6 +63,45 @@ div#speechBubbleIntroPage {
     z-index: 1;
 }
 
+div#speechBubbleIntroPage2 {
+    width: 262px;
+    height: 277px;
+    position: absolute;
+    top: 250px;
+    left: 24px;
+    z-index: 1;
+
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    padding: 24px 14px 0 28px;
+}
+
+div#speechBubbleIntroPage3 {
+    height: 203px;
+    width: 260px;
+    position: absolute;
+    top: 326px;
+    left: 24px;
+    z-index: 1;
+
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    padding: 25px 20px 0 20px;
+}
+
+/*Pilen i pratbubblan nedan*/
 img#continueArrowIntroPage {
     z-index: 1;
     cursor: pointer;
@@ -74,11 +113,33 @@ img#continueArrowIntroPage {
     width: 70px;
 
     /*
-    Värden från Figma nedan (som inte funkar):
+    Värden från Figma nedan (som inte blir rätt):
     height: 61.67px;
     width: 81.83px;
     position: absolute;
     top: 528.94px;
     left: 198px;
     */
+}
+
+img#continueArrowIntroPage2 {
+    z-index: 1;
+    cursor: pointer;
+  
+    position: absolute;
+    top: 460px;
+    left: 198px;
+    height: 68px;
+    width: 71.85px;
+}
+
+img#continueArrowIntroPage3 {
+    z-index: 1;
+    cursor: pointer;
+  
+    position: absolute;
+    top: 454px;
+    left: 198px;
+    height: 78px;
+    width: 70px;
 }
