@@ -58,8 +58,9 @@ div#speechBubbleIntroPage {
     letter-spacing: calc(13 * .01em);
 
     position: absolute;
-    top: 378px;
+    /*top: 378px;*/
     left: 24px;
+    bottom: 325px;
     z-index: 1;
 }
 
@@ -67,8 +68,9 @@ div#speechBubbleIntroPage2 {
     width: 262px;
     height: 277px;
     position: absolute;
-    top: 250px;
+    /*top: 250px;*/
     left: 24px;
+    bottom: 325px;
     z-index: 1;
 
     background-color: #010401;
@@ -86,8 +88,9 @@ div#speechBubbleIntroPage3 {
     height: 203px;
     width: 260px;
     position: absolute;
-    top: 326px;
+    /*top: 326px;*/
     left: 24px;
+    bottom: 325px;
     z-index: 1;
 
     background-color: #010401;
@@ -102,6 +105,7 @@ div#speechBubbleIntroPage3 {
 }
 
 /*Pilen i pratbubblan nedan*/
+/*För varje sida*/
 img#continueArrowIntroPage {
     z-index: 1;
     cursor: pointer;
