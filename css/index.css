@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Butterfinger Serif";
+    src: url("../fonts/ButterFinger\ Serif\ Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+    width: 393px;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
