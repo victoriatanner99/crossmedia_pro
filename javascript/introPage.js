@@ -89,7 +89,7 @@ function nextIntroPage(event) {
         document.querySelector("img#continueArrowIntroPage2").style.visibility = "hidden";
 
         let introPage3TextArray = 
-        `Bibliotekarie Karin Fahlen ringde oss tidigare, vi borde lyssna på hennes röstmeddelande för att starta vår utredning. `.split(" ");
+        `Bibliotekarie Karin Fahlén ringde oss tidigare, vi borde lyssna på hennes röstmeddelande för att starta utredningen. `.split(" ");
 
         let i = 0;
         let speechBubbleInterval = setInterval(function() {
