@@ -61,7 +61,7 @@ function nextIntroPage(event) {
         speechBubble.innerHTML = "";
         document.querySelector("img#continueArrowIntroPage").style.visibility = "hidden";
         let introPage2TextArray = 
-        `Vi behöver din hjälp med att lösa ett mysterium! Det har skett en stöld i Malmö. Vi kan tyvärr inte befinna oss på plats, men vi är med dig på resan via appen för att hjälpa dig.`.split(" ");
+        `Vi behöver din hjälp med att lösa ett mysterium! Det har skett en stöld i Malmö. Vi kan tyvärr inte befinna oss på plats, men vi är med på resan via appen för att hjälpa dig.`.split(" ");
 
         let i = 0;
         let speechBubbleInterval = setInterval(function() {
