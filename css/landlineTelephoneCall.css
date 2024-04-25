@@ -1,0 +1,274 @@
+div#telephonePageBackground {
+    height: 100%;
+    width: 100%;
+
+    background-image: url("../images/nudepinkBackground_512w.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+div#topQuestionButtonTelephonePage {
+    height: 36px;
+    width: 38px;
+   
+    position: absolute;
+    top: 40px;
+    left: 320px;
+    cursor: pointer;
+ 
+    border-radius: 50px;
+    border: 4px solid #353535;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    font-family: "Butterfinger Serif";
+    font-size: 26px;
+    color: #353535;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#overlayTelephonePage {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(217, 217, 217, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div#infoContainerTelephonePage {
+    background-image: url("../images/postIt_512w.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 264.84px;
+    height: 148.57px;
+    position: absolute;
+    top: 88px;
+    left: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#infoContainerOverlay {
+    background-color: #FFFFFF;
+    width: 200px;
+    height: 115px;
+    border-radius: 12%;
+}
+
+p#textInfoBoxTelephonePage {
+    font-family: "Inter";
+    text-align: center;
+
+    height: 60px;
+    width: 156px;
+    position: absolute;
+    margin: 0;
+    top: 47px;
+    left: 54px;
+    font-size: 16px;
+    z-index: 1;
+}
+
+div#landlineTelephone {
+    background-image: url("../images/landlineTelephone_512h.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 404.07px;
+    width: 318.62px;
+    position: absolute;
+    top: 262px;
+    left: 38px;
+    cursor: pointer;
+}
+
+/*Animering för den ringande telefonen nedan*/
+
+.vibratingTelephone {
+    animation: vibrate 0.3s linear infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5px, 5px); }
+    50% { transform: translate(0, 5px); }
+    75% { transform: translate(5px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+/*Sidorna med Karins röstmeddelande nedan*/
+div#overlayLibrarianMissedCallPage {
+    background-color: rgba(11, 11, 11, 0.85);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div#voiceMessageFromLibrarian {
+    width: 74.05%;
+    height: 27.82%;
+    background-color: #010401;
+    border: 5px solid #888586;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 27.46%;
+    left: 9.16%;
+    z-index: 1;
+
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    /*padding: 5.52vh 6.87vw 0 6.87vw;*/
+    padding: 38px 27px 0 27px;
+}
+
+div#voiceMessageFromLibrarian2 {
+    width: 262px;
+    height: 265px;
+    background-color: #010401;
+    border: 5px solid #888586;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 206px;
+    left: 9.16%;
+    z-index: 1;
+
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    /*padding: 5.52vh 6.87vw 0 6.87vw;*/
+    padding: 31px 19px 0 27px;
+}
+
+img#continueArrowLibrarianVoiceMessage {
+    /*height: 8.07%;
+    width: 18.34%;*/
+    height: 68.73px;
+    width: 72.08px;
+
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 46.6vh;
+    left: 58.72%;
+}
+
+img#continueArrowLibrarianVoiceMessage2 {
+    /*height: 8.07%;
+    width: 18.34%;*/
+    height: 68.73px;
+    width: 72.08px;
+
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 47.4vh;
+    left: 210.34px;
+}
+
+img#librarianKarinVoiceMessage {
+    height: 212px;
+    width: 226px;
+
+    position: absolute;
+    top: 56.53%;
+    right: 0;
+}
+
+/*Lasse och Maja sida efter att röstmeddelandet från Karin bröts*/
+div#callKarinPageContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #D6E5E7;
+
+    position: relative;
+}
+
+div#callKarinPageContainerOverlay {
+    background-color: rgba(11, 11, 11, 0.75);
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img#leafsImageCallKarinPage {
+    height: 458px;
+    width: 496px;
+
+    position: absolute;
+    top: 0;
+    left: -103px;
+}
+
+img#lasseMajaSignCallKarinPage {
+    height: 199px;
+    width: 357px;
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+}
+
+img#lasseMajaImageCallKarinPage {
+    width: 260px;
+    height: 333px;
+
+    position: absolute;
+    top: 519px;
+    left: 113px;
+    z-index: 1;
+}
+
+div#speechBubbleCallKarinPage {
+    width:  260px;
+    height: 203px;
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    padding: 25px 20px;
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+
+    position: absolute;
+    /*top: 378px;*/
+    left: 6.11vw;
+    bottom: 37.91vh;
+    z-index: 1;
+}
+
+img#continueArrowCallKarinPage {
+    width: 70px;
+    height: 78px;
+    cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 51vw;
+    top: 53.6vh;
+}

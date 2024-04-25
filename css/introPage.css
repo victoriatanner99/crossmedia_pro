@@ -65,7 +65,7 @@ div#speechBubbleIntroPage {
 }
 
 div#speechBubbleIntroPage2 {
-    width: 262px;
+    width: 260px;
     height: 277px;
     position: absolute;
     /*top: 250px;*/
@@ -81,7 +81,7 @@ div#speechBubbleIntroPage2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 24px 14px 0 28px;
+    padding: 24px 14px 0 24px;
 }
 
 div#speechBubbleIntroPage3 {
@@ -101,7 +101,7 @@ div#speechBubbleIntroPage3 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 25px 20px 0 20px;
+    padding: 25px 20px 0 24px;
 }
 
 /*Pilen i pratbubblan nedan*/
@@ -131,9 +131,9 @@ img#continueArrowIntroPage2 {
     cursor: pointer;
   
     position: absolute;
-    top: 460px;
+    top: 454px;
     left: 198px;
-    height: 68px;
+    height: 78px;
     width: 71.85px;
 }
 
