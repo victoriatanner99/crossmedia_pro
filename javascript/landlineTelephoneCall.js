@@ -54,13 +54,13 @@ function explainHowToListen(event) {
 }
 
 function telephoneStartsToRing(audio) {
-    //const audio = document.getElementById('audioPlayer');
     const vibratingIcon = document.getElementById('landlineTelephone');
     
-    //Start playing the audio immediately after the page loads
+    //Ringsignalen börjar spela nedan
     audio.play();
     audio.addEventListener("ended", stopAudio);
 
+    //I nedan funktion fortsätter ljudfilen med ringsignalen att spela om när den slutar
     function stopAudio(event) {
         this.currentTime = 0;
         this.play();
@@ -78,7 +78,7 @@ function telephoneStartsToRing(audio) {
     }, 600);
 
    
-    let timeToRingtoneInterval = setInterval(syncToRingtone, 1700);
+    let syncAnimationToRingtone = setInterval(syncToRingtone, 1700);
 
     function syncToRingtone() {
         if(vibratingIcon.style.animationPlayState === "paused") {
@@ -97,25 +97,25 @@ function telephoneStartsToRing(audio) {
         intervalIndex++;
 
         
-        clearInterval(timeToRingtoneInterval);
+        clearInterval(syncAnimationToRingtone);
 
         if(intervalIndex === 1) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1800);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1800);
 
         } else if(intervalIndex === 2) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1320);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1320);
 
         } else if(intervalIndex === 3) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1650);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1650);
 
         } else if(intervalIndex === 4) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1500);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1500);
 
         } else if(intervalIndex === 5) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1600);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1600);
 
         } else if(intervalIndex === 6) {
-            timeToRingtoneInterval = setInterval(syncToRingtone, 1350);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1350);
 
             intervalIndex = 0;
         }
@@ -125,11 +125,10 @@ function telephoneStartsToRing(audio) {
         vibratingIcon.classList.remove("vibratingTelephone");
         audio.setAttribute("src", "audio/karin_text1.mp3");
         audio.removeEventListener("ended", stopAudio);
-        clearInterval(timeToRingtoneInterval);
+        clearInterval(syncAnimationToRingtone);
 
         startLibrarianVoiceMessage(audio); 
     });   
-    
 }
 
 function startLibrarianVoiceMessage(audio) {
