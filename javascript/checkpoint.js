@@ -1,8 +1,26 @@
-function checkInput() {
-    var input = document.getElementById('feedbackInput').value;
-    if (input === 'G10') {
-        window.location.href = './Rebus.html'; // Rätt kod, skicka till success-sidan
-    } else {
-        alert('Fel kod, försök igen.'); // Felaktig kod, visa ett felmeddelande
+function autoTab(current, next) {
+    if (current.value.length >= current.maxLength) {
+        document.getElementById(next).focus();
     }
 }
+
+function checkFullWord() {
+    if (document.getElementById('letter5').value.length === 1) {
+        checkAnswer();
+    }
+}
+
+function checkAnswer() {
+    var word = '';
+    for (var i = 1; i <= 5; i++) {
+        word += document.getElementById('letter' + i).value;
+    }
+    if (word.toLowerCase() === 'dator') {
+        document.body.style.backgroundColor = 'green';
+        alert('Rätt svar! Bra jobbat!');
+        window.location.href = './Rebus.html';
+    } else {
+        alert('Fel svar, försök igen!');
+    }
+}
+
