@@ -153,6 +153,14 @@ function renderLoginInfo() {
             <div id="webAddressLoginInfoPage">www.forskarrummetvalleby.se</div>
             <button id="doneButtonLoginInfoPage" type"button">Klar</button>
             `;
+
+            let topQuestionButton = document.createElement("div");
+            topQuestionButton.setAttribute("id", "infoButtonLoginInfoPage");
+            topQuestionButton.textContent = "?";
+            loginInfoBackground.prepend(topQuestionButton);
+            topQuestionButton.addEventListener("click", explainHowToFindWebsite);
+
+        
         } else {
             document.querySelector("body").innerHTML = "";
             let turnMobileDeviceBackground = document.createElement("div");
@@ -163,5 +171,27 @@ function renderLoginInfo() {
             turnMobileDeviceSign.setAttribute("src", "images/flipPhone_512w.png");
             turnMobileDeviceBackground.appendChild(turnMobileDeviceSign);
         }
+    }
+}
+
+function explainHowToFindWebsite(event) {
+    if(!document.querySelector("div#overlayLoginInfoPage")) {
+        let overlay = document.createElement("div");
+        overlay.setAttribute("id", "overlayLoginInfoPage");
+        document.querySelector("body").appendChild(overlay);
+        document.querySelector("div#infoButtonLoginInfoPage").style.zIndex = 1;
+
+        let infoContainer = document.createElement("div");
+        infoContainer.setAttribute("id", "infoContainerLoginInfoPage");
+        overlay.appendChild(infoContainer);
+
+        infoContainer.innerHTML =
+        `
+        Tips! Ta dig till en <br> 
+        dator för att få <br> tillgång till hemsidan 
+        `;
+
+    } else {
+        document.querySelector("div#overlayLoginInfoPage").remove();
     }
 }
