@@ -2,3 +2,6 @@
 
 renderStartPage();
 
+//renderRebusPage();
+
+//renderLoginInfo();

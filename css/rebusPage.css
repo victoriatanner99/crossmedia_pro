@@ -1,0 +1,153 @@
+
+div#rebusPageBackground {
+    /*background-color: #D6E5E7;
+    height: 100%;
+    width: 100%;*/
+}
+
+@media screen and (orientation: portrait) {
+    div#turnMobileDeviceBackgroundBefore {
+        background-color: #E6D9D6;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img#turnMobileDeviceSignBefore {
+       width: 392px;
+       height: 392px;
+       position: fixed;
+       top: 27.00vh;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    div#rebusPageBackground {
+        background-color: #D6E5E7;
+        height: 100%;
+        width: 100%;
+    }
+
+    img#rightFacingFlowersRebusPage {
+        width: 57.16vw;
+        height: 81.42vh;
+        position: fixed;
+        top: -18.32vh;
+        left: -8.45vw;
+    }
+
+    img#leftFacingFlowersRebusPage {
+        width: 62.09vw;
+        height: 81.42vh;
+        position: fixed;
+        top: -12.98vh;
+        left: 48.71vw;
+    }
+
+    img#clotheslineRebusPage {
+        width: 99.85vw;
+        height: 19.5vh;
+
+        position: fixed;
+        top: 8.94vh;
+        left: 1px;
+    }
+
+    img#frogPictureRebusPage {
+        height: 180px;
+        width: 126px;
+
+        position: fixed;
+        top: 22.95vh;
+        left: 17.72vw;
+    }
+
+    img#tentPictureRebusPage {
+        height: 172.93px;
+        width: 139px;
+
+        position: fixed;
+        top: 27.78vh;
+        left: 44.49vw;
+    }
+
+    img#bubblesPictureRebusPage {
+        height: 180.93px;
+        width: 128.91px;
+
+        position: fixed;
+        top: 23.41vh;
+        left: 71.48vw;
+    }
+
+    input#rebusInputField {
+        height: 47px; 
+        width: 33.57vw;
+        border: 2px solid #D7D7D7;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-family: "Inter";
+        font-size: 18px;
+        padding: 10px 25px;
+        color: #2C2C2C;
+        letter-spacing: calc(1.5 * .01em);
+
+
+        position: fixed;
+        top: 78.63vh;
+        left: 27.82vw;
+    }
+
+    input#rebusInputField:focus {
+        outline: none;
+    }
+
+    button#rebusButton {
+       height: 47px; 
+       width: 75px;
+       border: 0;
+       border-radius: 6px;
+       background-color: #3981A2;
+       box-sizing: border-box;
+       cursor: pointer;
+
+       position: fixed;
+       top: 78.63vh;
+       left: 63.27vw;
+    }
+
+    img#arrowImageRebusPage {
+        height: 87px;
+        width: 74px;
+        cursor: pointer;
+
+        position: fixed;
+        top: 73.25vh;
+        left: 63.59vw;
+    }
+
+    div#firstPlusSignRebusPage {
+        position: fixed;
+        top: 49.68vh;
+        left: 38.28vw;
+        rotate: 3.63deg;
+    }
+
+    div#secondPlusSignRebusPage {
+        position: fixed;
+        top: 47.15vh;
+        left: 65.66vw;
+        rotate: 1.26deg;
+    }
+
+    .plusSignRebusPage {
+        width: 1.87vw;
+        height: 33.81px;
+        font-family: "Butterfinger Serif";
+        font-size: 40px;
+    }
+}
+

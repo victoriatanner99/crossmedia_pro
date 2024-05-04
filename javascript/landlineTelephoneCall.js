@@ -100,22 +100,22 @@ function telephoneStartsToRing(audio) {
         clearInterval(syncAnimationToRingtone);
 
         if(intervalIndex === 1) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1800);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1760);
 
         } else if(intervalIndex === 2) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1320);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1340);
 
         } else if(intervalIndex === 3) {
             syncAnimationToRingtone = setInterval(syncToRingtone, 1650);
 
         } else if(intervalIndex === 4) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1500);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1480);
 
         } else if(intervalIndex === 5) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1600);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1580);
 
         } else if(intervalIndex === 6) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1350);
+            syncAnimationToRingtone = setInterval(syncToRingtone, 1400);
 
             intervalIndex = 0;
         }
