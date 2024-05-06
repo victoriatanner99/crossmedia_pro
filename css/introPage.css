@@ -17,59 +17,59 @@ div#introPageContainerOverlay {
 }
 
 img#leafsImageIntroPage {
-    height: 458px;
-    width: 496px;
+    height: 53.76vh;
+    width: 126.21vw;
 
     position: absolute;
     top: 0;
-    left: -103px;
+    left: -26.21vw;
 }
 
 img#lasseMajaSignIntroPage {
-    height: 199px;
-    width: 357px;
+    height: 23.36vh;
+    width: 90.84vw;
 
     position: absolute;
-    top: 90px;
+    top: 10.56vh;
     left: 0;
 }
 
 img#lasseMajaImageIntroPage {
-    width: 260px;
-    height: 333px;
+    width: 66.16vw;
+    height: 39.08vh;
 
     position: absolute;
-    top: 519px;
-    left: 113px;
+    top: 60.92vh;
+    left: 28.75vw;
     z-index: 1;
 }
 
 div#speechBubbleIntroPage {
-    width:  260px;
-    height: 152px;
+    width:  66.16vw;
+    height: 17.84vh;
     background-color: #010401;
     border: solid #888586 5px;
     border-radius: 15px;
     box-sizing: border-box;
     color: #FFFFFF;
     font-family: "Butterfinger Serif";
-    padding: 31px 20px;
+    padding: 31px 5.09vw;
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
 
     position: absolute;
     /*top: 378px;*/
-    left: 24px;
+    left: 6.11vw;
     bottom: 325px;
     z-index: 1;
 }
 
 div#speechBubbleIntroPage2 {
-    width: 260px;
+    width: 66.16vw;
     height: 277px;
     position: absolute;
     /*top: 250px;*/
-    left: 24px;
+    left: 6.11vw;
     bottom: 325px;
     z-index: 1;
 
@@ -81,15 +81,15 @@ div#speechBubbleIntroPage2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 24px 14px 0 24px;
+    padding: 24px 3.56vw 0 6.11vw;
 }
 
 div#speechBubbleIntroPage3 {
     height: 203px;
-    width: 260px;
+    width: 66.16vw;
     position: absolute;
     /*top: 326px;*/
-    left: 24px;
+    left: 6.11vw;
     bottom: 325px;
     z-index: 1;
 
@@ -101,7 +101,7 @@ div#speechBubbleIntroPage3 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 25px 20px 0 24px;
+    padding: 25px 5.09vw 0 6.11vw;
 }
 
 /*Pilen i pratbubblan nedan*/
@@ -112,9 +112,9 @@ img#continueArrowIntroPage {
 
     position: absolute;
     top: 454px;
-    left: 198px;
+    left: 50.38vw;
     height: 78px;
-    width: 70px;
+    width: 17.81vw;
 
     /*
     Värden från Figma nedan (som inte blir rätt):
@@ -132,9 +132,9 @@ img#continueArrowIntroPage2 {
   
     position: absolute;
     top: 454px;
-    left: 198px;
+    left: 50.38vw;
     height: 78px;
-    width: 71.85px;
+    width: 18.28vw;
 }
 
 img#continueArrowIntroPage3 {
@@ -143,7 +143,7 @@ img#continueArrowIntroPage3 {
   
     position: absolute;
     top: 454px;
-    left: 198px;
+    left: 50.38vw;
     height: 78px;
-    width: 70px;
+    width: 17.81vw;
 }

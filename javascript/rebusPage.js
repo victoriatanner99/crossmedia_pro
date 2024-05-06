@@ -151,7 +151,7 @@ function renderLoginInfo() {
             <div id="usernameLoginInfoPage">Jane Doe</div>
             <div id="passwordLoginInfoPage">lassemaja123</div>
             <div id="webAddressLoginInfoPage">www.forskarrummetvalleby.se</div>
-            <button id="doneButtonLoginInfoPage" type"button">Klar</button>
+            <button id="doneButtonLoginInfoPage" type="button">Klar</button>
             `;
 
             let topQuestionButton = document.createElement("div");
