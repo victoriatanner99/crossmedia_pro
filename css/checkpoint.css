@@ -31,7 +31,8 @@ body{
 }
 
 #button{
-    background-color: blue;
-    width: 58.21%;
-    height: 14.14%;
+    background-color: #3981A2;
+    width: 185px;
+    height: 51px;
+    border-radius: 6px;
 }
