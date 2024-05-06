@@ -9,16 +9,17 @@ body{
     display: grid;
     place-items: center; /* Centrera innehållet både horisontellt och vertikalt */
     height: 100vh; /* För att centrera vertikalt i fönstret */
-    background-color: #F6E8E4;
-}
-#Group17 {
-    margin: -27px;
+    background-image: url(../images/BK.png); 
+    
 }
 
 #checkpoint {
-    
+    /* width: 34.61%; */
+    height: 50%;
     margin: 0;
-    
+    /* position: absolute; */
+    /* top: 253px;
+    left: 129px; */
 }
 
 .size_input{
