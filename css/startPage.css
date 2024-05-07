@@ -58,8 +58,10 @@ button#registerButton {
 }
 
 div#topQuestionButton {
-    height: 4.23vh;
-    width: 9.67vw;
+    /*height: 4.23vh;
+    width: 9.67vw;*/
+    height: 36px;
+    width: 38px;
    
     position: absolute;
     top: 4.69vh;

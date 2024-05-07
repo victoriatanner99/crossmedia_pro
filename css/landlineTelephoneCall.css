@@ -120,7 +120,7 @@ div#overlayLibrarianMissedCallPage {
 
 div#voiceMessageFromLibrarian {
     width: 74.05%;
-    height: 27.82%;
+    height: min-content;
     background-color: #010401;
     border: 5px solid #888586;
     border-radius: 15px;
@@ -135,8 +135,10 @@ div#voiceMessageFromLibrarian {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    /*padding: 5.52vh 6.87vw 0 6.87vw;*/
-    padding: 38px 27px 0 27px;
+    padding: 5.52vh 6.87vw 0 6.87vw; /*Måste lägga till padding där nere*/
+    /*padding: 38px 27px 0 27px;*/
+    line-height: 21px;
+
 }
 
 div#voiceMessageFromLibrarian2 {
@@ -158,6 +160,7 @@ div#voiceMessageFromLibrarian2 {
     letter-spacing: calc(13 * .01em);
     /*padding: 5.52vh 6.87vw 0 6.87vw;*/
     padding: 31px 19px 0 27px;
+    line-height: 21px;
 }
 
 img#continueArrowLibrarianVoiceMessage {
@@ -236,15 +239,20 @@ img#lasseMajaImageCallKarinPage {
     width: 260px;
     height: 333px;
 
+    /*
+    width:  66.16vw;
+    height: 39.08vh;
+    */
+
     position: absolute;
-    top: 519px;
-    left: 113px;
+    top: 60.92vh;
+    left: 28.75vw;
     z-index: 1;
 }
 
 div#speechBubbleCallKarinPage {
-    width:  260px;
-    height: 203px;
+    width:  66.16vw;
+    height: min-content;
     background-color: #010401;
     border: solid #888586 5px;
     border-radius: 15px;
@@ -263,8 +271,10 @@ div#speechBubbleCallKarinPage {
 }
 
 img#continueArrowCallKarinPage {
-    width: 70px;
-    height: 78px;
+    /*width: 17.81vw;
+    height: 9.15vh;*/
+    width: 78px;
+    height: 70px;
     cursor: pointer;
     z-index: 1;
 

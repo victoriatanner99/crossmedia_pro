@@ -46,32 +46,36 @@ img#lasseMajaImageIntroPage {
 
 div#speechBubbleIntroPage {
     width:  66.16vw;
-    height: 17.84vh;
+    height: min-content;
     background-color: #010401;
     border: solid #888586 5px;
     border-radius: 15px;
     box-sizing: border-box;
     color: #FFFFFF;
     font-family: "Butterfinger Serif";
-    padding: 31px 5.09vw;
+    padding: 3.23vh 4.33vw;
+
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
+    line-height: 21px;
+    /*padding: 27.5px 17px 27.5px 23px;*/
 
     position: absolute;
     /*top: 378px;*/
     left: 6.11vw;
-    bottom: 325px;
+    bottom: 38.15vh;
     z-index: 1;
 }
 
 div#speechBubbleIntroPage2 {
     width: 66.16vw;
-    height: 277px;
+    height: min-content;
     position: absolute;
     /*top: 250px;*/
     left: 6.11vw;
-    bottom: 325px;
+    bottom: 38.15vh;
     z-index: 1;
+    line-height: 21px;
 
     background-color: #010401;
     border: solid #888586 5px;
@@ -81,17 +85,19 @@ div#speechBubbleIntroPage2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 24px 3.56vw 0 6.11vw;
+    /*padding: 2.82vh 3.56vw 0 6.11vw;*/
+    padding: 19px 17px 23px 25px;
 }
 
 div#speechBubbleIntroPage3 {
-    height: 203px;
+    height: min-content;
     width: 66.16vw;
     position: absolute;
     /*top: 326px;*/
     left: 6.11vw;
-    bottom: 325px;
+    bottom: 38.15vh;
     z-index: 1;
+    line-height: 21px;
 
     background-color: #010401;
     border: solid #888586 5px;
@@ -101,7 +107,8 @@ div#speechBubbleIntroPage3 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 25px 5.09vw 0 6.11vw;
+    /*padding: 2.93vh 5.09vw 0 6.11vw;*/
+    padding: 22px 20px 21px 20px;
 }
 
 /*Pilen i pratbubblan nedan*/
@@ -111,10 +118,10 @@ img#continueArrowIntroPage {
     cursor: pointer;
 
     position: absolute;
-    top: 454px;
+    top: 53.29vh;
     left: 50.38vw;
     height: 78px;
-    width: 17.81vw;
+    width: 70px;
 
     /*
     Värden från Figma nedan (som inte blir rätt):
@@ -131,9 +138,9 @@ img#continueArrowIntroPage2 {
     cursor: pointer;
   
     position: absolute;
-    top: 454px;
+    top: 53.29vh;
     left: 50.38vw;
-    height: 78px;
+    height: 9.15vh;
     width: 18.28vw;
 }
 
@@ -142,8 +149,8 @@ img#continueArrowIntroPage3 {
     cursor: pointer;
   
     position: absolute;
-    top: 454px;
+    top: 53.29vh;
     left: 50.38vw;
-    height: 78px;
+    height: 9.15vh;
     width: 17.81vw;
 }
