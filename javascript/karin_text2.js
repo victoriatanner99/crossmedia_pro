@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audioPlayer');
     const textContainer = document.getElementById('textContainer');
     const nextPageButton = document.getElementById('nextPageButton');
-    const fullText = "Det är den mest värdefulla boken i i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 0701234….";
+    const fullText = "Det är den mest värdefulla boken i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 0701234….";
     const words = fullText.split(' ');
     let currentWordIndex = 0;
 
