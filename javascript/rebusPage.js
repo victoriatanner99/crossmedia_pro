@@ -188,7 +188,8 @@ function explainHowToFindWebsite(event) {
         infoContainer.innerHTML =
         `
         Tips! Ta dig till en <br> 
-        dator för att få <br> tillgång till hemsidan 
+        dator för att logga <br> 
+        in & få tillgång till <br> hemsidan.
         `;
 
     } else {

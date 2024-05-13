@@ -263,7 +263,9 @@ function speechBubbleAfterVoiceMessage(speechBubble) {
             continueArrow.setAttribute("id", "continueArrowCallKarinPage");
             continueArrow.setAttribute("src", "images/arrow_512w.png");
             document.querySelector("div#callKarinPageContainer").appendChild(continueArrow);
-            //continueArrow.addEventListener("click",);
+            continueArrow.addEventListener("click", () => {
+                window.location.href = 'html/firstCheckpoint.html'; 
+            });
 
             clearInterval(speechBubbleInterval);
         } else {

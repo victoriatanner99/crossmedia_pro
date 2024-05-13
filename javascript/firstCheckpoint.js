@@ -16,9 +16,9 @@ function checkAnswer() {
         word += document.getElementById('letter' + i).value;
     }
     if (word.toLowerCase() === 'dator') {
-        document.body.style.backgroundColor = 'green';
-        alert('Rätt svar! Bra jobbat!');
-        window.location.href = './Rebus.html';
+        
+        window.location.href = '../index.html';
+      
     } else {
         alert('Fel svar, försök igen!');
     }
