@@ -1,9 +1,34 @@
-body{
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
+div#firstCheckpointBackground {
+    height: 100%;
+    width: 100%;
+    background-color: #F6E8E4;
 }
 
+img#leftFlowerImageFirstCheckpointPage {
+    width: 83.15vw;
+    height: 35.15vh;
+    position: fixed;
+    top: -4vh;
+    left: -4.33vh;
+}
+
+img#rightFlowerImageFirstCheckpointPage {
+    width: 104.91vw;
+    height: 48.36vh;
+
+    position: fixed;
+    top: -11vh;
+    left: 15.4vw;
+}
+
+img#markerFirstCheckpointPage {
+    width: 34.61vw;
+    height: 22.65vh;
+
+    position: fixed;
+    top: 29.69vh;
+    left: 32.82vw;
+}
 
 #container {
     display: grid;

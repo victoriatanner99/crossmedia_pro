@@ -264,7 +264,7 @@ function speechBubbleAfterVoiceMessage(speechBubble) {
             continueArrow.setAttribute("src", "images/arrow_512w.png");
             document.querySelector("div#callKarinPageContainer").appendChild(continueArrow);
             continueArrow.addEventListener("click", () => {
-                window.location.href = 'html/firstCheckpoint.html'; 
+                renderFirstCheckpoint();
             });
 
             clearInterval(speechBubbleInterval);
