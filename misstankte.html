@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Dra och släpp spel</title>
+    <link rel="stylesheet" href="./css/misstankte.css">
+</head>
+<body>
+    <div id="images">
+       
+    </div>
+    <div id="drop-areas">
+        <div class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <button onclick="checkSelection()">Kontrollera Val</button>
+    <div id="result"></div>
+
+ 
+
+    <script src="./javascript/misstankte.js"></script>
+</body>
+</html>
