@@ -1,22 +1,4 @@
 /*Koden för denna sidan är i rebusPage.js*/
-@media screen and (orientation: landscape) {
-    div#turnMobileDeviceBackgroundAfter {
-        background-color: #E6D9D6;
-        height: 100%;
-        width: 100%;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    img#turnMobileDeviceSignAfter {
-        width: 407px;
-        height: 392px;
-        position: fixed;
-        left: 26.06vw;
-     }
-}
 
 @media screen and (orientation: portrait) {
     div#loginInfoPage {

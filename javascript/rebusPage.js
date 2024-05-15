@@ -160,6 +160,9 @@ function renderLoginInfo() {
             loginInfoBackground.prepend(topQuestionButton);
             topQuestionButton.addEventListener("click", explainHowToFindWebsite);
 
+            document.querySelector("button#doneButtonLoginInfoPage").addEventListener("click", (event) => {
+                renderDragSuspectsPage();
+            });
         
         } else {
             document.querySelector("body").innerHTML = "";

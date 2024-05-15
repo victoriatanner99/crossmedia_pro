@@ -30,6 +30,74 @@ img#markerFirstCheckpointPage {
     left: 32.82vw;
 }
 
+h1#headingFirstCheckpointPage {
+    margin: 0;
+    width: 81.17vw;
+    height: 4.69vh;
+    font-family: "Butterfinger Serif";
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: calc(13 * .01em);
+
+    position: fixed;
+    top: 56.57vh;
+    left: 9.41vw;
+}
+
+input.inputFirstCheckpointPage {
+    width: 18.58vw;
+    height: 7.98vh;
+    border: 2px solid #D7D7D7;
+    position: fixed;
+    top: 63.03vh;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-family: "Inter";
+    font-size: 18px;
+    text-align: center;
+}
+
+.inputFirstCheckpointPage:focus {
+    outline: none;
+}
+
+input#input1FirstCheckpointPage {
+    left: 9.41vw;
+}
+
+input#input2FirstCheckpointPage {
+    left: 30.28vw;
+}
+
+input#input3FirstCheckpointPage {
+    left: 51.15vw;
+}
+
+input#input4FirstCheckpointPage {
+    left: 72.01vw;
+}
+
+button#buttonFirstCheckpointPage {
+    margin: 0;
+    height: 6.52vh;
+    width: 33.52vw;
+    background-color: #3981A2;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    font-family: "Butterfinger Serif";
+    font-size: 22px;
+    letter-spacing: calc(13 * .01em);
+
+    position: fixed;
+    top: 77.35vh;
+    left: 33.33vw;
+}
+    
 #container {
     display: grid;
     place-items: center; /* Centrera innehållet både horisontellt och vertikalt */

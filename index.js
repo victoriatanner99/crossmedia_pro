@@ -2,11 +2,10 @@
 
 
 //console.log(document.referrer);
-renderStartPage();
+//renderStartPage();
 
 //renderTelephonePage();
-//renderFirstCheckpoint();
 
 //renderRebusPage();
 
-//renderLoginInfo();
+renderDragSuspectsPage();

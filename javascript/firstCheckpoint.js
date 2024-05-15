@@ -18,31 +18,48 @@ function renderFirstCheckpoint() {
     markerImage.setAttribute("id", "markerFirstCheckpointPage");
     markerImage.setAttribute("src", "images/checkpoint-removebg-preview 2.png");
     firstCheckpointBackground.appendChild(markerImage);
+
+    let headingFirstCheckpointPage = document.createElement("h1");
+    headingFirstCheckpointPage.setAttribute("id", "headingFirstCheckpointPage");
+    headingFirstCheckpointPage.textContent = "CHECKPOINT KOD";          
+    firstCheckpointBackground.appendChild(headingFirstCheckpointPage);
+
+    for(let i = 0; i < 4; i++) {
+        let input = document.createElement("input");
+        input.classList.add("inputFirstCheckpointPage");
+        input.setAttribute("id", `input${i+1}FirstCheckpointPage`);
+        input.setAttribute("maxlength", "1");
+        firstCheckpointBackground.appendChild(input);
+
+        if(i !== 3) {
+            input.oninput = (event) => {
+                autoTab(event.currentTarget, event.currentTarget.nextElementSibling.id);
+            }
+        }
+    }
+
+    let checkpointButton = document.createElement("button");
+    checkpointButton.setAttribute("id", "buttonFirstCheckpointPage");
+    firstCheckpointBackground.appendChild(checkpointButton);
+    checkpointButton.textContent = "Klar";
+    checkpointButton.addEventListener("click", function(event) {
+        checkAnswer();
+    })
 }
 
 
 function autoTab(current, next) {
-    if (current.value.length >= current.maxLength) {
+    if (current.value.length === current.maxLength) {
         document.getElementById(next).focus();
     }
 }
 
-function checkFullWord() {
-    if (document.getElementById('letter5').value.length === 1) {
-        checkAnswer();
-    }
-}
-
 function checkAnswer() {
-    var word = '';
-    for (var i = 1; i <= 5; i++) {
-        word += document.getElementById('letter' + i).value;
+    let digits = '';
+    for (let i = 0; i < 4; i++) {
+        digits += document.getElementById(`input${i+1}FirstCheckpointPage`).value;
     }
-    if (word.toLowerCase() === 'dator') {
-        
-        window.location.href = '../index.html';
-      
-    } else {
-        alert('Fel svar, försök igen!');
-    }
+    if (digits === '1210') {
+        renderRebusPage();
+    } 
 }

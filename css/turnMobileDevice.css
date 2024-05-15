@@ -1,0 +1,37 @@
+@media screen and (orientation: portrait) {
+    div#turnMobileDeviceBackgroundBefore {
+        background-color: #E6D9D6;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img#turnMobileDeviceSignBefore {
+       width: 392px;
+       height: 392px;
+       position: fixed;
+       top: 27.00vh;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    div#turnMobileDeviceBackgroundAfter {
+        background-color: #E6D9D6;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    img#turnMobileDeviceSignAfter {
+        width: 407px;
+        height: 392px;
+        position: fixed;
+        left: 26.06vw;
+     }
+}
