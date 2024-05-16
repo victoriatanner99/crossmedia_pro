@@ -311,4 +311,41 @@
         left: 62.91vw;
         z-index: 2;
     }
+
+    img#arrowDragSuspectsPage {
+        z-index: 2;
+        width: 12.29vw;
+        height: 29.3vh;
+        position: fixed;
+        top: 67.1vh;
+        left: 86.93vw;
+    }
+
+    div#notifyUserIfRightOrWrongOverlay {
+        background-color: rgb(217, 217, 217, 0.7);
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+    }
+
+    div#infoContainerRightOrWrongDragSuspectsPage {
+        background-image: url("../images/Group\ 8_4x.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 50.82vw;
+        height: 57.25vh;
+        position: fixed;
+        top: 20.87vh;
+        left: 25.35vw;
+        font-family: "Inter";
+        letter-spacing: 0.015em;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

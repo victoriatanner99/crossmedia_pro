@@ -1,3 +1,13 @@
+const images = [
+    { src: 'images/character_4x.png', correct: false },
+    { src: 'images/Miranda_4x.png', correct: false },
+    { src: 'images/prasten 1.png', correct: true },
+    { src: 'images/beatrice_holm 3.png', correct: true },
+    { src: 'images/welmer_frisk 1.png', correct: true },
+    { src: 'images/Karin_4x.png', correct: false },
+    { src: 'images/Barbro_4x.png', correct: false }
+];
+
 function renderDragSuspectsPage() {
     let body = document.querySelector("body");
 
@@ -20,7 +30,6 @@ function renderDragSuspectsPage() {
             <div class="dropArea" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="greyAreaInFrame" id="greyAreaInFrame1">?</div>
                 <div class="frameAroundSuspectDragPage" id="dropFrame1"></div>
-
             </div>
             <div class="dropArea" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="greyAreaInFrame" id="greyAreaInFrame2">?</div>
@@ -149,27 +158,25 @@ function drop(event) {
     let allSuspectsPlaced = true;
     for(let i = 0; i < suspects.length; i++) {
         console.log(suspects[i].children.length);
-        
+        if(suspects[i].children.length !== 3) {
+            allSuspectsPlaced = false;
+        }
+    }
+
+    if(allSuspectsPlaced === true) {
+        let checkSuspectsArrow = document.createElement("img");
+        checkSuspectsArrow.setAttribute("id", "arrowDragSuspectsPage");
+        checkSuspectsArrow.setAttribute("src", "images/arrow_4x.png");
+        checkSuspectsArrow.addEventListener("click", rightOrWrongSuspects);
+        document.querySelector("div#dragSuspectsBackground").appendChild(checkSuspectsArrow);
     }
 }
 
 function allowDrop(event) {
     event.preventDefault();
-    console.log(event);
 }
 
 function setupGame() {
-
-    const images = [
-        { src: 'images/character_4x.png', correct: false },
-        { src: 'images/Miranda_4x.png', correct: false },
-        { src: 'images/prasten 1.png', correct: true },
-        { src: 'images/beatrice_holm 3.png', correct: true },
-        { src: 'images/welmer_frisk 1.png', correct: true },
-        { src: 'images/Karin_4x.png', correct: false },
-        { src: 'images/Barbro_4x.png', correct: false }
-    ];
-
     const container = document.getElementById("draggableImages");
     images.forEach((image, index) => {
         const img = document.createElement('img');
@@ -183,4 +190,90 @@ function setupGame() {
         };
         container.appendChild(img);
     });
+}
+
+function rightOrWrongSuspects(event) {
+
+    let imagesArray = images;
+
+    checkSelection();
+
+    function checkSelection() {
+        const dropAreas = document.querySelectorAll('.dropArea img');
+        console.log(dropAreas);
+        //const isCorrect = Array.from(dropAreas).every(img => images[parseInt(img.id.replace('drag', ''))].correct);
+        
+        //console.log(isCorrect);
+        console.log(dropAreas[1].attributes);
+
+        let suspectImagesArray = [];
+        for(let i = 0; i < dropAreas.length; i++) {
+            for(let ii = 0; ii < dropAreas[i].attributes.length; ii++) {
+                let attributeElement = dropAreas[i].attributes[ii].textContent;
+                let suspectSrcToImage = "";
+                for(let iii = 0; iii < imagesArray.length; iii++) {
+                    let arrayElementSourceKey = imagesArray[iii].src;
+                    if(arrayElementSourceKey === attributeElement) {
+                        suspectSrcToImage = arrayElementSourceKey;
+                        console.log(suspectSrcToImage);
+                        suspectImagesArray.push(suspectSrcToImage);
+                    }
+                }
+            }
+        }
+
+        let allSuspectsAreCorrect = true;
+
+        for(let i = 0; i < suspectImagesArray.length; i++) {
+            let oneSuspectImage = suspectImagesArray[i];
+
+            for(let ii = 0; ii < imagesArray.length; ii++) {
+
+                if(oneSuspectImage === imagesArray[ii].src) {
+
+                    if(!imagesArray[ii].correct) {
+                        allSuspectsAreCorrect = false;
+                    }
+                }
+            }
+        }
+
+        if(allSuspectsAreCorrect) {
+            console.log("Alla misstänka är rätt");
+            if(!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {
+                let overlay = document.createElement("div");
+                overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");
+                document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
+        
+                let infoContainer = document.createElement("div");
+                infoContainer.setAttribute("id", "infoContainerRightOrWrongDragSuspectsPage");
+                overlay.appendChild(infoContainer);
+        
+                infoContainer.innerHTML =
+                `
+                Bra jobbat! Du lyckades gissa <br> 
+                rätt på alla misstänkta. Nu är det <br> 
+                dags att gå vidare i utredningen.
+                `;
+        
+            } 
+        } else {
+            if(!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {
+                let overlay = document.createElement("div");
+                overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");
+                document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
+        
+                let infoContainer = document.createElement("div");
+                infoContainer.setAttribute("id", "infoContainerRightOrWrongDragSuspectsPage");
+                overlay.appendChild(infoContainer);
+        
+                infoContainer.innerHTML =
+                `
+                Tyvärr var det fel gissat. Försök igen!
+                `;
+        
+            }
+        }
+    }
+
 }
