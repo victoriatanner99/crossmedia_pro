@@ -1,29 +1,32 @@
 const images = [
-    { src: './images/polismaster 1_512w.png', correct: false },
-    { src: './images/BK.png', correct: true },
-    { src: './images/polismaster 1_512w.png', correct: false }
-   
+    { src: './images/polismaster 1_512w.png', correct: false, text: 'Bild 1' },
+    { src: './images/BK.png', correct: true, text: 'Bild 2' },
+    { src: './images/polismaster 1_512w.png', correct: false, text: 'Bild 3' }
 ];
 
 function loadImages() {
     const container = document.getElementById('images');
     container.innerHTML = ''; // Rensa tidigare bilder
+
     images.forEach((image, index) => {
+        const box = document.createElement('div');
+        box.classList.add('image-box');
+
         const img = document.createElement('img');
         img.src = image.src;
         img.style.width = '100px'; // Storlek på bild
         img.style.height = '100px';
         img.style.margin = '10px';
         img.onclick = () => checkAnswer(index);
-        container.appendChild(img);
+
+        const text = document.createElement('p');
+        text.textContent = image.text;
+
+        box.appendChild(img);
+        box.appendChild(text);
+        container.appendChild(box);
     });
 }
-
-/* function checkAnswer(index) {
-    const message = images[index].correct ? "Rätt svar!" : "Fel svar, försök igen!";
-    alert(message);
-    document.getElementById('next').style.display = images[index].correct ? 'block' : 'none';
-} */
 
 document.getElementById('next').onclick = function() {
     // Här kan du ladda nästa sida eller nästa fråga
@@ -49,7 +52,6 @@ function checkAnswer(index) {
         }
     };
 }
-
 
 // Initiera spelet
 loadImages();

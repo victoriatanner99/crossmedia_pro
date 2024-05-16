@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/BKgissa.png'); 
+    background-size: contain;
+    background-position: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 53px;
+}
+
+.size_input {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#button {
+    background-color: #3981A2;
+    width: 185px;
+    height: 51px;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px; 
+}
