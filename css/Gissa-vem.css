@@ -32,13 +32,13 @@ body {
 
 .image-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    width: 120px; /* Width to accommodate the image and text */
+    width: 350px; /* Width to accommodate the image and text */
     text-align: center;
 }
 

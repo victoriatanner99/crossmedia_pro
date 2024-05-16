@@ -1,7 +1,7 @@
 const images = [
-    { src: './images/polismaster 1_512w.png', correct: false, text: 'Bild 1' },
-    { src: './images/BK.png', correct: true, text: 'Bild 2' },
-    { src: './images/polismaster 1_512w.png', correct: false, text: 'Bild 3' }
+    { src: './images/prästen 1.png', correct: false, text: 'Namn: Prästen Ålder: Vill inte säga Misstänktsamt: Verkar ha ekonomiska problem. Stor rock med många fickor. ' },
+    { src: './images/welmer_frisk 1.png', correct: true, text: 'Namn: Welmer Frisk Ålder: 34 år Misstänktsamt: Var personen som lånade boken senast. Tidigare dömd för snatteri.' },
+    { src: './images/beatrice_image.png', correct: false, text: 'Namn: Beatrice Holm Ålder: 73 år Misstänktsamt: Bitter och tycker att hennes bok är mycket bättre än “Under Himmelens fäste”' }
 ];
 
 function loadImages() {
