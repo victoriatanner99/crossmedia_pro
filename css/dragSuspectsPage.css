@@ -14,10 +14,12 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 1;
     
         height: 100%;
         width: 100%;
         background-color: rgba(11, 11, 11, 0.85);
+
     }
 
     div#infoButtonDragSuspectsPage {
@@ -31,7 +33,7 @@
         top: 6.87vh;
         left: 91.08vw;
         cursor: pointer;
-        z-index: 1;
+        z-index: 4;
      
         border-radius: 50px;
         border: 4px solid #FBF8F4;
@@ -46,10 +48,12 @@
         align-items: center;
     }
 
-    div#overlayDragSuspectsPage {
+    div#screenOverlayInfoButtonDragSuspectsPage {
         background-color: rgb(217, 217, 217, 0.7);
         height: 100%;
         width: 100%;
+        position: relative;
+        z-index: 3;
     }
 
     div#infoContainerDragSuspectsPage {
@@ -66,10 +70,245 @@
         font-family: "Inter";
         font-size: 16px;
         text-align: center;
-        z-index: 1;
+        z-index: 4;
 
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    div.dropArea {
+        width: 12.79vw;
+        height: 27.48vh;
+        position: fixed;
+        top: 7.89vh;
+        z-index: 2;
+    }
+
+    div.frameAroundSuspectDragPage {
+        background-image: url("../images/SuspectsFrame_4x.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+
+        position: relative;
+    }
+
+    div#dropArea1 {
+        left: 23.71vw;
+    }
+
+    div#dropArea2 {
+        left: 43.31vw;
+    }
+
+    div#dropArea3 {
+        left: 62.91vw;
+    }
+
+    div.greyAreaInFrame {
+        background-color: #ADADAD;
+        color: #FFFFFF;
+        font-family: "Butterfinger Serif";
+        font-size: 40px;
+        letter-spacing: calc(13 * .01em);
+        text-align: center;
+
+        height: 17.01vh;
+        width: 7.76vw;
+        position: fixed;
+        top: 13.14vh;
+        z-index: 2;
+        rotate: -2.99deg;
+
+        padding: 10px 10px 10px 15px;
+        box-sizing: border-box;
+    }
+
+    div#greyAreaInFrame1 {
+        left: 25.69vw;
+    }
+
+    div#greyAreaInFrame2 {
+        left: 45.29vw;
+    }
+
+    div#greyAreaInFrame3 {
+        left: 64.89vw;
+    }
+
+    img#drag0 {
+        height: 25.19vh;
+        width: 13.03vw;
+
+        position: fixed;
+        top: 40.50vh;
+        left: 22.44vw;
+        z-index: 2;
+    }
+
+    img#drag1 {
+        height: 23.41vh;
+        width: 11.50vw;
+
+        position: fixed;
+        top: 40.24vh;
+        left: 45.79vw;
+        z-index: 2;
+    }
+
+    img#drag2 {
+        height: 24.17vh;
+        width: 10.09vw;
+
+        position: fixed;
+        top: 39.73vh;
+        left: 67.04vw;
+        z-index: 2;
+    }
+
+    img#drag3 {
+        height: 24.68vh;
+        width: 12.69vw;
+
+        position: fixed;
+        top: 66.41vh;
+        left: 9.62vw;
+        z-index: 2;
+    }
+
+    img#drag4 {
+        height: 24.94vh;
+        width: 9.74vw;
+
+        position: fixed;
+        top: 63.90vh;
+        left: 36.52vw;
+        z-index: 2;
+    }
+
+    img#drag5 {
+        height: 23.16vh;
+        width: 11.38vw;
+
+        position: fixed;
+        top: 67.46vh;
+        left: 54.83vw;
+        z-index: 2;
+    }
+
+    img#drag6 {
+        height: 24.68vh;
+        width: 9.51vw;
+
+        position: fixed;
+        top: 63.13vh;
+        left: 77.37vw;
+        z-index: 2;
+    }
+
+    p.possibleSuspectName {
+        font-family: "Butterfinger Serif";
+        font-size: 11px;
+        margin: 0;
+        color: #FFFFFF;
+        z-index: 2;
+        text-align: center;
+    }
+
+    p#name1DragSuspectsPage {
+        position: fixed;
+        top: 65.25vh;
+        left: 25.25vw;
+        width: 8.84vw;
+        height: 5.82vh;
+        rotate: -4.78deg;
+    }
+
+    p#name2DragSuspectsPage {
+        position: fixed;
+        top: 63.39vh;
+        left: 49.32vw;
+        height: 3,02vh;
+        width: 5.42vw;
+        rotate: -4.78deg;
+    }
+
+    p#name3DragSuspectsPage {
+        width: 5.77vw;
+        height: 2.29vh;
+        position: fixed;
+        top: 64.14vh;
+        left: 69.62vw;
+        rotate: -1.12deg;
+    }
+
+    p#name4DragSuspectsPage {
+        width: 8.84vw;
+        height: 5.82vh;
+        rotate: -4.78deg;
+
+        position: fixed;
+        left: 12.79vw;
+        top: 91.17vh;
+    }
+
+    p#name5DragSuspectsPage {
+        width: 6.69vw;
+        height: 7.38vh;
+
+        position: fixed;
+        top: 88.32vh;
+        left: 38.04vw;
+    }
+
+    p#name6DragSuspectsPage {
+        width: 6.69vw;
+        height: 7.38vh;
+
+        position: fixed;
+        top: 89.64vh;
+        left: 58.00vw;
+        rotate: -4.17deg;
+    }
+
+    p#name7DragSuspectsPage {
+        width: 7.86vw;
+        height: 6.11vh;
+
+        position: fixed;
+        top: 88.58vh;
+        left: 78.30vw;
+    }
+
+    img#suspectDraggedToFrame1 {
+        width: 12.79vw;
+        height: 27.48vh;
+        position: fixed;
+        top: 7.89vh;
+        left: 23.71vw;
+        z-index: 2;
+    }
+
+    img#suspectDraggedToFrame2 {
+        width: 12.79vw;
+        height: 27.48vh;
+        position: fixed;
+        top: 7.89vh;
+        left: 43.31vw;
+        z-index: 2;
+    }
+
+    img#suspectDraggedToFrame3 {
+        width: 12.79vw;
+        height: 27.48vh;
+        position: fixed;
+        top: 7.89vh;
+        left: 62.91vw;
+        z-index: 2;
     }
 }
