@@ -38,3 +38,7 @@ h1{
 .login-form span {
     font-weight: bold; 
 }
+
+img{
+    width: 50vw;
+}
