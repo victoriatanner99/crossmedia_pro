@@ -1,8 +1,7 @@
 "use strict";
 
 
-//console.log(document.referrer);
-//renderStartPage();
+renderStartPage();
 
 //renderTelephonePage();
 
@@ -10,4 +9,6 @@
 
 //renderDragSuspectsPage();
 
-renderPoliceAudioFilePage();
+//renderPoliceAudioFilePage();
+
+//renderSecondCheckpoint();

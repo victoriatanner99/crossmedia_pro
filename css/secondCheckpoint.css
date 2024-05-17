@@ -1,0 +1,171 @@
+div#secondCheckpointBackground {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #625E5F;
+
+    background-image: url("../images/Fotavtryck.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div#backgroundOverlaySecondCheckpointPage {
+    background-color: rgba(11, 11, 11, 0.40);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+img#camera1SecondCheckpointPage {
+    width: 34.10vw;
+    height: 15.85vh;
+
+    position: absolute;
+    top: 14.91%;
+    left: 0;
+    z-index: 2;
+}
+
+img#camera2SecondCheckpointPage {
+    width: 34.10vw;
+    height: 15.85vh;
+
+    position: absolute;
+    top: 31.92%;
+    left: 67%;
+    z-index: 2;
+}
+
+div#infoButtonSecondCheckpointPage {
+    height: 36px;
+    width: 38px;
+
+    /*height: 9vh;
+    width: 9.2vh;*/
+   
+    position: absolute;
+    top: 4.69vh;
+    left: 81.42vw;
+    cursor: pointer;
+    z-index: 4;
+ 
+    border-radius: 50px;
+    border: 4px solid #FBF8F4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0, 0.25);
+    font-family: "Butterfinger Serif";
+    font-size: 26px;
+    color: #FBF8F4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#overlayInfoButtonSecondCheckpointPage {
+    background-color: rgb(217, 217, 217, 0.7);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+
+div#infoContainerSecondCheckpointPage {
+    background-image: url("../images/Group\ 8_4x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 67.39vw;
+    height: 17.44vh;
+    position: absolute;
+    top: 10.33vh;
+    left: 29.26vw;
+    font-family: "Inter";
+    font-size: 16px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1#headingSecondCheckpointPage {
+    margin: 0;
+    width: 81.17vw;
+    height: 4.69vh;
+    font-family: "Butterfinger Serif";
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: calc(13 * .01em);
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 56.57vh;
+    left: 9.41vw;
+    z-index: 2;
+}
+
+button#buttonSecondCheckpointPage {
+    margin: 0;
+    height: 6.52vh;
+    width: 33.52vw;
+    background-color: #3981A2;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    font-family: "Butterfinger Serif";
+    font-size: 22px;
+    letter-spacing: calc(13 * .01em);
+
+    position: absolute;
+    top: 77.35vh;
+    left: 33.33vw;
+    z-index: 2;
+
+}
+
+input.inputSecondCheckpointPage {
+    width: 18.58vw;
+    height: 7.98vh;
+    border: 2px solid #D7D7D7;
+    position: absolute;
+    top: 63.03vh;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-family: "Inter";
+    font-size: 18px;
+    text-align: center;
+    z-index: 2;
+}
+
+.inputSecondCheckpointPage:focus {
+    outline: none;
+}
+
+input#input1SecondCheckpointPage {
+    left: 9.41vw;
+}
+
+input#input2SecondCheckpointPage {
+    left: 30.28vw;
+}
+
+input#input3SecondCheckpointPage {
+    left: 51.15vw;
+}
+
+input#input4SecondCheckpointPage {
+    left: 72.01vw;
+}

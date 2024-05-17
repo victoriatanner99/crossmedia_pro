@@ -43,7 +43,7 @@ function renderFirstCheckpoint() {
     firstCheckpointBackground.appendChild(checkpointButton);
     checkpointButton.textContent = "Klar";
     checkpointButton.addEventListener("click", function(event) {
-        checkAnswer();
+        checkAnswerFirstCheckpointPage();
     })
 }
 
@@ -54,7 +54,7 @@ function autoTab(current, next) {
     }
 }
 
-function checkAnswer() {
+function checkAnswerFirstCheckpointPage() {
     let digits = '';
     for (let i = 0; i < 4; i++) {
         digits += document.getElementById(`input${i+1}FirstCheckpointPage`).value;

@@ -126,9 +126,11 @@ function secondPartOfPoliceCall(event) {
             const intervalId = setInterval(() => {
                 if (currentWordIndex === words.length) {
                     clearInterval(intervalId);
+                    document.querySelector("img#arrowPoliceCallPage").removeEventListener("click", secondPartOfPoliceCall);
                     document.querySelector("img#arrowPoliceCallPage").setAttribute("id", "arrowPoliceCallPage2");
                     document.querySelector("img#arrowPoliceCallPage2").style.visibility = "visible";
-                    document.querySelector("img#arrowPoliceCallPage").addEventListener("click", (event) => {
+                    
+                    document.querySelector("img#arrowPoliceCallPage2").addEventListener("click", (event) => {
                         renderSecondCheckpoint();
                     });
                           

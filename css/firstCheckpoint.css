@@ -38,8 +38,9 @@ h1#headingFirstCheckpointPage {
     font-size: 30px;
     text-align: center;
     letter-spacing: calc(13 * .01em);
-
-    position: fixed;
+    color: #2C2C2C;
+    
+    position: absolute;
     top: 56.57vh;
     left: 9.41vw;
 }
@@ -98,11 +99,12 @@ button#buttonFirstCheckpointPage {
     left: 33.33vw;
 }
     
+/*
 #container {
     display: grid;
-    place-items: center; /* Centrera innehållet både horisontellt och vertikalt */
-    height: 100vh; /* För att centrera vertikalt i fönstret */
-    background-color: #F6E8E4;
+    place-items: center; /* Centrera innehållet både horisontellt och vertikalt 
+    height: 100vh; /* För att centrera vertikalt i fönstret 
+    background-color: #F6E8E4; 
 }
 #Group17 {
     margin: -27px;
@@ -126,4 +128,4 @@ button#buttonFirstCheckpointPage {
     height: 51px;
     border-radius: 6px;
     color: white;
-}
+}*/

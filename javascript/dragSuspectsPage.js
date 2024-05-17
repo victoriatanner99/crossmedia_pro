@@ -109,6 +109,8 @@ function renderDragSuspectsPage() {
 
 function explainDraggingSuspects(event) {
     if(!document.querySelector("div#screenOverlayInfoButtonDragSuspectsPage")) {
+        event.currentTarget.style.color = "#353535";
+        event.currentTarget.style.borderColor = "#353535";
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "screenOverlayInfoButtonDragSuspectsPage");
         document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
@@ -126,6 +128,8 @@ function explainDraggingSuspects(event) {
 
     } else {
         document.querySelector("div#screenOverlayInfoButtonDragSuspectsPage").remove();
+        event.currentTarget.style.color = "#FBF8F4";
+        event.currentTarget.style.borderColor = "#FBF8F4";
     }
 }
 
