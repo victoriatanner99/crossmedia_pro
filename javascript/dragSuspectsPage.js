@@ -145,7 +145,7 @@ function drop(event) {
         for(let i = 0; i < event.currentTarget.children.length; i++) {
             console.log(event.currentTarget.children[i]);
             console.log(event.currentTarget.style);
-            if(event.currentTarget.children[i].classList.contains("greyAreaInFrame")) {
+            /*if(event.currentTarget.children[i].classList.contains("greyAreaInFrame")) {
                 event.currentTarget.children[i].style.visibility = "collapse";
                 //event.currentTarget.children[i].remove();
 
@@ -154,7 +154,7 @@ function drop(event) {
             if(event.currentTarget.children[i].classList.contains("frameAroundSuspectDragPage")) {
                 event.currentTarget.children[i].style.visibility = "collapse";
                 //event.currentTarget.children[i].remove();
-            }
+            }*/
 
             if(event.currentTarget.children[i].classList.contains("culpritFrameInDropArea")) {
                 //event.currentTarget.children[i].style.visibility = "collapse";
@@ -236,7 +236,6 @@ function drop(event) {
         document.getElementById(data).classList.add(data);
         //document.querySelector(`div#draggableImages > div.${data}`).remove();
 
-
         console.log(dropZone.children);
         const dropAreas = document.querySelectorAll('.dropArea');
         for(let i = 0; i < dropAreas.length; i++) {
@@ -272,7 +271,6 @@ function drop(event) {
 function allowDrop(event) {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
-
 }
 
 function setupGame() {
@@ -315,7 +313,6 @@ function rightOrWrongSuspects(event) {
                     let arrayElementSourceKey = imagesArray[iii].src;
                     if(arrayElementSourceKey === attributeElement) {
                         suspectSrcToImage = arrayElementSourceKey;
-                        console.log(suspectSrcToImage);
                         suspectImagesArray.push(suspectSrcToImage);
                     }
                 }
@@ -363,7 +360,9 @@ function rightOrWrongSuspects(event) {
                 newArrow.setAttribute("src", "images/arrow_4x.png");
                 overlay.appendChild(newArrow);
 
-        
+                newArrow.addEventListener("click", (event) => {
+                    renderPoliceAudioFilePage();
+                });
             } 
         } else {
             if(!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {

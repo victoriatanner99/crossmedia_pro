@@ -4,6 +4,7 @@ div#introPageContainer {
     background-color: #D6E5E7;
 
     position: relative;
+    overflow: hidden;
 }
 
 div#introPageContainerOverlay {
@@ -23,6 +24,7 @@ img#leafsImageIntroPage {
     position: absolute;
     top: 0;
     left: -26.21vw;
+    overflow: hidden;
 }
 
 img#lasseMajaSignIntroPage {
