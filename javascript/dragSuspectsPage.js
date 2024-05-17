@@ -25,7 +25,7 @@ function renderDragSuspectsPage() {
             dragSuspectsBackground.setAttribute("id", "dragSuspectsBackground");
             body.appendChild(dragSuspectsBackground);
 
-            dragSuspectsBackground.innerHTML = 
+            /*dragSuspectsBackground.innerHTML = 
             `
             <div class="dropArea" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="greyAreaInFrame" id="greyAreaInFrame1">?</div>
@@ -39,8 +39,25 @@ function renderDragSuspectsPage() {
                 <div class="greyAreaInFrame" id="greyAreaInFrame3">?</div>
                 <div class="frameAroundSuspectDragPage" id="dropFrame3"></div>
             </div>
-            <div id="draggableImages"></div>
+            <div id="draggableImages" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            `;*/
+
+            dragSuspectsBackground.innerHTML = 
+            `
+            <div class="dropArea" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="culpritFrameInDropArea"></div>
+            </div>
+            <div class="dropArea" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="culpritFrameInDropArea"></div>
+            </div>
+            <div class="dropArea" id="dropArea3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="culpritFrameInDropArea"></div>
+            </div>
+            <div id="draggableImages" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="showDropArea"></div>
+            </div>
             `;
+
             let infoButton = document.createElement("div");
             infoButton.setAttribute("id", "infoButtonDragSuspectsPage");
             infoButton.textContent = "?";
@@ -118,9 +135,10 @@ function drop(event) {
     var dropZone = event.currentTarget;
     console.log(event);
     console.log(event.currentTarget);
+    console.log(dropZone);
 
     // Kontrollera att drop-zone inte redan innehåller en bild
-    if (dropZone.classList.contains('dropArea') && dropZone.children.length === 2) {
+    if (dropZone.classList.contains('dropArea') && dropZone.children.length === 1) {
         dropZone.appendChild(document.getElementById(data));
         console.log(event.currentTarget.children);
 
@@ -136,48 +154,129 @@ function drop(event) {
             if(event.currentTarget.children[i].classList.contains("frameAroundSuspectDragPage")) {
                 event.currentTarget.children[i].style.visibility = "collapse";
                 //event.currentTarget.children[i].remove();
-
             }
+
+            if(event.currentTarget.children[i].classList.contains("culpritFrameInDropArea")) {
+                //event.currentTarget.children[i].style.visibility = "collapse";
+                event.currentTarget.children[i].remove();
+            }
+            
         }
         console.log(event.currentTarget.children);
 
         for(let i = 0; i < event.currentTarget.children.length; i++) {
             if(event.currentTarget.children[i].classList.contains("draggableImage")) {
                 if(event.currentTarget.id === "dropArea1") {
-                    event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame1");
+                    //event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame1");
                 } else if(event.currentTarget.id === "dropArea2") {
-                    event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame2");
+                    //event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame2");
                 } else if(event.currentTarget.id === "dropArea3") {
-                    event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame3");
+                    //event.currentTarget.children[i].setAttribute("id", "suspectDraggedToFrame3");
                 }
+                event.currentTarget.children[i].classList.add("suspectDraggedToFrame");
+                let suspectId = event.currentTarget.children[i].id;
+                console.log(suspectId);
+                event.currentTarget.children[i].classList.remove(`${suspectId}`);
+                console.log(event.currentTarget.children[i]);
+
+                /*let replacementElement = document.createElement("div");
+                replacementElement.classList.add(suspectId);
+                document.querySelector("div#draggableImages").appendChild(replacementElement);*/
+
             }
         }
-    }
 
-    let suspects = document.querySelectorAll("div.dropArea");
-    let allSuspectsPlaced = true;
-    for(let i = 0; i < suspects.length; i++) {
-        console.log(suspects[i].children.length);
-        if(suspects[i].children.length !== 3) {
-            allSuspectsPlaced = false;
+        const dropAreas = document.querySelectorAll('.dropArea');
+        for(let i = 0; i < dropAreas.length; i++) {
+            if(dropAreas[i].children.length === 0) {
+                let frameInsideDropArea = document.createElement("div");
+                frameInsideDropArea.classList.add("culpritFrameInDropArea");
+                dropAreas[i].appendChild(frameInsideDropArea);
+            }
         }
-    }
 
-    if(allSuspectsPlaced === true) {
-        let checkSuspectsArrow = document.createElement("img");
-        checkSuspectsArrow.setAttribute("id", "arrowDragSuspectsPage");
-        checkSuspectsArrow.setAttribute("src", "images/arrow_4x.png");
-        checkSuspectsArrow.addEventListener("click", rightOrWrongSuspects);
-        document.querySelector("div#dragSuspectsBackground").appendChild(checkSuspectsArrow);
+        let suspects = document.querySelectorAll("div.dropArea");
+        let allSuspectsPlaced = true;
+        for(let i = 0; i < suspects.length; i++) {
+            if(!suspects[i].children[0].classList.contains("suspectDraggedToFrame")) {
+                allSuspectsPlaced = false;
+            }
+        }
+
+        if(allSuspectsPlaced === true) {
+            let checkSuspectsArrow = document.createElement("img");
+            checkSuspectsArrow.setAttribute("id", "arrowDragSuspectsPage");
+            checkSuspectsArrow.setAttribute("src", "images/arrow_4x.png");
+            checkSuspectsArrow.addEventListener("click", rightOrWrongSuspects);
+            document.querySelector("div#dragSuspectsBackground").appendChild(checkSuspectsArrow);
+        }
+        
+
+        if(data === "drag0") {
+            document.querySelector("p#name1DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag1") {
+            document.querySelector("p#name2DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag2") {
+            document.querySelector("p#name3DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag3") {
+            document.querySelector("p#name4DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag4") {
+            document.querySelector("p#name5DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag5") {
+            document.querySelector("p#name6DragSuspectsPage").style.visibility = "hidden";
+        } else if(data === "drag6") {
+            document.querySelector("p#name7DragSuspectsPage").style.visibility = "hidden";
+        }
+
+
+    } else if(dropZone.id === "draggableImages") {
+        console.log(data);
+        dropZone.appendChild(document.getElementById(data));
+        document.getElementById(data).classList.remove("suspectDraggedToFrame");
+        document.getElementById(data).classList.add(data);
+        //document.querySelector(`div#draggableImages > div.${data}`).remove();
+
+
+        console.log(dropZone.children);
+        const dropAreas = document.querySelectorAll('.dropArea');
+        for(let i = 0; i < dropAreas.length; i++) {
+            if(dropAreas[i].children.length === 0) {
+                let frameInsideDropArea = document.createElement("div");
+                frameInsideDropArea.classList.add("culpritFrameInDropArea");
+                dropAreas[i].appendChild(frameInsideDropArea);
+            }
+        }
+
+        if(data === "drag0") {
+            document.querySelector("p#name1DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag1") {
+            document.querySelector("p#name2DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag2") {
+            document.querySelector("p#name3DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag3") {
+            document.querySelector("p#name4DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag4") {
+            document.querySelector("p#name5DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag5") {
+            document.querySelector("p#name6DragSuspectsPage").style.visibility = "visible";
+        } else if(data === "drag6") {
+            document.querySelector("p#name7DragSuspectsPage").style.visibility = "visible";
+        }
+
+        if(document.querySelector("img#arrowDragSuspectsPage")) {
+            document.querySelector("img#arrowDragSuspectsPage").remove();
+        }
     }
 }
 
 function allowDrop(event) {
     event.preventDefault();
+    event.dataTransfer.dropEffect = "move";
+
 }
 
 function setupGame() {
-    const container = document.getElementById("draggableImages");
+    const container = document.querySelector("div#draggableImages");
     images.forEach((image, index) => {
         const img = document.createElement('img');
         img.src = image.src;
@@ -185,6 +284,7 @@ function setupGame() {
         img.draggable = true;
         img.id = `drag${index}`;
         img.classList.add("draggableImage");
+        img.classList.add(`drag${index}`);
         img.ondragstart = (event) => {
             event.dataTransfer.setData("text", event.target.id);
         };
@@ -239,8 +339,9 @@ function rightOrWrongSuspects(event) {
         }
 
         if(allSuspectsAreCorrect) {
-            console.log("Alla misstänka är rätt");
             if(!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {
+                document.querySelector("div#infoButtonDragSuspectsPage").style.zIndex = "3";
+
                 let overlay = document.createElement("div");
                 overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");
                 document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
@@ -255,10 +356,19 @@ function rightOrWrongSuspects(event) {
                 rätt på alla misstänkta. Nu är det <br> 
                 dags att gå vidare i utredningen.
                 `;
+
+                document.querySelector("img#arrowDragSuspectsPage").remove();
+                let newArrow = document.createElement("img");
+                newArrow.setAttribute("id", "arrow2DragSuspectsPage");
+                newArrow.setAttribute("src", "images/arrow_4x.png");
+                overlay.appendChild(newArrow);
+
         
             } 
         } else {
             if(!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {
+                document.querySelector("div#infoButtonDragSuspectsPage").style.zIndex = "3";
+
                 let overlay = document.createElement("div");
                 overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");
                 document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
@@ -269,11 +379,19 @@ function rightOrWrongSuspects(event) {
         
                 infoContainer.innerHTML =
                 `
-                Tyvärr var det fel gissat. Försök igen!
+                Tyvärr var det fel gissat. Försök <br> igen!
                 `;
-        
+
+                document.querySelector("img#arrowDragSuspectsPage").remove();
+                let newArrow = document.createElement("img");
+                newArrow.setAttribute("id", "arrow2DragSuspectsPage");
+                newArrow.setAttribute("src", "images/arrow_4x.png");
+                overlay.appendChild(newArrow);
+
+                newArrow.addEventListener("click", (event) => {
+                    renderDragSuspectsPage();
+                });
             }
         }
     }
-
 }

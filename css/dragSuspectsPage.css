@@ -8,10 +8,28 @@
     
         height: 100%;
         width: 100%;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: auto 62vh;
+        grid-template-columns: 100%;
+    }
+
+    div#draggableImages {
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+    }
+
+    div#showDropArea {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
     }
     
     div#dragSuspectsBackgroundOverlay {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
@@ -29,7 +47,7 @@
         /*height: 9vh;
         width: 9.2vh;*/
        
-        position: fixed;
+        position: absolute;
         top: 6.87vh;
         left: 91.08vw;
         cursor: pointer;
@@ -52,7 +70,7 @@
         background-color: rgb(217, 217, 217, 0.7);
         height: 100%;
         width: 100%;
-        position: relative;
+        position: absolute;
         z-index: 3;
     }
 
@@ -64,7 +82,7 @@
 
         width:  31.08vw;
         height: 37.80vh;
-        position: fixed;
+        position: absolute;
         top: 18.32vh;
         left: 65.38vw;
         font-family: "Inter";
@@ -80,7 +98,7 @@
     div.dropArea {
         width: 12.79vw;
         height: 27.48vh;
-        position: fixed;
+        position: absolute;
         top: 7.89vh;
         z-index: 2;
     }
@@ -120,7 +138,7 @@
 
         height: 17.01vh;
         width: 7.76vw;
-        position: fixed;
+        position: absolute;
         top: 13.14vh;
         z-index: 2;
         rotate: -2.99deg;
@@ -141,74 +159,88 @@
         left: 64.89vw;
     }
 
-    img#drag0 {
+    .drag0 {
         height: 25.19vh;
         width: 13.03vw;
 
-        position: fixed;
+        position: absolute;
         top: 40.50vh;
         left: 22.44vw;
         z-index: 2;
     }
 
-    img#drag1 {
+    .drag1 {
         height: 23.41vh;
         width: 11.50vw;
 
-        position: fixed;
+        position: absolute;
         top: 40.24vh;
         left: 45.79vw;
         z-index: 2;
     }
 
-    img#drag2 {
+    .drag2 {
         height: 24.17vh;
         width: 10.09vw;
 
-        position: fixed;
+        position: absolute;
         top: 39.73vh;
         left: 67.04vw;
         z-index: 2;
     }
 
-    img#drag3 {
+    .drag3 {
         height: 24.68vh;
         width: 12.69vw;
 
-        position: fixed;
+        position: absolute;
         top: 66.41vh;
         left: 9.62vw;
         z-index: 2;
     }
 
-    img#drag4 {
+    .drag4 {
         height: 24.94vh;
         width: 9.74vw;
 
-        position: fixed;
+        position: absolute;
         top: 63.90vh;
         left: 36.52vw;
         z-index: 2;
     }
 
-    img#drag5 {
+    .drag5 {
         height: 23.16vh;
         width: 11.38vw;
 
-        position: fixed;
+        position: absolute;
         top: 67.46vh;
         left: 54.83vw;
         z-index: 2;
     }
 
-    img#drag6 {
+    .drag6 {
         height: 24.68vh;
         width: 9.51vw;
 
-        position: fixed;
+        position: absolute;
         top: 63.13vh;
         left: 77.37vw;
         z-index: 2;
+    }
+
+    div.culpritFrameInDropArea {
+        background-image: url("../images/Culprit.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    img.suspectDraggedToFrame {
+        height: 100%;
+        width: 100%;
     }
 
     p.possibleSuspectName {
@@ -221,7 +253,7 @@
     }
 
     p#name1DragSuspectsPage {
-        position: fixed;
+        position: absolute;
         top: 65.25vh;
         left: 25.25vw;
         width: 8.84vw;
@@ -230,7 +262,7 @@
     }
 
     p#name2DragSuspectsPage {
-        position: fixed;
+        position: absolute;
         top: 63.39vh;
         left: 49.32vw;
         height: 3,02vh;
@@ -241,7 +273,7 @@
     p#name3DragSuspectsPage {
         width: 5.77vw;
         height: 2.29vh;
-        position: fixed;
+        position: absolute;
         top: 64.14vh;
         left: 69.62vw;
         rotate: -1.12deg;
@@ -252,7 +284,7 @@
         height: 5.82vh;
         rotate: -4.78deg;
 
-        position: fixed;
+        position: absolute;
         left: 12.79vw;
         top: 91.17vh;
     }
@@ -261,7 +293,7 @@
         width: 6.69vw;
         height: 7.38vh;
 
-        position: fixed;
+        position: absolute;
         top: 88.32vh;
         left: 38.04vw;
     }
@@ -270,7 +302,7 @@
         width: 6.69vw;
         height: 7.38vh;
 
-        position: fixed;
+        position: absolute;
         top: 89.64vh;
         left: 58.00vw;
         rotate: -4.17deg;
@@ -280,7 +312,7 @@
         width: 7.86vw;
         height: 6.11vh;
 
-        position: fixed;
+        position: absolute;
         top: 88.58vh;
         left: 78.30vw;
     }
@@ -288,7 +320,7 @@
     img#suspectDraggedToFrame1 {
         width: 12.79vw;
         height: 27.48vh;
-        position: fixed;
+        position: absolute;
         top: 7.89vh;
         left: 23.71vw;
         z-index: 2;
@@ -297,7 +329,7 @@
     img#suspectDraggedToFrame2 {
         width: 12.79vw;
         height: 27.48vh;
-        position: fixed;
+        position: absolute;
         top: 7.89vh;
         left: 43.31vw;
         z-index: 2;
@@ -306,7 +338,7 @@
     img#suspectDraggedToFrame3 {
         width: 12.79vw;
         height: 27.48vh;
-        position: fixed;
+        position: absolute;
         top: 7.89vh;
         left: 62.91vw;
         z-index: 2;
@@ -316,16 +348,18 @@
         z-index: 2;
         width: 12.29vw;
         height: 29.3vh;
-        position: fixed;
+
+        position: absolute;
         top: 67.1vh;
         left: 86.93vw;
+        cursor: pointer;
     }
 
     div#notifyUserIfRightOrWrongOverlay {
         background-color: rgb(217, 217, 217, 0.7);
         height: 100%;
         width: 100%;
-        position: relative;
+        position: absolute;
         z-index: 3;
     }
 
@@ -337,7 +371,7 @@
 
         width: 50.82vw;
         height: 57.25vh;
-        position: fixed;
+        position: absolute;
         top: 20.87vh;
         left: 25.35vw;
         font-family: "Inter";
@@ -347,5 +381,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    img#arrow2DragSuspectsPage {
+        height: 17.5vh;
+        width: 9.8vw;
+
+        position: absolute;
+        top: 53.1vh;
+        left: 60vw;
+        cursor: pointer;
     }
 }
