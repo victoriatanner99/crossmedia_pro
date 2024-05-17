@@ -35,12 +35,21 @@ function renderPoliceAudioFilePage() {
             speechBubble.setAttribute("id", "speechBubble1PoliceCallPage");
             speechBubble.innerHTML = 
             `
-            <p id="textFromCallPoliceCallPage"></p>
+            <p id="textPoliceCallPage"></p>
             <img id="arrowPoliceCallPage" src="images/arrow_4x.png"></img>
             `;
 
             blueBackground.append(lampPost, flowers, speechBubble, chefOfPolice);
 
+            document.querySelector("img#arrowPoliceCallPage").style.visibility = "collapse";
+
+            let policeCall1 = document.createElement("audio");
+            policeCall1.setAttribute("id", "audioPlayer");
+            policeCall1.setAttribute("type", "audio/mpeg");
+            policeCall1.setAttribute("src", "audio/Polis 1.mp3");
+            blueBackground.appendChild(policeCall1);
+
+            startPoliceCall(policeCall1);
 
 
         } else {
@@ -53,5 +62,82 @@ function renderPoliceAudioFilePage() {
             turnMobileDeviceSign.setAttribute("src", "images/flipPhone_512w.png");
             turnMobileDeviceBackground.appendChild(turnMobileDeviceSign);
         }
+    }
+}
+
+function startPoliceCall(audio) {
+    let fullText = "Hallå där! Tack så mycket för hjälpen med att samla ihop de misstänkta. Jag ska hålla förhör med dem nu.";
+    let words = fullText.split(' ');
+    let textContainer = document.getElementById('textPoliceCallPage');
+
+    textContainer.textContent = "";
+    showTextContinuously();
+
+    function showTextContinuously() {
+        
+        audio.addEventListener("loadedmetadata", function() {
+            audio.volume = 0.8;
+            audio.play();
+          
+            let currentWordIndex = 0;
+            const intervalId = setInterval(() => {
+                if (currentWordIndex === words.length) {
+                    clearInterval(intervalId);
+                    document.querySelector("img#arrowPoliceCallPage").style.visibility = "visible";
+                    document.querySelector("img#arrowPoliceCallPage").addEventListener("click", secondPartOfPoliceCall);
+                          
+                } else {
+                    textContainer.textContent += words[currentWordIndex] + ' ';
+                    currentWordIndex++;
+                    
+                }
+            }, 220);
+        });
+    }
+}
+
+function secondPartOfPoliceCall(event) {
+
+    document.querySelector("audio#audioPlayer").remove();
+    document.querySelector("img#arrowPoliceCallPage").style.visibility = "collapse";
+
+    let policeCall2 = document.createElement("audio");
+    policeCall2.setAttribute("id", "audioPlayer");
+    policeCall2.setAttribute("type", "audio/mpeg");
+    policeCall2.setAttribute("src", "audio/Polis 2.mp3");
+    document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
+
+    let audio = policeCall2;
+    let fullText = "Om du mejlar mig på polismastaren@gmail. com så ska jag skicka över materialet från förhören när de är avslutade. Vi hörs sen!";
+    let words = fullText.split(' ');
+    let textContainer = document.getElementById('textPoliceCallPage');
+
+    document.querySelector("div#speechBubble1PoliceCallPage").setAttribute("id", "speechBubble1PoliceCallPage2");
+    textContainer.textContent = "";
+    showTextContinuously();
+
+    function showTextContinuously() {
+        
+        audio.addEventListener("loadedmetadata", function() {
+            audio.volume = 0.8;
+            audio.play();
+          
+            let currentWordIndex = 0;
+            const intervalId = setInterval(() => {
+                if (currentWordIndex === words.length) {
+                    clearInterval(intervalId);
+                    document.querySelector("img#arrowPoliceCallPage").setAttribute("id", "arrowPoliceCallPage2");
+                    document.querySelector("img#arrowPoliceCallPage2").style.visibility = "visible";
+                    document.querySelector("img#arrowPoliceCallPage").addEventListener("click", (event) => {
+                        renderSecondCheckpoint();
+                    });
+                          
+                } else {
+                    textContainer.textContent += words[currentWordIndex] + ' ';
+                    currentWordIndex++;
+                    
+                }
+            }, 220);
+        });
     }
 }

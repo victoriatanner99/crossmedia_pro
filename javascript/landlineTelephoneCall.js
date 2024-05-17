@@ -176,17 +176,17 @@ function startLibrarianVoiceMessage(audio) {
             audio.volume = 0.8;
             audio.play();
             // Beräkna tid per ord, default till 200ms om duration är 0
-            let intervalTime = (audio.duration / words.length * 1000) || 200; 
-
+            //let intervalTime = (audio.duration / words.length * 1000) || 200; 
+            //console.log(intervalTime);
             let currentWordIndex = 0;
             const intervalId = setInterval(() => {
-                if (audio.ended && currentWordIndex === words.length) {
+                if (currentWordIndex === words.length) {
                     clearInterval(intervalId);
 
                     if(document.querySelector("img#continueArrowLibrarianVoiceMessage2") === null) {
                         let continueArrow = document.createElement("img");
                         continueArrow.setAttribute("id", "continueArrowLibrarianVoiceMessage");
-                        continueArrow.setAttribute("src", "images/arrow_512w.png");
+                        continueArrow.setAttribute("src", "images/arrow_4x.png");
                         document.querySelector("div#telephonePageBackground").appendChild(continueArrow);
 
                         continueArrow.addEventListener("click", secondAudioFile);
@@ -202,7 +202,7 @@ function startLibrarianVoiceMessage(audio) {
                     currentWordIndex++;
                     
                 }
-            }, intervalTime);
+            }, 350);
         });
     }
 }

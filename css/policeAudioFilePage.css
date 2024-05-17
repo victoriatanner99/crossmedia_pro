@@ -72,13 +72,58 @@ div#speechBubble1PoliceCallPage {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
+    padding: 9.72% 4.58vw 10.72% 7vw;
+
+    /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
+    /*padding: 35px 10px 24px 25px;*/
+
+}
+
+div#speechBubble1PoliceCallPage2 {
+    grid-row: 2 / 3;
+
+    width:  73.54vw;
+    height: min-content;
+
+    position: relative;
+    left: 6.62vw;
+
+    z-index: 4;
+    line-height: 21px;
+
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    padding: 7.8% 4.58vw 10.72% 5.12vw;
+
+    /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
+    /*padding: 28px 10px 20px 18px;*/
+
+    /*Iphone SE:*/
+    /*padding: 22px 10px 20px 25px*/
 }
 
 img#arrowPoliceCallPage {
     position: absolute;
     top: 67%;
     left: 70%;
-    
+
+    height: 8.5vh;
+    width: 18.8vw;
+
+    cursor: pointer;
+}
+
+img#arrowPoliceCallPage2 {
+    position: absolute;
+    top: 67%;
+    left: 70%;
+
     height: 8.5vh;
     width: 18.8vw;
 
@@ -86,5 +131,9 @@ img#arrowPoliceCallPage {
 }
 
 div#speechBubble1PoliceCallPage > p {
+    margin: 0;
+}
+
+div#speechBubble1PoliceCallPage2 > p {
     margin: 0;
 }
