@@ -72,7 +72,7 @@ div#speechBubble1PoliceCallPage {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 9.72% 4.58vw 10.72% 7vw;
+    padding: 9.72% 4.58vw 9.72% 7vw;
 
     /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
     /*padding: 35px 10px 24px 25px;*/
@@ -104,13 +104,16 @@ div#speechBubble1PoliceCallPage2 {
     /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
     /*padding: 28px 10px 20px 18px;*/
 
+    /*Padding i pixlar bara uppe och nere?*/
+    /*padding: 38px 4.58vw 38px 7vw*/
+
     /*Iphone SE:*/
     /*padding: 22px 10px 20px 25px*/
 }
 
 img#arrowPoliceCallPage {
     position: absolute;
-    top: 67%;
+    top: 66%;
     left: 70%;
 
     height: 8.5vh;

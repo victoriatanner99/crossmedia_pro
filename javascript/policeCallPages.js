@@ -36,7 +36,7 @@ function renderPoliceAudioFilePage() {
             speechBubble.innerHTML = 
             `
             <p id="textPoliceCallPage"></p>
-            <img id="arrowPoliceCallPage" src="images/arrow_4x.png"></img>
+            <img id="arrowPoliceCallPage" src="images/arrow_4x.png">
             `;
 
             blueBackground.append(lampPost, flowers, speechBubble, chefOfPolice);
