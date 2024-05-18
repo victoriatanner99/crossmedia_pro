@@ -1,0 +1,81 @@
+div#backgroundFinalPage {
+    background-image: url("../images/BK.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 2fr 1fr 4fr 1fr;
+}
+
+img#lasseMajaSignFinalPage {
+    height: 18.66vh;
+    width: 75.57vw;
+
+    grid-row: 1 / 2;
+    grid-column: 1;
+    justify-self: left;
+    align-self: center;
+}
+
+h1#headingFinalPage {
+    font-family: "Butterfinger Serif";
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: calc(13 * .01em);
+
+    grid-row: 2 / 3;
+    grid-column: 1;
+    width: 66.41vw;
+    height: 8.22vh;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+img#lasseAndMajaFinalPage {
+    width: 92.37vw;
+    height: 44.37vh;
+    grid-row: 3 / 4;
+    grid-column: 1;
+
+    justify-self: center;
+    align-self: flex-start;
+}
+
+a#linkToSurvey {
+    margin: 0;
+    /*height: 5.87vh;*/
+    /*width: 50.89vw;*/
+    height: 50px;
+    width: 200px;
+    background-color: #3981A2;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    font-family: "Butterfinger Serif";
+    font-size: 20px;
+    letter-spacing: calc(13 * .01em);
+
+    grid-row: 4 / 5;
+    grid-column: 1;
+    align-self: flex-start;
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: absolute;
+    top: 84.74vh;
+    left: 33.33vw;
+    z-index: 2;*/
+}

@@ -1,16 +1,18 @@
 "use strict";
 
 
-renderStartPage();
+//renderStartPage();
 
 //renderTelephonePage();
 
 //renderRebusPage();
 
-//renderDragSuspectsPage();
+renderDragSuspectsPage();
 
 //renderPoliceAudioFilePage();
 
 //renderSecondCheckpoint();
 
 //renderProloguePage();
+
+//renderFinalPage();
