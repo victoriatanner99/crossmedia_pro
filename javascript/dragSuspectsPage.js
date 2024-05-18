@@ -137,18 +137,14 @@ function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
     var dropZone = event.currentTarget;
-    console.log(event);
-    console.log(event.currentTarget);
-    console.log(dropZone);
+  
 
     // Kontrollera att drop-zone inte redan innehåller en bild
     if (dropZone.classList.contains('dropArea') && dropZone.children.length === 1) {
         dropZone.appendChild(document.getElementById(data));
-        console.log(event.currentTarget.children);
 
         for(let i = 0; i < event.currentTarget.children.length; i++) {
-            console.log(event.currentTarget.children[i]);
-            console.log(event.currentTarget.style);
+          
             /*if(event.currentTarget.children[i].classList.contains("greyAreaInFrame")) {
                 event.currentTarget.children[i].style.visibility = "collapse";
                 //event.currentTarget.children[i].remove();
@@ -166,7 +162,6 @@ function drop(event) {
             }
             
         }
-        console.log(event.currentTarget.children);
 
         for(let i = 0; i < event.currentTarget.children.length; i++) {
             if(event.currentTarget.children[i].classList.contains("draggableImage")) {
@@ -179,9 +174,7 @@ function drop(event) {
                 }
                 event.currentTarget.children[i].classList.add("suspectDraggedToFrame");
                 let suspectId = event.currentTarget.children[i].id;
-                console.log(suspectId);
                 event.currentTarget.children[i].classList.remove(`${suspectId}`);
-                console.log(event.currentTarget.children[i]);
 
                 /*let replacementElement = document.createElement("div");
                 replacementElement.classList.add(suspectId);
@@ -240,7 +233,6 @@ function drop(event) {
         document.getElementById(data).classList.add(data);
         //document.querySelector(`div#draggableImages > div.${data}`).remove();
 
-        console.log(dropZone.children);
         const dropAreas = document.querySelectorAll('.dropArea');
         for(let i = 0; i < dropAreas.length; i++) {
             if(dropAreas[i].children.length === 0) {
@@ -303,9 +295,7 @@ function rightOrWrongSuspects(event) {
     function checkSelection() {
         const dropAreas = document.querySelectorAll('.dropArea img');
         console.log(dropAreas);
-        //const isCorrect = Array.from(dropAreas).every(img => images[parseInt(img.id.replace('drag', ''))].correct);
-        
-        //console.log(isCorrect);
+       
         console.log(dropAreas[1].attributes);
 
         let suspectImagesArray = [];

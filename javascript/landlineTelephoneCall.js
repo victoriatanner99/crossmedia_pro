@@ -175,9 +175,7 @@ function startLibrarianVoiceMessage(audio) {
         audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
-            // Beräkna tid per ord, default till 200ms om duration är 0
-            //let intervalTime = (audio.duration / words.length * 1000) || 200; 
-            //console.log(intervalTime);
+           
             let currentWordIndex = 0;
             const intervalId = setInterval(() => {
                 if (currentWordIndex === words.length) {
@@ -202,7 +200,7 @@ function startLibrarianVoiceMessage(audio) {
                     currentWordIndex++;
                     
                 }
-            }, 350);
+            }, 200);
         });
     }
 }
