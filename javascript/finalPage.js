@@ -13,7 +13,7 @@ function renderFinalPage(event) {
 
     let heading = document.createElement("h1");
     heading.setAttribute("id", "headingFinalPage");
-    heading.textContent = "Tack för att du spelat!";
+    heading.textContent = "Äntligen är mysteriet löst. Utan dig hade det inte gått. Tack för hjälpen!";
     background.appendChild(heading);
 
     let lasseAndMaja = document.createElement("img");
