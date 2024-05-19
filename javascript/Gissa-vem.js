@@ -1,29 +1,32 @@
 const images = [
-    { src: './images/polismaster 1_512w.png', correct: false },
-    { src: './images/BK.png', correct: true },
-    { src: './images/polismaster 1_512w.png', correct: false }
-   
+    { src: './images/prästen 1.png', correct: false, text: 'Namn: Prästen Ålder: Vill inte säga Misstänktsamt: Verkar ha ekonomiska problem. Stor rock med många fickor. ' },
+    { src: './images/welmer_frisk 1.png', correct: true, text: 'Namn: Welmer Frisk Ålder: 34 år Misstänktsamt: Var personen som lånade boken senast. Tidigare dömd för snatteri.' },
+    { src: './images/beatrice_image.png', correct: false, text: 'Namn: Beatrice Holm Ålder: 73 år Misstänktsamt: Bitter och tycker att hennes bok är mycket bättre än “Under Himmelens fäste”' }
 ];
 
 function loadImages() {
     const container = document.getElementById('images');
     container.innerHTML = ''; // Rensa tidigare bilder
+
     images.forEach((image, index) => {
+        const box = document.createElement('div');
+        box.classList.add('image-box');
+
         const img = document.createElement('img');
         img.src = image.src;
         img.style.width = '100px'; // Storlek på bild
         img.style.height = '100px';
         img.style.margin = '10px';
         img.onclick = () => checkAnswer(index);
-        container.appendChild(img);
+
+        const text = document.createElement('p');
+        text.textContent = image.text;
+
+        box.appendChild(img);
+        box.appendChild(text);
+        container.appendChild(box);
     });
 }
-
-/* function checkAnswer(index) {
-    const message = images[index].correct ? "Rätt svar!" : "Fel svar, försök igen!";
-    alert(message);
-    document.getElementById('next').style.display = images[index].correct ? 'block' : 'none';
-} */
 
 document.getElementById('next').onclick = function() {
     // Här kan du ladda nästa sida eller nästa fråga
@@ -49,7 +52,6 @@ function checkAnswer(index) {
         }
     };
 }
-
 
 // Initiera spelet
 loadImages();
