@@ -72,3 +72,11 @@ button {
     cursor: pointer;
 }
 
+.arrow {
+    position: absolute;
+    bottom: 20px; /* Justera vertikal placering från botten */
+    left: 20px; /* Justera horisontell placering från vänster */
+    width: 40px; /* Justera bredd på bilden */
+    height: auto; /* Behåll bildförhållande */
+}
+
