@@ -29,7 +29,7 @@ function renderPoliceAudioFilePage() {
 
             let chefOfPolice = document.createElement("img");
             chefOfPolice.setAttribute("id", "chefOfPolicePoliceCallPage");
-            chefOfPolice.setAttribute("src", "images/Polismästaren.png")
+            chefOfPolice.setAttribute("src", "images/Polismastaren.png")
 
             let speechBubble = document.createElement("div");
             speechBubble.setAttribute("id", "speechBubble1PoliceCallPage");
@@ -108,7 +108,7 @@ function secondPartOfPoliceCall(event) {
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
-    let fullText = "Om du mejlar mig på polismastaren@gmail. com så ska jag skicka över materialet från förhören när de är avslutade. Vi hörs sen!";
+    let fullText = "Gå till mitt arbetsrum på OR:E422 och skicka ett mail till mig så ska jag skicka över materialet från förhören när de är avslutade. Vi hörs sen!";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
 

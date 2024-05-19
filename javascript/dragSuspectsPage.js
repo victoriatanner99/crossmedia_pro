@@ -289,7 +289,10 @@ function setupGame() {
 function rightOrWrongSuspects(event) {
 
     let imagesArray = images;
+    event.stopPropagation();
+    /*if(event.currentTarget === event.originalTarget) {
 
+    }*/
     checkSelection();
 
     function checkSelection() {

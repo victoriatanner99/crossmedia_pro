@@ -31,22 +31,17 @@ function explainHowToListen(event) {
     if(!document.querySelector("div#overlayTelephonePage")) {
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "overlayTelephonePage");
-        document.querySelector("body").appendChild(overlay);
-        document.querySelector("div#topQuestionButtonTelephonePage").style.zIndex = 1;
+        document.querySelector("div#telephonePageBackground").appendChild(overlay);
 
         let infoContainer = document.createElement("div");
         infoContainer.setAttribute("id", "infoContainerTelephonePage");
         overlay.appendChild(infoContainer);
-        let infoContainerOverlay = document.createElement("div");
-        infoContainerOverlay.setAttribute("id", "infoContainerOverlay");
 
         infoContainer.innerHTML = 
         `
         <p id="textInfoBoxTelephonePage">Tryck på telefonen <br>  
         för att avlyssna röstmeddelandet</p> 
         `;
-
-        infoContainer.appendChild(infoContainerOverlay);
 
     } else {
         document.querySelector("div#overlayTelephonePage").remove();
@@ -73,62 +68,72 @@ function telephoneStartsToRing(audio) {
     vibratingIcon.classList.add('vibratingTelephone');
     vibratingIcon.style.animationPlayState = "paused";
 
-    setTimeout(function() {
-        vibratingIcon.style.animationPlayState = "running";
-    }, 600);
+    audio.addEventListener("loadedmetadata", function() {
 
-   
-    let syncAnimationToRingtone = setInterval(syncToRingtone, 1700);
-
-    function syncToRingtone() {
-        if(vibratingIcon.style.animationPlayState === "paused") {
+        setTimeout(function() {
             vibratingIcon.style.animationPlayState = "running";
+        }, 600);
+    });
 
-        } else {
-            vibratingIcon.style.animationPlayState = "paused";
+    /*audio.addEventListener("loadedmetadata", function() {
 
-        }
+        setTimeout(function() {
+            vibratingIcon.style.animationPlayState = "running";
+        }, 600);
 
-        stopInterval();
-    }
-
-    let intervalIndex = 0;
-    function stopInterval() {
-        intervalIndex++;
-
-        
-        clearInterval(syncAnimationToRingtone);
-
-        if(intervalIndex === 1) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1760);
-
-        } else if(intervalIndex === 2) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1340);
-
-        } else if(intervalIndex === 3) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1650);
-
-        } else if(intervalIndex === 4) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1480);
-
-        } else if(intervalIndex === 5) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1580);
-
-        } else if(intervalIndex === 6) {
-            syncAnimationToRingtone = setInterval(syncToRingtone, 1400);
-
-            intervalIndex = 0;
-        }
-    }
     
+        let syncAnimationToRingtone = setInterval(syncToRingtone, 1700);
+
+        function syncToRingtone() {
+            if(vibratingIcon.style.animationPlayState === "paused") {
+                vibratingIcon.style.animationPlayState = "running";
+
+            } else {
+                vibratingIcon.style.animationPlayState = "paused";
+
+            }
+
+            stopInterval();
+        }
+
+        let intervalIndex = 0;
+        function stopInterval() {
+            intervalIndex++;
+
+            
+            clearInterval(syncAnimationToRingtone);
+
+            if(intervalIndex === 1) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1760);
+
+            } else if(intervalIndex === 2) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1340);
+
+            } else if(intervalIndex === 3) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1650);
+
+            } else if(intervalIndex === 4) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1480);
+
+            } else if(intervalIndex === 5) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1580);
+
+            } else if(intervalIndex === 6) {
+                syncAnimationToRingtone = setInterval(syncToRingtone, 1400);
+
+                intervalIndex = 0;
+            }
+        } 
+    }); */
+
     vibratingIcon.addEventListener('click', () => {
         vibratingIcon.classList.remove("vibratingTelephone");
-        audio.setAttribute("src", "audio/karin_text1.mp3");
+        audio.setAttribute("src", "audio/Karin1.m4a");
         audio.removeEventListener("ended", stopAudio);
-        clearInterval(syncAnimationToRingtone);
+        //clearInterval(syncAnimationToRingtone);
 
         startLibrarianVoiceMessage(audio); 
-    });   
+    }); 
 }
 
 function startLibrarianVoiceMessage(audio) {
@@ -138,11 +143,31 @@ function startLibrarianVoiceMessage(audio) {
 
     if(document.querySelector("img#continueArrowLibrarianVoiceMessage") !== null) {
         document.querySelector("img#continueArrowLibrarianVoiceMessage").setAttribute("id", "continueArrowLibrarianVoiceMessage2");
-        document.querySelector("img#continueArrowLibrarianVoiceMessage2").style.visibility = "hidden";
-        fullText = "Det är den mest värdefulla boken i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 0701234….";
+        document.querySelector("img#continueArrowLibrarianVoiceMessage2").style.visibility = "collapse";
+        fullText = "Det är den mest värdefulla boken i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 073777….";
         words = fullText.split(' ');
         document.querySelector("div#voiceMessageFromLibrarian").setAttribute("id", "voiceMessageFromLibrarian2");
-        textContainer = document.getElementById("voiceMessageFromLibrarian2");
+        textContainer = document.getElementById("textLibrarianCallPages");
+        textContainer.textContent = "";
+
+        audio.addEventListener("loadedmetadata", function() {
+            audio.volume = 0.8;
+            audio.play();
+           
+            let currentWordIndex = 0;
+            const intervalId = setInterval(() => {
+                if (currentWordIndex === words.length) {
+                    clearInterval(intervalId);
+                    document.querySelector("img#continueArrowLibrarianVoiceMessage2").style.visibility = "visible";
+                    document.querySelector("img#continueArrowLibrarianVoiceMessage2").removeEventListener("click", secondAudioFile);
+                    document.querySelector("img#continueArrowLibrarianVoiceMessage2").addEventListener("click", voiceMessageGotCutOff);
+                    
+                } else {
+                    textContainer.textContent += words[currentWordIndex] + ' ';
+                    currentWordIndex++;
+                }
+            }, 360);
+        });
 
     } else {
         document.querySelector("div#topQuestionButtonTelephonePage").remove();
@@ -153,25 +178,29 @@ function startLibrarianVoiceMessage(audio) {
 
         let voiceMessageBubble = document.createElement("div");
         voiceMessageBubble.setAttribute("id", "voiceMessageFromLibrarian");
-        document.querySelector("div#telephonePageBackground").appendChild(voiceMessageBubble);
+
+        voiceMessageBubble.innerHTML = 
+        `
+        <p id="textLibrarianCallPages"></p>
+        <img id="continueArrowLibrarianVoiceMessage" src="images/arrow_4x.png">
+        `;
+
+        overlayVoiceMessage.appendChild(voiceMessageBubble);
+
+        document.querySelector("img#continueArrowLibrarianVoiceMessage").style.visibility = "collapse";
 
         let librarianKarin = document.createElement("img");
         librarianKarin.setAttribute("id", "librarianKarinVoiceMessage");
         librarianKarin.setAttribute("alt", "Image of librarian Karin");
         librarianKarin.setAttribute("src", "images/librarian_1x.png");
-        document.querySelector("div#telephonePageBackground").appendChild(librarianKarin);
+        overlayVoiceMessage.appendChild(librarianKarin);
 
         fullText = "Hej det är Karin Fahlén, bibliotekarie på Orkanen! Jag behöver er hjälp! Någon har stulit boken “Under himmelens fäste”.";
         words = fullText.split(' ');
-        textContainer = document.getElementById('voiceMessageFromLibrarian');
-    }
-    
-    textContainer.textContent = "";
-    
-    showTextContinuously();
+        textContainer = document.getElementById('textLibrarianCallPages');
 
-    function showTextContinuously() {
-        
+        textContainer.textContent = "";
+    
         audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
@@ -180,27 +209,15 @@ function startLibrarianVoiceMessage(audio) {
             const intervalId = setInterval(() => {
                 if (currentWordIndex === words.length) {
                     clearInterval(intervalId);
-
-                    if(document.querySelector("img#continueArrowLibrarianVoiceMessage2") === null) {
-                        let continueArrow = document.createElement("img");
-                        continueArrow.setAttribute("id", "continueArrowLibrarianVoiceMessage");
-                        continueArrow.setAttribute("src", "images/arrow_4x.png");
-                        document.querySelector("div#telephonePageBackground").appendChild(continueArrow);
-
-                        continueArrow.addEventListener("click", secondAudioFile);
-                        
-                    } else {
-                        document.querySelector("img#continueArrowLibrarianVoiceMessage2").style.visibility = "visible";
-                        document.querySelector("img#continueArrowLibrarianVoiceMessage2").removeEventListener("click", secondAudioFile);
-                        document.querySelector("img#continueArrowLibrarianVoiceMessage2").addEventListener("click", voiceMessageGotCutOff);
-                    }
+                    document.querySelector("img#continueArrowLibrarianVoiceMessage").style.visibility = "visible";
+                    document.querySelector("img#continueArrowLibrarianVoiceMessage").addEventListener("click", secondAudioFile);
                     
                 } else {
                     textContainer.textContent += words[currentWordIndex] + ' ';
                     currentWordIndex++;
                     
                 }
-            }, 200);
+            }, 440);
         });
     }
 }
@@ -210,7 +227,7 @@ function secondAudioFile(event) {
     let audio2 = document.createElement("audio");
     audio2.setAttribute("id", "audioPlayer");
     audio2.setAttribute("type", "audio/mpeg");
-    audio2.setAttribute("src", "audio/karin_text2.mp3");
+    audio2.setAttribute("src", "audio/Karin2.aac");
     document.querySelector("div#telephonePageBackground").appendChild(audio2);
 
     startLibrarianVoiceMessage(audio2);
@@ -218,9 +235,9 @@ function secondAudioFile(event) {
 
 
 function voiceMessageGotCutOff(event) {
-    document.querySelector("div#telephonePageBackground").remove();
 
     let body = document.querySelector("body");
+    body.innerHTML = "";
     let introPageContainer = document.createElement("div");
     introPageContainer.setAttribute("id", "callKarinPageContainer");
     body.appendChild(introPageContainer);

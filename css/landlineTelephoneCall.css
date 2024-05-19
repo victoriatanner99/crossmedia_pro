@@ -8,15 +8,20 @@ div#telephonePageBackground {
     background-repeat: no-repeat;
 
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 div#topQuestionButtonTelephonePage {
     height: 36px;
     width: 38px;
+    z-index: 2;
    
     position: absolute;
     top: 40px;
-    left: 320px;
+    right: 35px;
     cursor: pointer;
  
     border-radius: 50px;
@@ -39,10 +44,13 @@ div#overlayTelephonePage {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 div#infoContainerTelephonePage {
-    background-image: url("../images/postIt_512w.png");
+    background-image: url("../images/Group\ 8_4x.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,18 +59,12 @@ div#infoContainerTelephonePage {
     height: 148.57px;
     position: absolute;
     top: 88px;
-    left: 115px;
+    right: 21px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-div#infoContainerOverlay {
-    background-color: #FFFFFF;
-    width: 200px;
-    height: 115px;
-    border-radius: 12%;
+    z-index: 2;
 }
 
 p#textInfoBoxTelephonePage {
@@ -71,25 +73,22 @@ p#textInfoBoxTelephonePage {
 
     height: 60px;
     width: 156px;
-    position: absolute;
     margin: 0;
-    top: 47px;
-    left: 54px;
     font-size: 16px;
-    z-index: 1;
+    z-index: 3;
 }
 
 div#landlineTelephone {
-    background-image: url("../images/landlineTelephone_512h.png");
+    background-image: url("../images/Telefon_4x.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
-    height: 404.07px;
-    width: 318.62px;
+    height: 47.43%;
+    width: 81.07%;
     position: absolute;
-    top: 262px;
-    left: 38px;
+    top: 30.75vh;
+    left: 9.67vw;
     cursor: pointer;
 }
 
@@ -114,88 +113,110 @@ div#overlayLibrarianMissedCallPage {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.2fr 1fr;
+    z-index: 2;
+    gap: 17px;
+
 }
 
 div#voiceMessageFromLibrarian {
-    width: 74.05%;
+    width: 291px;
     height: min-content;
     background-color: #010401;
     border: 5px solid #888586;
     border-radius: 15px;
     box-sizing: border-box;
 
-    position: fixed;
-    top: 27.46%;
-    left: 9.16%;
-    z-index: 1;
+    position: relative;
+    left: 9vw;
+    z-index: 3;
+
+    grid-row: 1;
+    align-self: flex-end;
 
     color: #FFFFFF;
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 5.52vh 6.87vw 0 6.87vw; /*Måste lägga till padding där nere*/
-    /*padding: 38px 27px 0 27px;*/
+    padding: 37px 20px 37px 30px; 
     line-height: 21px;
 
 }
 
 div#voiceMessageFromLibrarian2 {
     width: 262px;
-    height: 265px;
+    height: min-content;
     background-color: #010401;
     border: 5px solid #888586;
     border-radius: 15px;
     box-sizing: border-box;
 
-    position: fixed;
-    top: 206px;
-    left: 9.16%;
-    z-index: 1;
+    position: relative;
+    left: 9vw;
+    z-index: 3;
+
+    grid-row: 1;
+    align-self: flex-end;
 
     color: #FFFFFF;
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    /*padding: 5.52vh 6.87vw 0 6.87vw;*/
-    padding: 31px 19px 0 27px;
+    padding: 22px 18px 22px 24px;
     line-height: 21px;
+}
+
+div#voiceMessageFromLibrarian > p {
+    margin: 0;
+}
+
+div#voiceMessageFromLibrarian2 > p {
+    margin: 0;
 }
 
 img#continueArrowLibrarianVoiceMessage {
     /*height: 8.07%;
     width: 18.34%;*/
-    height: 68.73px;
-    width: 72.08px;
+    height: 78px;
+    width: 70px;
 
-    z-index: 1;
+    z-index: 4;
+
     cursor: pointer;
     position: absolute;
-    top: 46.6vh;
-    left: 58.72%;
+    top: 153px;
+    left: 209px;
 }
 
 img#continueArrowLibrarianVoiceMessage2 {
     /*height: 8.07%;
     width: 18.34%;*/
-    height: 68.73px;
-    width: 72.08px;
+    height: 78px;
+    width: 70px;
 
-    z-index: 1;
+    z-index: 4;
     cursor: pointer;
     position: absolute;
-    top: 47.4vh;
-    left: 210.34px;
+    top: 183px;
+    left: 177.3px;
 }
 
 img#librarianKarinVoiceMessage {
     height: 212px;
     width: 226px;
 
-    position: absolute;
-    top: 56.53%;
-    right: 0;
+    z-index: 3;
+
+    grid-row: 2;
+    justify-self: flex-end;
+    align-self: flex-start;
 }
 
 /*Lasse och Maja sida efter att röstmeddelandet från Karin bröts*/

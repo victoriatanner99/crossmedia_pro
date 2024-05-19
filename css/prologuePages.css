@@ -7,7 +7,11 @@ div#backgroundProloguePage {
     position: relative;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+
+    /*display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 5vh 20vh 20vh 20vh 30vh*/
 
     display: flex;
     flex-direction: column;
@@ -20,6 +24,7 @@ img#lightsProloguePage {
     position: absolute;
     top: -0.47vh;
     left: -60.31vw;
+    /*grid-row: 1;*/
 }
 
 h1#headingProloguePage {
@@ -30,7 +35,9 @@ h1#headingProloguePage {
     margin: 0;
     position: absolute;
     top: 20.19vh;
-    left: 13.23vw;
+    /*left: 13.23vw;*/
+
+    /*grid-row: 2;*/
 }
 
 button#guessButtonProloguePage {
@@ -50,8 +57,10 @@ button#guessButtonProloguePage {
 
     position: absolute;
     top: 84.74vh;
-    left: 33.33vw;
+    /*left: 33.33vw;*/
     z-index: 2;
+
+    /*grid-row: 6;*/
 }
 
 div.priestInfoProloguePage {
@@ -64,9 +73,11 @@ div.priestInfoProloguePage {
     position: absolute;
     top: 26.17vh;
     /*left: 8.40vw;*/
-    width: 81.93%;
+    width: 81.93vw;
     height: 16%;
     border-radius: 6px;
+
+    /*grid-row: 3;*/
 }
 
 div.welmerFriskInfoProloguePage {
@@ -82,6 +93,8 @@ div.welmerFriskInfoProloguePage {
     width: 81.93%;
     height: 16%;
     border-radius: 6px;
+
+    /*grid-row: 4;*/
 }
 
 div.beatriceHolmInfoProloguePage {
@@ -97,6 +110,8 @@ div.beatriceHolmInfoProloguePage {
     width: 81.93%;
     height: 16%;
     border-radius: 6px;
+
+    /*grid-row: 5;*/
 }
 
 div#clickedSuspectProloguePage {
@@ -111,7 +126,7 @@ div#backgroundConversationPrologues {
     background-color: #D6E5E7;
 
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 
     display: grid;
     grid-template-columns: 100vw;
@@ -159,7 +174,6 @@ img#chefOfPoliceConversationPrologues {
 }
 
 /*Beatrice prologue below*/
-
 img#beatriceConversationPrologue {
     position: absolute;
     top: 63vh;
