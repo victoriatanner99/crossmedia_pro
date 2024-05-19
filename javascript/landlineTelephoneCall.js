@@ -144,7 +144,7 @@ function startLibrarianVoiceMessage(audio) {
     if(document.querySelector("img#continueArrowLibrarianVoiceMessage") !== null) {
         document.querySelector("img#continueArrowLibrarianVoiceMessage").setAttribute("id", "continueArrowLibrarianVoiceMessage2");
         document.querySelector("img#continueArrowLibrarianVoiceMessage2").style.visibility = "collapse";
-        fullText = "Det är den mest värdefulla boken i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 073777….";
+        fullText = "Det är den mest värdefulla boken i i hela biblioteket, ni måste hjälpa mig hitta tjuven! Snälla ring tillbaka till mig så ska jag förklara mer, mitt nummer är 070-585….";
         words = fullText.split(' ');
         document.querySelector("div#voiceMessageFromLibrarian").setAttribute("id", "voiceMessageFromLibrarian2");
         textContainer = document.getElementById("textLibrarianCallPages");

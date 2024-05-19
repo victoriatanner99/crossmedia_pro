@@ -138,7 +138,7 @@ p#secondParagraphInfoBox {
 }
 
 div#createUsernameContainer {
-    height: 85.65vh;
+    /*height: 85.65vh;
     width: 94.82vw;
     background-image: url("../images/Group\ 5_512w.png");
     background-size: cover;
@@ -147,7 +147,21 @@ div#createUsernameContainer {
 
     position: absolute;
     top: 9.53vh;
+    left: 2.80vw;*/
+
+    height: 85.65vh;
+    width: 94.82vw;
+    background-image: url("../images/Group\ 5_512w.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 80px;
     left: 2.80vw;
+
+    display: flex;
+    align-items: center;
 }
 
 div#createUsernameContainer {
@@ -173,7 +187,7 @@ h2#chooseUsernameStartPage {
 
 .usernameInputs {
     height: 5.87vh;
-    width: 64.63vw;
+    width: 55.6%;
     border: 2px solid #D7D7D7;
     border-radius: 6px;
     font-family: "Inter";
@@ -184,7 +198,7 @@ h2#chooseUsernameStartPage {
 }
 
 input#firstNameInput {
-    margin: 3.52vh 16.54vw 0 16.54vw;
+    margin: 35px 16.54vw 0 16.54vw;
 }
 
 input#lastNameInput {
@@ -192,7 +206,7 @@ input#lastNameInput {
 }
 
 button#saveUsernameButton {
-    margin: 7.16vh 31.81vw 0 31.81vw;
+    margin: 45px 31.81vw 0 31.81vw;
     height: 6.52vh;
     width: 33.52vw;
     background-color: #3981A2;
@@ -204,4 +218,5 @@ button#saveUsernameButton {
 
     font-family: "Butterfinger Serif";
     font-size: 22px;
+    letter-spacing: calc(13 * .01em);
 }
