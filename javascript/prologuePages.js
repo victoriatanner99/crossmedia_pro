@@ -109,7 +109,8 @@ function talkToBeatrice() {
 
     let beatrice = document.createElement("img");
     beatrice.setAttribute("id", "beatriceConversationPrologue");
-    beatrice.setAttribute("src", "images/beatriceProloguePage.png");
+    beatrice.setAttribute("src", "images/BeatriceProloguePage.png");
+    console.log(beatrice);
 
     let speechBubble = document.createElement("div");
     speechBubble.setAttribute("id", "speechBubbleBeatriceConversation1");

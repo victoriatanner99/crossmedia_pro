@@ -7,10 +7,10 @@ function renderStartPage() {
     body.appendChild(startPageBackgroundDiv);
 
     let lasseMajaImageContainer = document.createElement("div");
-    lasseMajaImageContainer.setAttribute("id", "lasseMajaImageContainerStartP");
+    lasseMajaImageContainer.setAttribute("id", "lasseMajaImageContainerStartPage");
     startPageBackgroundDiv.appendChild(lasseMajaImageContainer);
     let lasseMajaImage = document.createElement("img");
-    lasseMajaImage.setAttribute("id", "lasseMajaImageStartP");
+    lasseMajaImage.setAttribute("id", "lasseMajaImageStartPage");
     lasseMajaImage.setAttribute("src", "images/lassemaja_512h.png");
     lasseMajaImageContainer.appendChild(lasseMajaImage);
 
@@ -40,7 +40,7 @@ function renderStartPage() {
 }
 
 function displayRegisterInputs(event) {
-    document.querySelector("div#lasseMajaImageContainerStartP").remove();
+    document.querySelector("div#lasseMajaImageContainerStartPage").remove();
     document.querySelector("div#welcomeContainer").remove();
     let createUsernameContainer = document.createElement("div");
     createUsernameContainer.setAttribute("id", "createUsernameContainer");
@@ -94,7 +94,7 @@ function explainTheGame(event) {
     if(!document.querySelector("div#overlayStartPage")) {
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "overlayStartPage");
-        document.querySelector("body").appendChild(overlay);
+        document.querySelector("div#startPageBackground").appendChild(overlay);
         document.querySelector("div#topQuestionButton").style.zIndex = 1;
 
         let infoContainer = document.createElement("div");

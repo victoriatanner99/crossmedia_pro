@@ -4,7 +4,15 @@ div#introPageContainer {
     background-color: #D6E5E7;
 
     position: relative;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 1.6fr
 }
 
 div#introPageContainerOverlay {
@@ -15,6 +23,9 @@ div#introPageContainerOverlay {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
 }
 
 img#leafsImageIntroPage {
@@ -23,8 +34,9 @@ img#leafsImageIntroPage {
 
     position: absolute;
     top: 0;
-    left: -26.21vw;
+    left: -24.2vw;
     overflow: hidden;
+    z-index: 1;
 }
 
 img#lasseMajaSignIntroPage {
@@ -34,20 +46,25 @@ img#lasseMajaSignIntroPage {
     position: absolute;
     top: 10.56vh;
     left: 0;
+    z-index: 2;
 }
 
 img#lasseMajaImageIntroPage {
     width: 66.16vw;
     height: 39.08vh;
 
-    position: absolute;
+    /*position: absolute;
     top: 60.92vh;
-    left: 28.75vw;
-    z-index: 1;
+    left: 28.75vw;*/
+    z-index: 4;
+
+    grid-row: 3;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 div#speechBubbleIntroPage {
-    width:  66.16vw;
+    width: 260px;
     height: min-content;
     background-color: #010401;
     border: solid #888586 5px;
@@ -55,28 +72,26 @@ div#speechBubbleIntroPage {
     box-sizing: border-box;
     color: #FFFFFF;
     font-family: "Butterfinger Serif";
-    padding: 3.23vh 4.33vw;
 
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
     line-height: 21px;
-    /*padding: 27.5px 17px 27.5px 23px;*/
+    padding: 27.5px 17px 27.5px 23px;
 
-    position: absolute;
-    /*top: 378px;*/
+    position: relative;
     left: 6.11vw;
-    bottom: 38.15vh;
-    z-index: 1;
+    z-index: 4;
+
+    grid-row: 2;
+    align-self: flex-end;
 }
 
 div#speechBubbleIntroPage2 {
-    width: 66.16vw;
+    width: 262px;
     height: min-content;
-    position: absolute;
-    /*top: 250px;*/
+    position: relative;
     left: 6.11vw;
-    bottom: 38.15vh;
-    z-index: 1;
+    z-index: 4;
     line-height: 21px;
 
     background-color: #010401;
@@ -87,18 +102,17 @@ div#speechBubbleIntroPage2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    /*padding: 2.82vh 3.56vw 0 6.11vw;*/
-    padding: 19px 17px 23px 25px;
+    padding: 21px 17px 21px 25px;
+    grid-row: 2;
+    align-self: flex-end;
 }
 
 div#speechBubbleIntroPage3 {
     height: min-content;
-    width: 66.16vw;
-    position: absolute;
-    /*top: 326px;*/
+    width: 260px;
+    position: relative;
     left: 6.11vw;
-    bottom: 38.15vh;
-    z-index: 1;
+    z-index: 4;
     line-height: 21px;
 
     background-color: #010401;
@@ -111,19 +125,36 @@ div#speechBubbleIntroPage3 {
     letter-spacing: calc(13 * .01em);
     /*padding: 2.93vh 5.09vw 0 6.11vw;*/
     padding: 22px 20px 21px 20px;
+    grid-row: 2;
+    align-self: flex-end;
+}
+
+div#speechBubbleIntroPage > p {
+    margin: 0;
+}
+
+div#speechBubbleIntroPage2 > p {
+    margin: 0;
+}
+
+div#speechBubbleIntroPage3 > p {
+    margin: 0;
 }
 
 /*Pilen i pratbubblan nedan*/
 /*För varje sida*/
 img#continueArrowIntroPage {
-    z-index: 1;
+    z-index: 5;
     cursor: pointer;
 
     position: absolute;
-    top: 53.29vh;
-    left: 50.38vw;
+    top: 70px;
+    left: 169px;
     height: 78px;
     width: 70px;
+
+    /*height: 8.5vh;
+    width: 16.8vw;*/
 
     /*
     Värden från Figma nedan (som inte blir rätt):
@@ -136,23 +167,23 @@ img#continueArrowIntroPage {
 }
 
 img#continueArrowIntroPage2 {
-    z-index: 1;
+    z-index: 5;
     cursor: pointer;
   
     position: absolute;
-    top: 53.29vh;
-    left: 50.38vw;
-    height: 9.15vh;
-    width: 18.28vw;
+    top: 203px;
+    left: 177px;
+    height: 78px;
+    width: 70px;
 }
 
 img#continueArrowIntroPage3 {
-    z-index: 1;
+    z-index: 5;
     cursor: pointer;
   
     position: absolute;
-    top: 53.29vh;
-    left: 50.38vw;
-    height: 9.15vh;
-    width: 17.81vw;
+    top: 120px;
+    left: 177px;
+    height: 78px;
+    width: 70px;
 }

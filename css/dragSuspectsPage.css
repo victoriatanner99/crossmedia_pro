@@ -6,13 +6,17 @@
         background-position: center;
         background-repeat: repeat-x;
     
-        height: 120%;
+        height: 100%;
         width: 100%;
         position: relative;
+        overflow-x: hidden;
 
         display: grid;
         grid-template-rows: auto 62vh;
         grid-template-columns: 100%;
+
+        overscroll-behavior: none;
+
     }
 
     div#draggableImages {
