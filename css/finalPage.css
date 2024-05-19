@@ -26,17 +26,22 @@ img#lasseMajaSignFinalPage {
 
 h1#headingFinalPage {
     font-family: "Butterfinger Serif";
-    font-size: 30px;
+    font-size: 29px;
     text-align: center;
     margin: 0;
     letter-spacing: calc(13 * .01em);
+    color: white;
 
     grid-row: 2 / 3;
     grid-column: 1;
-    width: 66.41vw;
-    height: 8.22vh;
+    width: 67vw;
+    height: 13.22vh;
     justify-self: center;
     align-self: flex-end;
+    background-color: black;
+    border-radius: 20px;
+    border: solid 10px #888586;
+    padding: 18px;
 }
 
 img#lasseAndMajaFinalPage {
