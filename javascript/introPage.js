@@ -43,7 +43,15 @@ function renderIntroPage() {
 }
 
 function dynamicSpeechBubble(paragraph) {
-    
+
+    let audio = document.createElement("audio");
+    audio.setAttribute("id", "audioPlayer");
+    audio.setAttribute("type", "audio/mpeg");
+    audio.setAttribute("src", "audio/Lasse samtal 1.mp3");
+    document.querySelector("div#introPageContainer").appendChild(audio);
+
+    audio.play();
+
     let firstStringArray = "Hej! Lasse & Maja här, från LasseMajas Detektivbyrå!".split(" ");
 
     let i = 0;
@@ -57,11 +65,14 @@ function dynamicSpeechBubble(paragraph) {
             paragraph.innerHTML += firstStringArray[i] + " ";
         }
         i++;
-    }, 100);
+    }, 250);
 }
 
 function nextIntroPage(event) {
     if(event.currentTarget.parentNode.id === "speechBubbleIntroPage") {
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Lasse samtal 2.mp3");
+        document.querySelector("audio#audioPlayer").play();
+
         document.querySelector("div#speechBubbleIntroPage").setAttribute("id", "speechBubbleIntroPage2");
         document.querySelector("p#textIntroPages").innerHTML = "";
         document.querySelector("img#continueArrowIntroPage").style.visibility = "hidden";
@@ -80,8 +91,11 @@ function nextIntroPage(event) {
                 document.querySelector("p#textIntroPages").innerHTML += introPage2TextArray[i] + " ";
             }
             i++;
-        }, 100);
+        }, 200);
     } else {
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/LasseMaja3.mp3");
+        document.querySelector("audio#audioPlayer").play();
+
         document.querySelector("div#speechBubbleIntroPage2").setAttribute("id", "speechBubbleIntroPage3");
         document.querySelector("p#textIntroPages").innerHTML = "";
 
@@ -103,6 +117,6 @@ function nextIntroPage(event) {
                 document.querySelector("p#textIntroPages").innerHTML += introPage3TextArray[i] + " ";
             }
             i++;
-        }, 100);
+        }, 250);
     } 
 }

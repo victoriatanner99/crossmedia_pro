@@ -45,8 +45,8 @@ function renderPoliceAudioFilePage() {
 
             let policeCall1 = document.createElement("audio");
             policeCall1.setAttribute("id", "audioPlayer");
-            policeCall1.setAttribute("type", "audio/x-m4a");
-            //policeCall1.setAttribute("src", "audio/Polismästaren1.mp3");
+            policeCall1.setAttribute("type", "audio/mpeg");
+            policeCall1.setAttribute("src", "audio/Polismastaren 1.mp3");
             blueBackground.appendChild(policeCall1);
 
             startPoliceCall(policeCall1);
@@ -66,6 +66,9 @@ function renderPoliceAudioFilePage() {
 }
 
 function startPoliceCall(audio) {
+
+    audio.play();
+
     let fullText = "Hallå där! Tack så mycket för hjälpen med att samla ihop de misstänkta. Jag ska hålla förhör med dem nu.";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
@@ -76,7 +79,7 @@ function startPoliceCall(audio) {
     function showTextContinuously() {
         
         //audio.addEventListener("loadedmetadata", function() {
-            audio.volume = 0.8;
+            audio.volume = 1;
             audio.play();
 
             let currentWordIndex = 0;
@@ -119,7 +122,7 @@ function secondPartOfPoliceCall(event) {
     function showTextContinuously() {
         
         //audio.addEventListener("loadedmetadata", function() {
-            audio.volume = 0.8;
+            audio.volume = 1;
             audio.play();
           
             let currentWordIndex = 0;
