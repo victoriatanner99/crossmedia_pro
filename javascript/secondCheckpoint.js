@@ -18,6 +18,11 @@ function renderSecondCheckpoint() {
 
     checkpointBackground.append(camera1, camera2);
 
+    let backArrow = document.createElement("img");
+    backArrow.setAttribute("id", "goBackArrow");
+    backArrow.setAttribute("src", "images/bakpil.png");
+    checkpointBackground.appendChild(backArrow);
+
     let infoButton = document.createElement("div");
     infoButton.setAttribute("id", "infoButtonSecondCheckpointPage");
     infoButton.textContent = "?";

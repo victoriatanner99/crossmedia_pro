@@ -24,6 +24,13 @@ function renderAddOnCheckpoint() {
     headingFirstCheckpointPage.textContent = "CHECKPOINT KOD";          
     firstCheckpointBackground.appendChild(headingFirstCheckpointPage);
 
+    let backArrow = document.createElement("img");
+    backArrow.setAttribute("id", "goBackArrow");
+    backArrow.setAttribute("src", "images/bakpil.png");
+    firstCheckpointBackground.appendChild(backArrow);
+
+
+
     for(let i = 0; i < 4; i++) {
         let input = document.createElement("input");
         input.classList.add("inputFirstCheckpointPage");
