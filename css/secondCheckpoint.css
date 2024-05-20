@@ -51,13 +51,11 @@ img#camera2SecondCheckpointPage {
 div#infoButtonSecondCheckpointPage {
     height: 36px;
     width: 38px;
-
-    /*height: 9vh;
-    width: 9.2vh;*/
+    z-index: 4;
    
     position: absolute;
-    top: 4.69vh;
-    left: 81.42vw;
+    top: 40px;
+    right: 35px;
     cursor: pointer;
     z-index: 4;
  
@@ -91,11 +89,12 @@ div#infoContainerSecondCheckpointPage {
     background-position: center;
     background-repeat: no-repeat;
 
-    width: 67.39vw;
-    height: 17.44vh;
+    width: 264.84px;
+    height: 148.57px;
     position: absolute;
-    top: 10.33vh;
-    left: 29.26vw;
+    top: 88px;
+    right: 21px;
+
     font-family: "Inter";
     font-size: 16px;
     text-align: center;
@@ -103,6 +102,8 @@ div#infoContainerSecondCheckpointPage {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 4;
+
 }
 
 h1#headingSecondCheckpointPage {

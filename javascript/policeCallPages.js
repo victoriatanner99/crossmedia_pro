@@ -106,12 +106,14 @@ function secondPartOfPoliceCall(event) {
 
     let policeCall2 = document.createElement("audio");
     policeCall2.setAttribute("id", "audioPlayer");
-    policeCall2.setAttribute("type", "audio/x-m4a");
-    //policeCall2.setAttribute("src", "audio/Polismästaren2.m4a");
+    policeCall2.setAttribute("type", "audio/mpeg");
+    policeCall2.setAttribute("src", "audio/Polismastaren 2ny.mp3");
+
+    
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
-    let fullText = "Skicka ett mail till mig på polismastaren@gmail.com  så skickar jag över materialet från förhören. Vi hörs sen!";
+    let fullText = "Skicka ett mail till mig på polismastaren@<br>gmail.com  så skickar jag över materialet från förhören. Vi hörs sen!";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
 
@@ -138,11 +140,11 @@ function secondPartOfPoliceCall(event) {
                     });
                           
                 } else {
-                    textContainer.textContent += words[currentWordIndex] + ' ';
+                    textContainer.innerHTML += words[currentWordIndex] + ' ';
                     currentWordIndex++;
                     
                 }
-            }, 220);
+            }, 350);
         //});
     }
 }
