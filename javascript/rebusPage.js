@@ -67,13 +67,6 @@ function renderRebusPage() {
 
       infoButton.addEventListener("click", explainRebus);
 
-      let rebusBackgroundOverlay = document.createElement("div");
-      rebusBackgroundOverlay.setAttribute(
-        "id",
-        "rebusBackgroundOverlay"
-      );
-      rebusPageBackground.appendChild(rebusBackgroundOverlay);
-
       let arrowImage = document.createElement("img");
       arrowImage.setAttribute("id", "arrowImageRebusPage");
       arrowImage.setAttribute("src", "images/arrow_512h.png");
@@ -100,11 +93,10 @@ function renderRebusPage() {
 
 function explainRebus (event) {
     if (!document.querySelector("div#screenOverlayInfoButtonRebusPage")) {
-        event.currentTarget.style.color = "#353535";
-        event.currentTarget.style.borderColor = "#353535";
+       
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "screenOverlayInfoButtonRebusPage");
-        document.querySelector("div#rebusBackgroundOverlay").appendChild(overlay);
+        document.querySelector("div#rebusPageBackground").appendChild(overlay);
     
         let infoContainerRebus = document.createElement("div");
         infoContainerRebus.setAttribute("id", "infoContainerRebusPage");
@@ -119,11 +111,7 @@ function explainRebus (event) {
         document
           .querySelector("div#screenOverlayInfoButtonRebusPage")
           .remove();
-        event.currentTarget.style.color = "#FBF8F4";
-        event.currentTarget.style.borderColor = "#FBF8F4";
       }
-   
-      console.log(infoContainerRebus);
 }
 
 
@@ -171,9 +159,7 @@ function renderLoginInfo() {
       loginInfoBackground.prepend(topQuestionButton);
       topQuestionButton.addEventListener("click", explainHowToFindWebsite);
 
-      document
-        .querySelector("button#doneButtonLoginInfoPage")
-        .addEventListener("click", (event) => {
+      document.querySelector("button#doneButtonLoginInfoPage").addEventListener("click", (event) => {
           renderAddOnCheckpoint();
         });
     } else {
