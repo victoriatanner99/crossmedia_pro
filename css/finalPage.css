@@ -86,4 +86,6 @@ a#linkToSurvey {
     top: 84.74vh;
     left: 33.33vw;
     z-index: 2;*/
+
+    text-decoration: none;
 }

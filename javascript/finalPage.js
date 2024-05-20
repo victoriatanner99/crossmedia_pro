@@ -13,7 +13,6 @@ function renderFinalPage(event) {
 
     let heading = document.createElement("h1");
     heading.setAttribute("id", "headingFinalPage");
-    heading.textContent = "Äntligen är mysteriet löst. Utan dig hade det inte gått. Tack för hjälpen!";
     background.appendChild(heading);
 
     let lasseAndMaja = document.createElement("img");
@@ -32,8 +31,22 @@ function renderFinalPage(event) {
     audio.setAttribute("id", "audioPlayer");
     audio.setAttribute("type", "audio/mpeg");
     audio.setAttribute("src", "audio/finalpage.mp3");
-    document.querySelector("h1#headingFinalPage").appendChild(audio);
+    document.querySelector("div#backgroundFinalPage").appendChild(audio);
 
     audio.play();
+
+    let finalPageArray = 
+    `Äntligen är mysteriet löst. Utan dig hade det inte gått. Tack för hjälpen!`.split(" ");
+
+    let i = 0;
+    let speechBubbleInterval = setInterval(function() {
+        if(i === finalPageArray.length) {
+    
+            clearInterval(speechBubbleInterval);
+        } else {
+            document.querySelector("h1#headingFinalPage").innerHTML += finalPageArray[i] + " ";
+        }
+        i++;
+    }, 300);
 }
 
