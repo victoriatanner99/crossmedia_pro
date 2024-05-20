@@ -14,8 +14,8 @@
 
 //renderSecondCheckpoint();
 
-//renderProloguePage();
-renderFinalPage();
+renderProloguePage();
+//renderFinalPage();
 //renderLoginInfo();
 
 //renderRebusPage();
