@@ -130,8 +130,9 @@ div#backgroundConversationPrologues {
     overflow: hidden;
 
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 1fr 2fr 1.6fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 2.2fr;
+    overflow: hidden;
 }
 
 div#backgroundOverlayConversationPrologues {
@@ -206,7 +207,7 @@ div#speechBubbleBeatriceConversation1 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 6.72% 3.58vw 4.72% 6vw;
+    padding: 20px 30px 20px 20px;
 
     /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
     /*padding: 35px 10px 24px 25px;*/
@@ -217,13 +218,14 @@ div#speechBubbleBeatriceConversation1 > p {
 }
 
 img#arrowBeatricePrologue1 {
-    position: absolute;
-    top: 67%;
-    left: 65%;
-
-    height: 8.5vh;
-    width: 16.8vw;
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }
 
 div#speechBubbleBeatriceConversation2 {
@@ -247,7 +249,31 @@ div#speechBubbleBeatriceConversation2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 5.72% 3.8vw 11.72% 5vw;
+    padding: 20px 30px 20px 20px;
+}
+
+div#speechBubbleBeatriceConversation3 {
+    grid-row: 2 / 3;
+    align-self: flex-end;
+
+    width: 184px;
+    height: min-content;
+
+    position: relative;
+    right: -129px;
+
+    z-index: 4;
+    line-height: 21px;
+
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleBeatriceConversation2 > p {
@@ -255,13 +281,25 @@ div#speechBubbleBeatriceConversation2 > p {
 }
 
 img#arrowBeatricePrologue2 {
-    position: absolute;
-    top: 64%;
-    left: 67.5%;
-
-    height: 8.5vh;
-    width: 15.8vw;
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
+}
+
+img#arrowBeatricePrologue3 {
+    width: 78px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }
 
 /*Welmer prologue below*/
@@ -297,14 +335,15 @@ div#speechBubbleWelmerConversation1 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 6.42% 3.28vw 9.72% 5vw;
+    padding: 20px 30px 20px 20px;
+
 }
 
 div#speechBubbleWelmerConversation2 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 54.45vw;
+    width: 214px;
     height: min-content;
 
     position: relative;
@@ -321,7 +360,31 @@ div#speechBubbleWelmerConversation2 {
     font-family: "Butterfinger Serif";
     font-size: 18px;
     letter-spacing: calc(13 * .01em);
-    padding: 6.72% 3.58vw 6.72% 5vw;
+    padding: 20px 30px 20px 20px;
+}
+
+div#speechBubbleWelmerConversation3 {
+    grid-row: 2 / 3;
+    align-self: flex-end;
+
+    width: 215.21px;
+    height: min-content;
+
+    position: relative;
+    right: -42vw;
+
+    z-index: 4;
+    line-height: 21px;
+
+    background-color: #010401;
+    border: solid #888586 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Butterfinger Serif";
+    font-size: 18px;
+    letter-spacing: calc(13 * .01em);
+    padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleWelmerConversation1 > p {
@@ -332,24 +395,41 @@ div#speechBubbleWelmerConversation2 > p {
     margin: 0;
 }
 
-img#arrowWelmerPrologue1 {
-    position: absolute;
-    top: 63%;
-    left: 67.5%;
+div#speechBubbleWelmerConversation3 > p {
+    margin: 0;
+}
 
-    height: 8.5vh;
-    width: 15.8vw;
+img#arrowWelmerPrologue1 {
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }
 
 img#arrowWelmerPrologue2 {
-    position: absolute;
-    top: 53.8%;
-    left: 67%;
-
-    height: 8.5vh;
-    width: 15.8vw;
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
+}
+
+img#arrowWelmerPrologue3 {
+    width: 78px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }
 
 /*Priest prologue below*/
@@ -416,21 +496,23 @@ div#speechBubblePriestConversation2 > p {
 }
 
 img#arrowPriestPrologue1 {
-    position: absolute;
-    top: 73.8%;
-    left: 73%;
-
-    height: 8.5vh;
-    width: 15.8vw;
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }
 
 img#arrowPriestPrologue2 {
-    position: absolute;
-    top: 63.8%;
-    left: 69%;
-
-    height: 8.5vh;
-    width: 15.8vw;
+    width: 78px;
+    height: 70px;
     cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    left: 174px;
+    top: 145px;
 }

@@ -276,7 +276,36 @@ function talkToWelmer() {
             if (index === words.length) {
                 clearInterval(intervalId);
                 document.querySelector("img#arrowWelmerPrologue2").style.visibility = "visible";
-                document.querySelector("img#arrowWelmerPrologue2").addEventListener("click", secondPartOfWelmerConversation);
+                document.querySelector("img#arrowWelmerPrologue2").addEventListener("click", thirdPartOfWelmerConversation);
+            } else {
+                textContainer.textContent += words[index] + ' ';
+                index++;
+            }
+        }, 250);
+    }
+
+    function thirdPartOfWelmerConversation() {
+        document.querySelector("img#arrowWelmerPrologue2").setAttribute("id", "arrowWelmerPrologue3");
+        document.querySelector("img#arrowWelmerPrologue3").removeEventListener("click", secondPartOfWelmerConversation);
+        document.querySelector("img#arrowWelmerPrologue3").style.visibility = "collapse";
+
+        document.querySelector("div#speechBubbleWelmerConversation2").setAttribute("id", "speechBubbleWelmerConversation3");
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Welmer.mp3");
+        document.querySelector("audio#audioPlayer").play();
+
+        let fullText = "Jag håller inte på med snatteri... Jag sa ju att jag var oskyldig.";
+        let words = fullText.split(' ');
+        let textContainer = document.getElementById('textProloguePages');
+
+        textContainer.textContent = "";
+            
+        let index = 0;
+        const intervalId = setInterval(() => {
+            if (index === words.length) {
+                clearInterval(intervalId);
+                document.querySelector("img#arrowWelmerPrologue3").style.visibility = "visible";
+                document.querySelector("img#arrowWelmerPrologue3").removeEventListener("click", thirdPartOfWelmerConversation);
+                document.querySelector("img#arrowWelmerPrologue3").addEventListener("click", renderProloguePage);
             } else {
                 textContainer.textContent += words[index] + ' ';
                 index++;
