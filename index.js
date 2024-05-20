@@ -12,11 +12,11 @@
 
 //renderPoliceAudioFilePage();
 
-renderSecondCheckpoint();
+//renderSecondCheckpoint();
 
 //renderProloguePage();
 
-//renderFinalPage();
+renderFinalPage();
 //renderLoginInfo();
 
 //renderRebusPage();
