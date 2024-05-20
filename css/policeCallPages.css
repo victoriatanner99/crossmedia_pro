@@ -11,7 +11,7 @@ div#backgroundPoliceCallPage {
     display: grid;
     grid-template-columns: 100%;
     /*grid-template-rows: 30vh 27vh 43vh;*/
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-rows: 0.8fr 2fr 3fr;
 
     overflow: hidden;
 }
