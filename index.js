@@ -1,7 +1,7 @@
 "use strict";
 
 
-//renderStartPage();
+renderStartPage();
 
 //renderIntroPage();
 //renderTelephonePage();
@@ -10,7 +10,7 @@
 
 //renderDragSuspectsPage();
 
-renderPoliceAudioFilePage();
+//renderPoliceAudioFilePage();
 
 //renderSecondCheckpoint();
 
