@@ -14,12 +14,14 @@
 
 //renderSecondCheckpoint();
 
-renderProloguePage();
+//renderProloguePage();
 //renderFinalPage();
 //renderLoginInfo();
 
 //renderRebusPage();
 
-//renderFirstCheckpoint();
+renderFirstCheckpoint();
 
 //renderLoginInfo();
+
+//renderAddOnCheckpoint();

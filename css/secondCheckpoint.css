@@ -178,3 +178,12 @@ input#input3SecondCheckpointPage {
 input#input4SecondCheckpointPage {
     left: 72.01vw;
 }
+
+img#goBackArrow {
+    width: 20.2vw;
+    height: 10.1vh;
+    position: absolute;
+    top: 90vh;
+    left: 1.7vh;
+    z-index: 4;
+}

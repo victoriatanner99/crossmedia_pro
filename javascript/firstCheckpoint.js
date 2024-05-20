@@ -9,6 +9,11 @@ function renderFirstCheckpoint() {
     rightFlowerImage.setAttribute("src", "images/Group 17.png");
     firstCheckpointBackground.appendChild(rightFlowerImage);
 
+    let backArrow = document.createElement("img");
+    backArrow.setAttribute("id", "goBackArrow");
+    backArrow.setAttribute("src", "images/bakpil.png");
+    firstCheckpointBackground.appendChild(backArrow);
+
     let leftFlowerImage = document.createElement("img");
     leftFlowerImage.setAttribute("id", "leftFlowerImageFirstCheckpointPage");
     leftFlowerImage.setAttribute("src", "images/Clip path group.png");

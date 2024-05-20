@@ -106,3 +106,13 @@ button#buttonFirstCheckpointPage {
     top: 77.35vh;
     left: 33.33vw;
 }
+
+img#goBackArrow {
+    width: 20.2vw;
+    height: 10.1vh;
+    position: absolute;
+    top: 90vh;
+    left: 1.7vh;
+}
+
+
