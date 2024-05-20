@@ -11,8 +11,7 @@ div#backgroundPoliceCallPage {
     display: grid;
     grid-template-columns: 100%;
     /*grid-template-rows: 30vh 27vh 43vh;*/
-    grid-template-rows: 0.8fr 2fr 3fr;
-
+    grid-template-rows: 1fr 2fr 1.6fr;
     overflow: hidden;
 }
 
@@ -64,7 +63,7 @@ div#speechBubble1PoliceCallPage {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 68.96vw;
+    width: 271px;
     height: min-content;
 
     position: relative;
@@ -92,7 +91,7 @@ div#speechBubble1PoliceCallPage2 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width:  73.54vw;
+    width:  247.03px;
     height: min-content;
 
     position: relative;
