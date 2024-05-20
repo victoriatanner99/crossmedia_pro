@@ -1,7 +1,7 @@
 "use strict";
 
 
-//renderStartPage();
+renderStartPage();
 
 //renderIntroPage();
 //renderTelephonePage();
@@ -16,7 +16,7 @@
 
 //renderProloguePage();
 
-renderFinalPage();
+//renderFinalPage();
 
 //renderLoginInfo();
 
