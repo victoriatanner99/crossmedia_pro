@@ -175,7 +175,7 @@ function explainHowToFindWebsite(event) {
     if(!document.querySelector("div#overlayLoginInfoPage")) {
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "overlayLoginInfoPage");
-        document.querySelector("body").appendChild(overlay);
+        document.querySelector("div#loginInfoPage").appendChild(overlay);
         document.querySelector("div#infoButtonLoginInfoPage").style.zIndex = 1;
 
         let infoContainer = document.createElement("div");

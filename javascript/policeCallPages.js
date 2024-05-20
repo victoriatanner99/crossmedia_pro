@@ -46,7 +46,7 @@ function renderPoliceAudioFilePage() {
             let policeCall1 = document.createElement("audio");
             policeCall1.setAttribute("id", "audioPlayer");
             policeCall1.setAttribute("type", "audio/x-m4a");
-            policeCall1.setAttribute("src", "audio/Polismästaren1.mp3");
+            //policeCall1.setAttribute("src", "audio/Polismästaren1.mp3");
             blueBackground.appendChild(policeCall1);
 
             startPoliceCall(policeCall1);
@@ -104,7 +104,7 @@ function secondPartOfPoliceCall(event) {
     let policeCall2 = document.createElement("audio");
     policeCall2.setAttribute("id", "audioPlayer");
     policeCall2.setAttribute("type", "audio/x-m4a");
-    policeCall2.setAttribute("src", "audio/Polismästaren2.m4a");
+    //policeCall2.setAttribute("src", "audio/Polismästaren2.m4a");
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
