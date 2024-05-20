@@ -6,7 +6,7 @@
 //renderIntroPage();
 //renderTelephonePage();
 
-//renderRebusPage();
+renderRebusPage();
 
 //renderDragSuspectsPage();
 
@@ -14,7 +14,7 @@
 
 //renderSecondCheckpoint();
 
-renderProloguePage();
+//renderProloguePage();
 //renderFinalPage();
 //renderLoginInfo();
 
