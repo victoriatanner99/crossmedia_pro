@@ -169,7 +169,7 @@ function startLibrarianVoiceMessage(audio) {
                     textContainer.textContent += words[currentWordIndex] + ' ';
                     currentWordIndex++;
                 }
-            }, 360);
+            }, 160);
         //});
 
     } else {
@@ -220,7 +220,7 @@ function startLibrarianVoiceMessage(audio) {
                     currentWordIndex++;
                     
                 }
-            }, 440);
+            }, 140);
         //});
     }
 }
