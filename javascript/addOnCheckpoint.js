@@ -1,4 +1,4 @@
-function renderFirstCheckpoint() {
+function renderAddOnCheckpoint() {
     document.querySelector("body").innerHTML = "";
     let firstCheckpointBackground = document.createElement("div");
     firstCheckpointBackground.setAttribute("id", "firstCheckpointBackground");
@@ -43,7 +43,8 @@ function renderFirstCheckpoint() {
     firstCheckpointBackground.appendChild(checkpointButton);
     checkpointButton.textContent = "Klar";
     checkpointButton.addEventListener("click", function(event) {
-        checkAnswerFirstCheckpointPage();
+
+        checkAnswerAddOnCheckpoint();
     });
 }
 
@@ -54,12 +55,12 @@ function autoTab(current, next) {
     }
 }
 
-function checkAnswerFirstCheckpointPage() {
+function checkAnswerAddOnCheckpoint() {
     let digits = '';
     for (let i = 0; i < 4; i++) {
         digits += document.getElementById(`input${i+1}FirstCheckpointPage`).value;
     }
-    if (digits === '1210') {
-        renderRebusPage();
+    if (digits === '1085') {
+        renderDragSuspectsPage();
     } 
 }

@@ -155,7 +155,7 @@ function renderLoginInfo() {
             topQuestionButton.addEventListener("click", explainHowToFindWebsite);
 
             document.querySelector("button#doneButtonLoginInfoPage").addEventListener("click", (event) => {
-                renderDragSuspectsPage();
+                renderAddOnCheckpoint();
             });
         
         } else {
