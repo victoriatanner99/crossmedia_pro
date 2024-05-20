@@ -50,10 +50,11 @@
 
         /*height: 9vh;
         width: 9.2vh;*/
-       
+
         position: absolute;
-        top: 6.87vh;
-        left: 91.08vw;
+        top: 27px;
+        right: 25px;
+       
         cursor: pointer;
         z-index: 4;
      
@@ -84,11 +85,13 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        width:  31.08vw;
-        height: 37.80vh;
+        width:  264.84px;
+        height: 148.57px;
+
         position: absolute;
-        top: 18.32vh;
-        left: 65.38vw;
+        top: 73px;
+        right: 12px;
+
         font-family: "Inter";
         font-size: 16px;
         text-align: center;

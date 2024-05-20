@@ -276,7 +276,7 @@ function talkToWelmer() {
             if (index === words.length) {
                 clearInterval(intervalId);
                 document.querySelector("img#arrowWelmerPrologue2").style.visibility = "visible";
-                document.querySelector("img#arrowWelmerPrologue2").addEventListener("click", renderProloguePage);
+                document.querySelector("img#arrowWelmerPrologue2").addEventListener("click", secondPartOfWelmerConversation);
             } else {
                 textContainer.textContent += words[index] + ' ';
                 index++;
