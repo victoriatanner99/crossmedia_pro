@@ -27,5 +27,4 @@ function renderFinalPage(event) {
     background.appendChild(surveyLink);
     surveyLink.setAttribute("target", "_blank");
     document.querySelector("a#linkToSurvey").setAttribute("href", "https://docs.google.com/forms/d/e/1FAIpQLSdWg3axB0ZuRbzsJVh2CunD6z7cWpBi39gQ2aJuv3gYwicYqw/viewform");
-
 }

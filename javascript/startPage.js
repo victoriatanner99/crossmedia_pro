@@ -82,7 +82,6 @@ function saveUsername(event) {
                 return;
             }
             window.localStorage.setItem("username", fullNameToSave);
-            console.log(localStorage.getItem("username"));
         }
     }
 

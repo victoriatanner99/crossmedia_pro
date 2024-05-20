@@ -66,8 +66,6 @@ function whichPossibleCulprit(event) {
     let suspectsArray = document.querySelectorAll("div.suspectInfoImageProloguePage");
     for(let i = 0; i < suspectsArray.length; i++) {
         if(suspectsArray[i].id === "clickedSuspectProloguePage") {
-            console.log(suspectsArray[i]);
-            console.log(suspectsArray[i].classList);
 
             for(let ii = 0; ii < suspectsArray[i].classList.length; ii++) {
                 if(suspectsArray[i].classList[ii] !== "suspectInfoImageProloguePage") {
@@ -110,7 +108,6 @@ function talkToBeatrice() {
     let beatrice = document.createElement("img");
     beatrice.setAttribute("id", "beatriceConversationPrologue");
     beatrice.setAttribute("src", "images/BeatriceProloguePage.png");
-    console.log(beatrice);
 
     let speechBubble = document.createElement("div");
     speechBubble.setAttribute("id", "speechBubbleBeatriceConversation1");
