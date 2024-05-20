@@ -108,7 +108,7 @@ function secondPartOfPoliceCall(event) {
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
-    let fullText = "Skicka ett mail till mig på polismastaren@gmail.com så skickar jag över materialet från förhören. Vi hörs sen!";
+    let fullText = "Skicka ett mail till mig på polismastaren@gmail.com  så skickar jag över materialet från förhören. Vi hörs sen!";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
 

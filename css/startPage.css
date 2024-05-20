@@ -58,6 +58,12 @@ h2#welcomeText {
     font-size: 40px;
 }
 
+h3#soundText {
+    font-family: "Butterfinger Serif";
+    margin-top: 40px;
+    font-size: 16px;
+}
+
 button#registerButton {
     height: 51px;
     width: 199px;

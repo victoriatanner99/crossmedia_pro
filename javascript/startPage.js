@@ -36,6 +36,11 @@ function renderStartPage() {
     registerButton.textContent = "Registrera";
     welcomeContainer.appendChild(registerButton);
 
+    let soundText = document.createElement("h3");
+    soundText.setAttribute("id", "soundText");
+    soundText.textContent = "Slå på ljudet på din telefon!";
+    welcomeContainer.appendChild(soundText);
+
     registerButton.addEventListener("click", displayRegisterInputs);
 }
 
@@ -76,12 +81,14 @@ function saveUsername(event) {
             if(nameOfUser === "") {
                 return;
             }
+            console.log(localStorage.getItem("username"));
         } else {
             let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
             if(fullNameToSave === " ") {
                 return;
             }
             window.localStorage.setItem("username", fullNameToSave);
+            console.log(localStorage.getItem("username"));
         }
     }
 
