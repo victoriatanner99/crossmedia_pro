@@ -223,8 +223,8 @@ img#arrowBeatricePrologue1 {
   z-index: 1;
 
   position: absolute;
-  left: 174px;
-  top: 145px;
+  left: 134px;
+  top: 181px;
 }
 
 div#speechBubbleBeatriceConversation2 {
@@ -259,7 +259,7 @@ div#speechBubbleBeatriceConversation3 {
   height: min-content;
 
   position: relative;
-  right: -129px;
+  right: -44vw;
 
   z-index: 4;
   line-height: 21px;
@@ -279,6 +279,14 @@ div#speechBubbleBeatriceConversation2 > p {
   margin: 0;
 }
 
+div#speechBubbleBeatriceConversation3 > p {
+    margin: 0;
+}
+
+div#speechBubbleBeatriceConversation3 > p {
+    margin: 0;
+}
+
 img#arrowBeatricePrologue2 {
   width: 78px;
   height: 70px;
@@ -286,8 +294,8 @@ img#arrowBeatricePrologue2 {
   z-index: 1;
 
   position: absolute;
-  left: 174px;
-  top: 145px;
+  left: 131px;
+  top: 102px;
 }
 
 img#arrowBeatricePrologue3 {
@@ -297,8 +305,8 @@ img#arrowBeatricePrologue3 {
   z-index: 1;
 
   position: absolute;
-  left: 174px;
-  top: 145px;
+  left: 100px;
+  top: 121px;
 }
 
 /*Welmer prologue below*/
