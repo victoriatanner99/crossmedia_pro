@@ -1,10 +1,10 @@
 "use strict";
 
 
-//renderStartPage();
+renderStartPage();
 
 //renderIntroPage();
-renderTelephonePage();
+//renderTelephonePage();
 
 //renderRebusPage();
 

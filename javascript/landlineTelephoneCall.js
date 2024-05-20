@@ -75,62 +75,12 @@ function telephoneStartsToRing(audio) {
         }, 700);
     });
 
-    /*audio.addEventListener("loadedmetadata", function() {
-
-        setTimeout(function() {
-            vibratingIcon.style.animationPlayState = "running";
-        }, 600);
-
-    
-        let syncAnimationToRingtone = setInterval(syncToRingtone, 1700);
-
-        function syncToRingtone() {
-            if(vibratingIcon.style.animationPlayState === "paused") {
-                vibratingIcon.style.animationPlayState = "running";
-
-            } else {
-                vibratingIcon.style.animationPlayState = "paused";
-
-            }
-
-            stopInterval();
-        }
-
-        let intervalIndex = 0;
-        function stopInterval() {
-            intervalIndex++;
-
-            
-            clearInterval(syncAnimationToRingtone);
-
-            if(intervalIndex === 1) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1760);
-
-            } else if(intervalIndex === 2) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1340);
-
-            } else if(intervalIndex === 3) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1650);
-
-            } else if(intervalIndex === 4) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1480);
-
-            } else if(intervalIndex === 5) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1580);
-
-            } else if(intervalIndex === 6) {
-                syncAnimationToRingtone = setInterval(syncToRingtone, 1400);
-
-                intervalIndex = 0;
-            }
-        } 
-    }); */
 
     vibratingIcon.addEventListener('click', () => {
         //audio.setAttribute("src", "");
 
         vibratingIcon.classList.remove("vibratingTelephone");
-        audio.setAttribute("src", "audio/Karin Fahlen samtal 1.mp3");
+        audio.setAttribute("src", "audio/Karen Fahlen Samtal 1.mp3");
         audio.removeEventListener("ended", stopAudio);
         //clearInterval(syncAnimationToRingtone);
 
