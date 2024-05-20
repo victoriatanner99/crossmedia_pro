@@ -16,7 +16,7 @@ renderStartPage();
 
 //renderProloguePage();
 
-//renderFinalPage();
+renderFinalPage();
 //renderLoginInfo();
 
 //renderRebusPage();
