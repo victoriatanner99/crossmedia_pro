@@ -198,7 +198,7 @@ function startLibrarianVoiceMessage(audio) {
         librarianKarin.setAttribute("src", "images/librarian_1x.png");
         overlayVoiceMessage.appendChild(librarianKarin);
 
-        fullText = "Hej det är Karin Fahlén, bibliotekarie på Orkanen! Jag behöver er hjälp! Någon har stulit boken “Under himmelens fäste”.";
+        fullText = "Hej det är Karin Fahlén, bibliotekarie på Orkanen! Jag behöver er hjälp! Någon har stulit boken “Under himmelens fäste”. Den försvann kl 15:00 häromdagen och har inte synts till sedan dess.";
         words = fullText.split(' ');
         textContainer = document.getElementById('textLibrarianCallPages');
 
