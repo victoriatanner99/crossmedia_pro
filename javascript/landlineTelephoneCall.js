@@ -127,10 +127,10 @@ function telephoneStartsToRing(audio) {
     }); */
 
     vibratingIcon.addEventListener('click', () => {
-        audio.setAttribute("src", "");
+        //audio.setAttribute("src", "");
 
         vibratingIcon.classList.remove("vibratingTelephone");
-        //audio.setAttribute("src", "audio/Karin1.mp3");
+        audio.setAttribute("src", "audio/Karin Fahlen samtal 1.mp3");
         audio.removeEventListener("ended", stopAudio);
         //clearInterval(syncAnimationToRingtone);
 
@@ -169,7 +169,7 @@ function startLibrarianVoiceMessage(audio) {
                     textContainer.textContent += words[currentWordIndex] + ' ';
                     currentWordIndex++;
                 }
-            }, 160);
+            }, 400);
         //});
 
     } else {
@@ -220,7 +220,7 @@ function startLibrarianVoiceMessage(audio) {
                     currentWordIndex++;
                     
                 }
-            }, 140);
+            }, 420);
         //});
     }
 }
@@ -230,7 +230,7 @@ function secondAudioFile(event) {
     let audio2 = document.createElement("audio");
     audio2.setAttribute("id", "audioPlayer");
     audio2.setAttribute("type", "audio/mpeg");
-    //audio2.setAttribute("src", "audio/Karin2.mp3");
+    audio2.setAttribute("src", "audio/Karins samtal bryts.mp3");
     document.querySelector("div#telephonePageBackground").appendChild(audio2);
 
     startLibrarianVoiceMessage(audio2);
@@ -286,6 +286,15 @@ function voiceMessageGotCutOff(event) {
 }
 
 function speechBubbleAfterVoiceMessage(speechBubble) {
+
+    let audio = document.createElement("audio");
+    audio.setAttribute("id", "audioPlayer");
+    audio.setAttribute("type", "audio/mpeg");
+    audio.setAttribute("src", "audio/Lasse sista slut dialog.mp3");
+    document.querySelector("div#callKarinPageContainer").appendChild(audio);
+
+    audio.play();
+
     let lasseAndMajaText = "Det verkar som att samtalet bröts. Prova ringa tillbaka till Karin. Hennes nummer borde stå nedskrivet någonstans...".split(" ");
 
     let i = 0;
@@ -301,7 +310,7 @@ function speechBubbleAfterVoiceMessage(speechBubble) {
             document.querySelector("p#textAfterKarinVoiceMessage").innerHTML += lasseAndMajaText[i] + " ";
         }
         i++;
-    }, 100);
+    }, 250);
 }
 
 function explainHowToFindNumber(event) {

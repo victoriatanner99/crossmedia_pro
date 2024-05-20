@@ -124,6 +124,14 @@ function talkToBeatrice() {
     startConversation();
 
     function startConversation() {
+        let audio = document.createElement("audio");
+        audio.setAttribute("id", "audioPlayer");
+        audio.setAttribute("type", "audio/mpeg");
+        audio.setAttribute("src", "audio/Polismastaren 3.mp3");
+        background.appendChild(audio);
+
+        audio.play();
+
         let fullText = "Jag har kollat med skolan och det stämmer att du var på ett möte vid tidpunkten då boken försvann, Beatrice.";
         let words = fullText.split(' ');
         let textContainer = document.getElementById('textProloguePages');
@@ -151,6 +159,9 @@ function talkToBeatrice() {
         document.querySelector("img#arrowBeatricePrologue2").style.visibility = "collapse";
 
         document.querySelector("div#speechBubbleBeatriceConversation1").setAttribute("id", "speechBubbleBeatriceConversation2");
+
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Polismastaren 5.mp3");
+        document.querySelector("audio#audioPlayer").play();
 
         let fullText = "Detta betyder att du har alibi och att det inte är du som stulit boken.";
         let words = fullText.split(' ');
@@ -216,6 +227,14 @@ function talkToWelmer() {
     startConversation();
 
     function startConversation() {
+        let audio = document.createElement("audio");
+        audio.setAttribute("id", "audioPlayer");
+        audio.setAttribute("type", "audio/mpeg");
+        audio.setAttribute("src", "audio/Polismastaren 4.mp3");
+        background.appendChild(audio);
+
+        audio.play();
+
         let fullText = "Tiden du var på på möte på hotellet stämde överens med det du uppgav i förhör.";
         let words = fullText.split(' ');
         let textContainer = document.getElementById('textProloguePages');
@@ -234,7 +253,7 @@ function talkToWelmer() {
                 index++;
                 
             }
-        }, 150);
+        }, 220);
     }
 
     function secondPartOfWelmerConversation() {
@@ -243,8 +262,10 @@ function talkToWelmer() {
         document.querySelector("img#arrowWelmerPrologue2").style.visibility = "collapse";
 
         document.querySelector("div#speechBubbleWelmerConversation1").setAttribute("id", "speechBubbleWelmerConversation2");
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Polismastaren 6.mp3");
+        document.querySelector("audio#audioPlayer").play();
 
-        let fullText = "Det betyder att du har alibi vid tidpunkten då boken försvann.";
+        let fullText = "Ditt alibi stämmer och det är uppenbart att det inte är du som har snott boken.";
         let words = fullText.split(' ');
         let textContainer = document.getElementById('textProloguePages');
 
@@ -260,7 +281,7 @@ function talkToWelmer() {
                 textContainer.textContent += words[index] + ' ';
                 index++;
             }
-        }, 150);
+        }, 250);
     }
 }
 

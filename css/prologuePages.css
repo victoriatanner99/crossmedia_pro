@@ -189,7 +189,7 @@ div#speechBubbleBeatriceConversation1 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 54.45vw;
+    width: 214px;
     height: min-content;
 
     position: relative;
@@ -230,7 +230,7 @@ div#speechBubbleBeatriceConversation2 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 54.45vw;
+    width: 214px;
     height: min-content;
 
     position: relative;
@@ -280,7 +280,7 @@ div#speechBubbleWelmerConversation1 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 54.45vw;
+    width: 214px;
     height: min-content;
 
     position: relative;

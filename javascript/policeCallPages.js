@@ -45,8 +45,8 @@ function renderPoliceAudioFilePage() {
 
             let policeCall1 = document.createElement("audio");
             policeCall1.setAttribute("id", "audioPlayer");
-            policeCall1.setAttribute("type", "audio/x-m4a");
-            //policeCall1.setAttribute("src", "audio/Polismästaren1.mp3");
+            policeCall1.setAttribute("type", "audio/mpeg");
+            policeCall1.setAttribute("src", "audio/Polismastaren 1.mp3");
             blueBackground.appendChild(policeCall1);
 
             startPoliceCall(policeCall1);
@@ -66,6 +66,9 @@ function renderPoliceAudioFilePage() {
 }
 
 function startPoliceCall(audio) {
+
+    audio.play();
+
     let fullText = "Hallå där! Tack så mycket för hjälpen med att samla ihop de misstänkta. Jag ska hålla förhör med dem nu.";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
@@ -76,7 +79,7 @@ function startPoliceCall(audio) {
     function showTextContinuously() {
         
         //audio.addEventListener("loadedmetadata", function() {
-            audio.volume = 0.8;
+            audio.volume = 1;
             audio.play();
 
             let currentWordIndex = 0;
@@ -103,12 +106,12 @@ function secondPartOfPoliceCall(event) {
 
     let policeCall2 = document.createElement("audio");
     policeCall2.setAttribute("id", "audioPlayer");
-    policeCall2.setAttribute("type", "audio/x-m4a");
-    //policeCall2.setAttribute("src", "audio/Polismästaren2.m4a");
+    policeCall2.setAttribute("type", "audio/mpeg");
+    policeCall2.setAttribute("src", "audio/Polismastaren 2ny.mp3");
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
-    let fullText = "Gå till mitt arbetsrum på OR:E422 och skicka ett mail till mig så ska jag skicka över materialet från förhören när de är avslutade. Vi hörs sen!";
+    let fullText = "Skicka ett mail till mig på polismastaren@gmail.com så skickar jag över materialet från förhören. Vi hörs sen!";
     let words = fullText.split(' ');
     let textContainer = document.getElementById('textPoliceCallPage');
 
@@ -119,7 +122,7 @@ function secondPartOfPoliceCall(event) {
     function showTextContinuously() {
         
         //audio.addEventListener("loadedmetadata", function() {
-            audio.volume = 0.8;
+            audio.volume = 1;
             audio.play();
           
             let currentWordIndex = 0;
