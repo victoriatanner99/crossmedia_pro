@@ -23,6 +23,8 @@ function renderSecondCheckpoint() {
     backArrow.setAttribute("src", "images/bakpil.png");
     checkpointBackground.appendChild(backArrow);
 
+    backArrow.addEventListener("click", goBack);
+
     let infoButton = document.createElement("div");
     infoButton.setAttribute("id", "infoButtonSecondCheckpointPage");
     infoButton.textContent = "?";
@@ -58,6 +60,10 @@ function renderSecondCheckpoint() {
     checkpointButton.addEventListener("click", function(event) {
         checkAnswerSecondCheckpointPage();
     })
+}
+
+function goBack() {
+    renderPoliceAudioFilePage();
 }
 
 function secondCheckpointHint() {

@@ -14,6 +14,8 @@ function renderFirstCheckpoint() {
     backArrow.setAttribute("src", "images/bakpil.png");
     firstCheckpointBackground.appendChild(backArrow);
 
+    backArrow.addEventListener("click", goBackToLasseMaja);
+
     let leftFlowerImage = document.createElement("img");
     leftFlowerImage.setAttribute("id", "leftFlowerImageFirstCheckpointPage");
     leftFlowerImage.setAttribute("src", "images/Clip path group.png");
@@ -52,6 +54,9 @@ function renderFirstCheckpoint() {
     });
 }
 
+function goBackToLasseMaja() {
+    voiceMessageGotCutOff();
+}
 
 function autoTab(current, next) {
     if (current.value.length === current.maxLength) {

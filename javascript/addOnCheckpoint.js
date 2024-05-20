@@ -29,7 +29,7 @@ function renderAddOnCheckpoint() {
     backArrow.setAttribute("src", "images/bakpil.png");
     firstCheckpointBackground.appendChild(backArrow);
 
-
+    backArrow.addEventListener("click", goBackToLoginInfo);
 
     for(let i = 0; i < 4; i++) {
         let input = document.createElement("input");
@@ -55,6 +55,9 @@ function renderAddOnCheckpoint() {
     });
 }
 
+function goBackToLoginInfo() {
+    renderLoginInfo();
+}
 
 function autoTab(current, next) {
     if (current.value.length === current.maxLength) {
