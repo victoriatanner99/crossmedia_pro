@@ -1,49 +1,68 @@
 @font-face {
-    font-family: "Butterfinger Serif";
-    src: url("./font/ButterFinger\ Serif\ Regular.ttf");
+  font-family: "Butterfinger Serif";
+  src: url("./font/ButterFinger\ Serif\ Regular.ttf");
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0e5d8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: "Arial", sans-serif;
+  background-color: #f0e5d8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-h1{
-    font-family: "Butterfinger Serif";
-    font-size: 50px;
+h1 {
+  font-family: "Butterfinger Serif";
+  font-size: 50px;
 }
 .container {
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
-p{
-    font-size: 30px;
-    
+p {
+  font-size: 30px;
 }
 .login-form p {
-    background-color: #e8e8e8; 
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .login-form span {
-    font-weight: bold; 
+  font-weight: bold;
 }
 
-img{
-    width: 50vw;
+img {
+  width: 50vw;
+}
+
+.checkpoint_code {
+  border-radius: 15px;
+  background-color: #010401;
+  border: solid #888586 5px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 19px;
+  right: 22px;
+  height: 35px;
+  width: 60px;
+}
+
+.checkpoint_code > p {
+    font-size: 12px;
+    font-family: "Inter";
 }
