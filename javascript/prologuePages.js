@@ -174,13 +174,43 @@ function talkToBeatrice() {
             if (index === words.length) {
                 clearInterval(intervalId);
                 document.querySelector("img#arrowBeatricePrologue2").style.visibility = "visible";
-                document.querySelector("img#arrowBeatricePrologue2").addEventListener("click", renderProloguePage);
+                document.querySelector("img#arrowBeatricePrologue2").addEventListener("click", thirdPartOfBeatriceConversation);
             } else {
                 textContainer.textContent += words[index] + ' ';
                 index++;
                 
             }
         }, 150);
+    }
+
+    function thirdPartOfBeatriceConversation() {
+        document.querySelector("img#arrowBeatricePrologue2").setAttribute("id", "arrowBeatricePrologue3");
+        document.querySelector("img#arrowBeatricePrologue3").removeEventListener("click", thirdPartOfBeatriceConversation);
+        document.querySelector("img#arrowBeatricePrologue3").style.visibility = "collapse";
+
+        document.querySelector("div#speechBubbleBeatriceConversation2").setAttribute("id", "speechBubbleBeatriceConversation3");
+
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Beatrice.mp3");
+        document.querySelector("audio#audioPlayer").play();
+
+        let fullText = "Jag sa ju att jag inte hade stulit boken, din dumma polis!";
+        let words = fullText.split(' ');
+        let textContainer = document.getElementById('textProloguePages');
+
+        textContainer.textContent = "";
+            
+        let index = 0;
+        const intervalId = setInterval(() => {
+            if (index === words.length) {
+                clearInterval(intervalId);
+                document.querySelector("img#arrowBeatricePrologue3").style.visibility = "visible";
+                document.querySelector("img#arrowBeatricePrologue3").addEventListener("click", renderProloguePage);
+            } else {
+                textContainer.textContent += words[index] + ' ';
+                index++;
+                
+            }
+        }, 200);
     }
 
 }

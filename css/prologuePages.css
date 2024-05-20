@@ -260,7 +260,7 @@ div#speechBubbleBeatriceConversation3 {
     height: min-content;
 
     position: relative;
-    right: -129px;
+    right: -44vw;
 
     z-index: 4;
     line-height: 21px;
@@ -277,6 +277,10 @@ div#speechBubbleBeatriceConversation3 {
 }
 
 div#speechBubbleBeatriceConversation2 > p {
+    margin: 0;
+}
+
+div#speechBubbleBeatriceConversation3 > p {
     margin: 0;
 }
 
