@@ -67,7 +67,7 @@ div#speechBubble1PoliceCallPage {
     height: min-content;
 
     position: relative;
-    left: 6.62vw;
+    left: 4.6vw;;
 
     z-index: 4;
     line-height: 21px;
@@ -122,18 +122,16 @@ div#speechBubble1PoliceCallPage2 {
 
 img#arrowPoliceCallPage {
     position: absolute;
-    top: 66%;
+    top: 58%;
     left: 70%;
-
     height: 8.5vh;
     width: 18.8vw;
-
     cursor: pointer;
 }
 
 img#arrowPoliceCallPage2 {
     position: absolute;
-    top: 67%;
+    top: 55%;
     left: 70%;
 
     height: 8.5vh;
