@@ -17,7 +17,7 @@ function renderFinalPage(event) {
 
     let lasseAndMaja = document.createElement("img");
     lasseAndMaja.setAttribute("id", "lasseAndMajaFinalPage");
-    lasseAndMaja.setAttribute("src", "images/lassemaja_2 1.png");
+    lasseAndMaja.setAttribute("src", "images/Group 25.png");
     background.appendChild(lasseAndMaja);
     
     let surveyLink = document.createElement("a");
