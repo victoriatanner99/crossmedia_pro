@@ -108,7 +108,7 @@ function explainDraggingSuspects(event) {
     infoContainer.innerHTML = `
         Dra de tre misstänkta <br> 
         till de tomma ramarna <br> 
-        för att gå vidare 
+        för att gå vidare.
         `;
   } else {
     document

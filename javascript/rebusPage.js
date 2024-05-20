@@ -113,7 +113,7 @@ function explainRebus (event) {
         infoContainerRebus.innerHTML = `
             Lös rebusen genom att <br> 
             sätta ihop rätt bokstäver <br> 
-            för att bilda ett ord
+            för att bilda ett ord.
             `;
       } else {
         document

@@ -1,282 +1,285 @@
 div#backgroundProloguePage {
-    background-image: url("../images/BK.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("../images/BK.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 
-    /*display: grid;
+  /*display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5vh 5vh 20vh 20vh 20vh 30vh*/
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img#lightsProloguePage {
-    width: 190.59vw;
-    height: 26.64vh;
-    position: absolute;
-    top: -0.47vh;
-    left: -60.31vw;
-    /*grid-row: 1;*/
+  width: 190.59vw;
+  height: 26.64vh;
+  position: absolute;
+  top: -0.47vh;
+  left: -60.31vw;
+  /*grid-row: 1;*/
 }
 
 h1#headingProloguePage {
-    font-family: "Butterfinger Serif";
-    font-size: 30px;
-    text-align: center;
+  font-family: "Butterfinger Serif";
+  font-size: 30px;
+  text-align: center;
 
-    margin: 0;
-    position: absolute;
-    top: 20.19vh;
-    /*left: 13.23vw;*/
+  margin: 0;
+  position: absolute;
+  top: 20.19vh;
+  /*left: 13.23vw;*/
 
-    /*grid-row: 2;*/
+  /*grid-row: 2;*/
 }
 
 button#guessButtonProloguePage {
-    margin: 0;
-    height: 6.52vh;
-    width: 33.52vw;
-    background-color: #3981A2;
-    color: #FFFFFF;
-    border: 0;
-    border-radius: 6px;
-    box-sizing: border-box;
-    cursor: pointer;
+  margin: 0;
+  height: 6.52vh;
+  width: 33.52vw;
+  background-color: #3981a2;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
 
-    font-family: "Butterfinger Serif";
-    font-size: 22px;
-    letter-spacing: calc(13 * .01em);
+  font-family: "Butterfinger Serif";
+  font-size: 22px;
+  letter-spacing: calc(13 * 0.01em);
 
-    position: absolute;
-    top: 84.74vh;
-    /*left: 33.33vw;*/
-    z-index: 2;
+  position: absolute;
+  top: 84.74vh;
+  /*left: 33.33vw;*/
+  z-index: 2;
 
-    /*grid-row: 6;*/
+  /*grid-row: 6;*/
 }
 
 div.priestInfoProloguePage {
-    background-image: url("../images/Prasten.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  background-image: url("../images/Prasten.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 
-    position: absolute;
-    top: 26.17vh;
-    /*left: 8.40vw;*/
-    width: 81.93vw;
-    height: 16%;
-    border-radius: 6px;
+  position: absolute;
+  top: 26.17vh;
+  /*left: 8.40vw;*/
+  width: 81.93vw;
+  height: 16%;
+  border-radius: 6px;
 
-    /*grid-row: 3;*/
+  /*grid-row: 3;*/
 }
 
 div.welmerFriskInfoProloguePage {
-    background-image: url("../images/Welmer.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  background-image: url("../images/Welmer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 
-    position: absolute;
-    top: 43.90vh;
-    /*left: 8.40vw;*/
-    width: 81.93%;
-    height: 16%;
-    border-radius: 6px;
+  position: absolute;
+  top: 43.9vh;
+  /*left: 8.40vw;*/
+  width: 81.93%;
+  height: 16%;
+  border-radius: 6px;
 
-    /*grid-row: 4;*/
+  /*grid-row: 4;*/
 }
 
 div.beatriceHolmInfoProloguePage {
-    background-image: url("../images/Beatrice.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  background-image: url("../images/Beatrice.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 
-    position: absolute;
-    top: 61.62vh;
-    /*left: 8.40vw;*/
-    width: 81.93%;
-    height: 16%;
-    border-radius: 6px;
+  position: absolute;
+  top: 61.62vh;
+  /*left: 8.40vw;*/
+  width: 81.93%;
+  height: 16%;
+  border-radius: 6px;
 
-    /*grid-row: 5;*/
+  /*grid-row: 5;*/
 }
 
 div#clickedSuspectProloguePage {
-    width: 89%;
-    height: 17.2%;
+  width: 89%;
+  height: 17.2%;
 }
 
 /*Prologues Priest, Beatrice and Welmer below*/
 div#backgroundConversationPrologues {
-    height: 100%;
-    width: 100%;
-    background-color: #D6E5E7;
+  height: 100%;
+  width: 100%;
+  background-color: #d6e5e7;
 
-    position: relative;
-    overflow-x: hidden;
-    overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
+  overflow: hidden;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 2fr 2.2fr;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 2fr 2.2fr;
+  overflow: hidden;
 }
 
 div#backgroundOverlayConversationPrologues {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(11, 11, 11, 0.85);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(11, 11, 11, 0.85);
 
-    position: absolute;
-    z-index: 3;
+  position: absolute;
+  z-index: 3;
 }
 
 img#flowersConversationPrologues {
-    width: 104.6vw;
-    height: 46.48vh;
+  width: 104.6vw;
+  height: 46.48vh;
 
-    position: absolute;
-    top: -2vh;
-    left: -3.5vw;
-    z-index: 1;
-
+  position: absolute;
+  top: -2vh;
+  left: -3.5vw;
+  z-index: 1;
 }
 
 img#lasseMajaSignConversationPrologues {
-    height: 23.36vh;
-    width: 90.84vw;
+  height: 23.36vh;
+  width: 90.84vw;
 
-    position: absolute;
-    top: 8.57vh;
-    left: 0;
-    z-index: 2;
+  position: absolute;
+  top: 8.57vh;
+  left: 0;
+  z-index: 2;
 }
 
 img#chefOfPoliceConversationPrologues {
-    position: absolute;
-    top: 57.9vh;
-    left: 0vw;
+  position: absolute;
+  top: 57.9vh;
+  left: 0vw;
 
-    width: 57.5vw;
-    height: 42.5vh;
-    z-index: 4;
+  width: 57.5vw;
+  height: 42.5vh;
+  z-index: 4;
 }
 
 /*Beatrice prologue below*/
 img#beatriceConversationPrologue {
-    position: absolute;
-    top: 63vh;
-    left: 43vw;
+  position: absolute;
+  top: 63vh;
+  left: 43vw;
 
-    width: 57.25vw;
-    height: 37.5vh;
-    z-index: 4;
+  width: 57.25vw;
+  height: 37.5vh;
+  z-index: 4;
 }
 
 div#speechBubbleBeatriceConversation1 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 214px;
-    height: min-content;
+  width: 214px;
+  height: min-content;
 
-    position: relative;
-    left: 7.4vw;
+  position: relative;
+  left: 7.4vw;
 
-    z-index: 4;
-    line-height: 21px;
+  z-index: 4;
+  line-height: 21px;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 20px 30px 20px 20px;
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 20px 30px 20px 20px;
 
-    /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
-    /*padding: 35px 10px 24px 25px;*/
+  /*Padding med pixlarna nedan ser ej bra ut på större skärmar*/
+  /*padding: 35px 10px 24px 25px;*/
 }
 
 div#speechBubbleBeatriceConversation1 > p {
-    margin: 0;
+  margin: 0;
 }
 
 img#arrowBeatricePrologue1 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 174px;
+  top: 145px;
 }
 
 div#speechBubbleBeatriceConversation2 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 214px;
-    height: min-content;
+  width: 214px;
+  height: min-content;
 
-    position: relative;
-    left: 7.4vw;
+  position: relative;
+  left: 7.4vw;
 
-    z-index: 4;
-    line-height: 21px;
+  z-index: 4;
+  line-height: 21px;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 20px 30px 20px 20px;
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleBeatriceConversation3 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 184px;
-    height: min-content;
+  width: 184px;
+  height: min-content;
 
-    position: relative;
-    right: -44vw;
+  position: relative;
+  right: -44vw;
 
-    z-index: 4;
-    line-height: 21px;
+  z-index: 4;
+  line-height: 21px;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 20px 30px 20px 20px;
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleBeatriceConversation2 > p {
+  margin: 0;
+}
+
+div#speechBubbleBeatriceConversation3 > p {
     margin: 0;
 }
 
@@ -285,69 +288,68 @@ div#speechBubbleBeatriceConversation3 > p {
 }
 
 img#arrowBeatricePrologue2 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 174px;
+  top: 145px;
 }
 
 img#arrowBeatricePrologue3 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 174px;
+  top: 145px;
 }
 
 /*Welmer prologue below*/
 
 img#welmerConversationPrologue {
-    width: 50.13vw;
-    height: 40.23vh;
+  width: 50.13vw;
+  height: 40.23vh;
 
-    position: absolute;
-    top: 60vh;
-    left: 51.91vw;
-    z-index: 4;
+  position: absolute;
+  top: 60vh;
+  left: 51.91vw;
+  z-index: 4;
 }
 
 div#speechBubbleWelmerConversation1 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 214px;
-    height: min-content;
+  width: 214px;
+  height: min-content;
 
-    position: relative;
-    left: 7.4vw;
+  position: relative;
+  left: 7.4vw;
 
-    z-index: 4;
-    line-height: 21px;
+  z-index: 4;
+  line-height: 21px;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 20px 30px 20px 20px;
-
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleWelmerConversation2 {
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    width: 214px;
+    width: 220px;
     height: min-content;
 
     position: relative;
@@ -360,163 +362,164 @@ div#speechBubbleWelmerConversation2 {
     border: solid #888586 5px;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: "Butterfinger Serif";
     font-size: 18px;
-    letter-spacing: calc(13 * .01em);
+    letter-spacing: calc(13 * 0.01em);
     padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleWelmerConversation3 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 215.21px;
-    height: min-content;
+  width: 208.2px;
+  height: min-content;
 
-    position: relative;
-    right: -42vw;
+  position: relative;
+  right: -42vw;
 
-    z-index: 4;
-    line-height: 21px;
+  z-index: 4;
+  line-height: 21px;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 20px 30px 20px 20px;
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 20px 30px 20px 20px;
 }
 
 div#speechBubbleWelmerConversation1 > p {
-    margin: 0;
+  margin: 0;
 }
 
 div#speechBubbleWelmerConversation2 > p {
-    margin: 0;
+  margin: 0;
 }
 
 div#speechBubbleWelmerConversation3 > p {
-    margin: 0;
+  margin: 0;
 }
 
 img#arrowWelmerPrologue1 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 130px;
+  top: 128px;
 }
 
 img#arrowWelmerPrologue2 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 137px;
+  top: 127px;
 }
 
 img#arrowWelmerPrologue3 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 125px;
+  top: 101px;
 }
 
 /*Priest prologue below*/
 img#priestConversationPrologue {
-    width: 50vw;
-    height: 41.67vh;
+  width: 50vw;
+  height: 41.67vh;
 
-    position: absolute;
-    top: 58.4%;
-    left: 53%;
-    z-index: 4;
+  position: absolute;
+  top: 58.4%;
+  left: 53%;
+  z-index: 4;
 }
 
 div#speechBubblePriestConversation1 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
-    
-    width: 54.45vw;
-    height: min-content;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    position: relative;
-    left: 38.4vw;
-    z-index: 4;
+  width: 58.45vw;
+  height: min-content;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 4.72% 4.58vw 4.72% 5vw;
+  position: relative;
+  left: 33.4vw;
+  z-index: 4;
+
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 6% 4.58vw 4.72% 5vw;
 }
 
 div#speechBubblePriestConversation2 {
-    grid-row: 2 / 3;
-    align-self: flex-end;
+  grid-row: 2 / 3;
+  align-self: flex-end;
 
-    width: 54.45vw;
-    height: min-content;
+  width: 54.45vw;
+  height: min-content;
 
-    position: relative;
-    left: 38.4vw;
-    z-index: 4;
+  position: relative;
+  left: 38.4vw;
+  z-index: 4;
 
-    background-color: #010401;
-    border: solid #888586 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    font-family: "Butterfinger Serif";
-    font-size: 18px;
-    letter-spacing: calc(13 * .01em);
-    padding: 6.72% 6vw 9% 6vw;
+  background-color: #010401;
+  border: solid #888586 5px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Butterfinger Serif";
+  font-size: 18px;
+  letter-spacing: calc(13 * 0.01em);
+  padding: 6.72% 6vw 9% 6vw;
 }
 
 div#speechBubblePriestConversation1 > p {
-    margin: 0;
+  margin: 0;
 }
 
 div#speechBubblePriestConversation2 > p {
-    margin: 0;
+  margin: 0;
 }
 
 img#arrowPriestPrologue1 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 155px;
+  top: 170px;
 }
 
 img#arrowPriestPrologue2 {
-    width: 78px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
+  width: 78px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
 
-    position: absolute;
-    left: 174px;
-    top: 145px;
+  position: absolute;
+  left: 143px;
+  top: 99px;
 }
