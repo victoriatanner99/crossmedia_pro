@@ -9,84 +9,108 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        position: relative;
+        top: 0; 
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     div#tapedNoteInfoPage {
         background-image: url("../images/Group\ 5_512w.png");
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
 
         /*height: 729.78px;
         width: 372.66px;*/
         height: 85.65vh;
         width: 94.82vw;
-        position: fixed;
-        top: 10.68vh;
-        /*left: 2.80vw;*/
-
+     
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        position: absolute;
+        top: 80px;
+        left: 2.80vw;
     }
 
     h1#successHeadingLoginInfoPage {
-        position: fixed;
-        top: 33.80vh;
+        /*position: absolute;
+        top: 33.80vh;*/
         /*left: 17.81vw;*/
 
         height: 8.80vh;
-        width: 245px;
+        width: 65.39vw;
         font-family: "Butterfinger Serif";
-        font-size: 30px;
+        font-size: 28px;
         letter-spacing: calc(13 * .01em);
         text-align: center;
         line-height: normal;
         margin: 0;
+        margin: 12.65vh 16.54vw 0 16.54vw;
 
     }
 
     h3#loginInfoHeadingLoginInfoPage {
         height: 3.08vh;
-        width: 254px;
+        width: 65.39vw;
         margin: 0;
         font-family: "Butterfinger Serif";
         font-size: 18px;
         letter-spacing: calc(13 * .01em);
 
-        position: fixed;
-        top: 46.95vh;
+        /*position: absolute;
+        top: 46.95vh;*/
+        margin-top: 5vh;
+        text-align: center;
+        position: relative;
+        top: 11px;
     }
 
     div#usernameLoginInfoPage {
         height: 5.87vh;
-        width: 254px;
+        width: 58%;
+
         border-radius: 6px;
         border: 2px solid #E1E0DF;
         box-sizing: border-box;
 
-        position: fixed;
-        top: 50.82vh;
+        /*position: absolute;
+        top: 50.82vh;*/
         font-family: "Inter";
         font-size: 16px;
         letter-spacing: calc(1.5 * .01em);
         color: rgba(44, 44, 44, 0.57);
 
+        margin-top: 42px;
+        margin-bottom: 12px;
+
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
+
     }
 
     div#passwordLoginInfoPage {
         height: 5.87vh;
-        width: 254px;
+        width: 58%;
+
         border-radius: 6px;
         border: 2px solid #E1E0DF;
         box-sizing: border-box;
 
-        position: fixed;
-        top: 57.86vh;
+        margin-top: 0;
+        margin-bottom: 12px;
+
+        /*position: absolute;
+        top: 57.86vh;*/
         font-family: "Inter";
         font-size: 16px;
         letter-spacing: calc(1.5 * .01em);
@@ -95,17 +119,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
+
     }
 
     div#webAddressLoginInfoPage {
-        height: 5.87vh;
-        width: 254px;
+        height: 73px;
+        width: 58%;
+
         border-radius: 6px;
         border: 2px solid #E1E0DF;
         box-sizing: border-box;
 
-        position: fixed;
-        top: 65.73vh;
+        margin-top: 0;
+        margin-bottom: 20px;
+        /*position: absolute;
+        top: 65.73vh;*/
         font-family: "Inter";
         font-size: 14px;
         letter-spacing: calc(1.5 * .01em);
@@ -114,6 +143,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     button#doneButtonLoginInfoPage {
@@ -131,17 +161,20 @@
         font-size: 22px;
         letter-spacing: calc(13 * .01em);
 
-        position: fixed;
-        top: 77.35vh;
+        /*position: absolute;
+        top: 77.35vh;*/
+        margin-top: 2vh;
+        margin-bottom: 38px;
     }
 
     div#infoButtonLoginInfoPage {
         height: 36px;
         width: 38px;
-       
+        z-index: 6;
+    
         position: absolute;
-        top: 4.69vh;
-        left: 81.42vw;
+        top: 40px;
+        right: 35px;
         cursor: pointer;
      
         border-radius: 50px;
@@ -164,6 +197,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
     }
 
     div#infoContainerLoginInfoPage {
@@ -172,17 +207,21 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        width: 67.39vw;
-        height: 17.44vh;
+        width: 264.84px;
+        height: 148.57px;
         position: absolute;
-        top: 10.33vh;
-        left: 29.26vw;
-        font-family: "Inter";
-        font-size: 16px;
-        text-align: center;
+        top: 88px;
+        right: 21px;
 
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 3;
+
+        font-family: "Inter";
+        text-align: center;
+    
+        margin: 0;
+        font-size: 16px;
     }
 }

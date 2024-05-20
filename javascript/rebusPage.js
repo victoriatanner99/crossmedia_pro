@@ -1,12 +1,6 @@
 "use strict";
 
 function renderRebusPage() {
-    /*screen.orientation.addEventListener("change", (event) => {
-        console.log(event);
-        console.log(screen.orientation);
-
-        showContentForOrientation();
-    });*/
 
     let body = document.querySelector("body");
 
@@ -34,7 +28,7 @@ function renderRebusPage() {
         
             let clothesline = document.createElement("img");
             clothesline.setAttribute("id", "clotheslineRebusPage");
-            clothesline.setAttribute("src", "images/Klädlina_1x.png");
+            clothesline.setAttribute("src", "images/line_4x.png");
         
             let bubblesPicture = document.createElement("img");
             bubblesPicture.setAttribute("id", "bubblesPictureRebusPage");
@@ -42,7 +36,7 @@ function renderRebusPage() {
         
             let tentPicture = document.createElement("img");
             tentPicture.setAttribute("id", "tentPictureRebusPage");
-            tentPicture.setAttribute("src", "images/TÄLT_512h.png");
+            tentPicture.setAttribute("src", "images/tent_4x.png");
         
             let frogPicture = document.createElement("img");
             frogPicture.setAttribute("id", "frogPictureRebusPage");
@@ -53,19 +47,19 @@ function renderRebusPage() {
             rebusPageBackground.appendChild(clothesline);
             rebusPageBackground.append(bubblesPicture, tentPicture, frogPicture);
 
-            let firstPlusSign = document.createElement("div");
+            /*let firstPlusSign = document.createElement("div");
             let secondPlusSign = document.createElement("div");
             firstPlusSign.setAttribute("id", "firstPlusSignRebusPage");
-            secondPlusSign.setAttribute("id", "secondPlusSignRebusPage");
+            secondPlusSign.setAttribute("id", "secondPlusSignRebusPage");*/
 
             /*firstPlusSign.setAttribute("src", "images/+_512h.png");
             secondPlusSign.setAttribute("src", "images/+_512h.png");*/
             
-            firstPlusSign.classList.add("plusSignRebusPage");
+            /*firstPlusSign.classList.add("plusSignRebusPage");
             secondPlusSign.classList.add("plusSignRebusPage");
             firstPlusSign.textContent = "+";
             secondPlusSign.textContent = "+";
-            rebusPageBackground.append(firstPlusSign, secondPlusSign);
+            rebusPageBackground.append(firstPlusSign, secondPlusSign);*/
         
             let rebusInputField = document.createElement("input");
             rebusInputField.setAttribute("type", "text");
@@ -147,10 +141,10 @@ function renderLoginInfo() {
 
             tapedNote.innerHTML = `
             <h1 id="successHeadingLoginInfoPage">Du klarade rebusen!</h1>
-            <h3 id="loginInfoHeadingLoginInfoPage">Inloggnings-uppgifter</h3>
-            <div id="usernameLoginInfoPage">Jane Doe</div>
-            <div id="passwordLoginInfoPage">lassemaja123</div>
-            <div id="webAddressLoginInfoPage">www.forskarrummetvalleby.se</div>
+            <h3 id="loginInfoHeadingLoginInfoPage">Inloggnings-<br>uppgifter</h3>
+            <div id="usernameLoginInfoPage">ap9849@mau.se</div>
+            <div id="passwordLoginInfoPage">Ilovebooks4ever!</div>
+            <div id="webAddressLoginInfoPage">http://students.maumt.se/<br>WDU22/victoria/<br>biblioteketsloggbok/</div>
             <button id="doneButtonLoginInfoPage" type="button">Klar</button>
             `;
 

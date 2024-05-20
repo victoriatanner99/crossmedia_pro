@@ -72,7 +72,7 @@ function telephoneStartsToRing(audio) {
 
         setTimeout(function() {
             vibratingIcon.style.animationPlayState = "running";
-        }, 600);
+        }, 700);
     });
 
     /*audio.addEventListener("loadedmetadata", function() {
@@ -128,7 +128,7 @@ function telephoneStartsToRing(audio) {
 
     vibratingIcon.addEventListener('click', () => {
         vibratingIcon.classList.remove("vibratingTelephone");
-        audio.setAttribute("src", "audio/Karin1.m4a");
+        //audio.setAttribute("src", "audio/Karin1.mp3");
         audio.removeEventListener("ended", stopAudio);
         //clearInterval(syncAnimationToRingtone);
 
@@ -150,7 +150,7 @@ function startLibrarianVoiceMessage(audio) {
         textContainer = document.getElementById("textLibrarianCallPages");
         textContainer.textContent = "";
 
-        audio.addEventListener("loadedmetadata", function() {
+        //audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
            
@@ -167,7 +167,7 @@ function startLibrarianVoiceMessage(audio) {
                     currentWordIndex++;
                 }
             }, 360);
-        });
+        //});
 
     } else {
         document.querySelector("div#topQuestionButtonTelephonePage").remove();
@@ -201,7 +201,7 @@ function startLibrarianVoiceMessage(audio) {
 
         textContainer.textContent = "";
     
-        audio.addEventListener("loadedmetadata", function() {
+        //audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
            
@@ -218,7 +218,7 @@ function startLibrarianVoiceMessage(audio) {
                     
                 }
             }, 440);
-        });
+        //});
     }
 }
 
@@ -227,7 +227,7 @@ function secondAudioFile(event) {
     let audio2 = document.createElement("audio");
     audio2.setAttribute("id", "audioPlayer");
     audio2.setAttribute("type", "audio/mpeg");
-    audio2.setAttribute("src", "audio/Karin2.aac");
+    //audio2.setAttribute("src", "audio/Karin2.mp3");
     document.querySelector("div#telephonePageBackground").appendChild(audio2);
 
     startLibrarianVoiceMessage(audio2);
@@ -244,7 +244,14 @@ function voiceMessageGotCutOff(event) {
 
     let introPageContainerOverlay = document.createElement("div");
     introPageContainerOverlay.setAttribute("id", "callKarinPageContainerOverlay");
-    body.appendChild(introPageContainerOverlay);
+    introPageContainer.appendChild(introPageContainerOverlay);
+
+    let topQuestionButton = document.createElement("div");
+    topQuestionButton.setAttribute("id", "topQuestionButtonAfterKarinVoiceMessage");
+    topQuestionButton.textContent = "?";
+    introPageContainer.appendChild(topQuestionButton);
+
+    topQuestionButton.addEventListener("click", explainHowToFindNumber);
 
     let leafsImage = document.createElement("img");
     leafsImage.setAttribute("id", "leafsImageCallKarinPage");
@@ -265,27 +272,56 @@ function voiceMessageGotCutOff(event) {
     speechBubble.setAttribute("id", "speechBubbleCallKarinPage");
     introPageContainer.appendChild(speechBubble);
 
+    speechBubble.innerHTML =
+    `
+    <p id="textAfterKarinVoiceMessage"></p>
+    <img id="continueArrowCallKarinPage" src="images/arrow_4x.png">
+    `;
+    
+    document.querySelector("img#continueArrowCallKarinPage").style.visibility = "collapse";
     speechBubbleAfterVoiceMessage(speechBubble);
 }
 
 function speechBubbleAfterVoiceMessage(speechBubble) {
-    let lasseAndMajaText = "Det verkar som att samtalet bröts. Prova ringa tillbaka till Karin. Hennes nr borde stå nedskrivet någonstans...".split(" ");
+    let lasseAndMajaText = "Det verkar som att samtalet bröts. Prova ringa tillbaka till Karin. Hennes nummer borde stå nedskrivet någonstans...".split(" ");
 
     let i = 0;
     let speechBubbleInterval = setInterval(function() {
         if(i === lasseAndMajaText.length) {
-            let continueArrow = document.createElement("img");
-            continueArrow.setAttribute("id", "continueArrowCallKarinPage");
-            continueArrow.setAttribute("src", "images/arrow_512w.png");
-            document.querySelector("div#callKarinPageContainer").appendChild(continueArrow);
-            continueArrow.addEventListener("click", () => {
+            document.querySelector("img#continueArrowCallKarinPage").style.visibility = "visible";
+            document.querySelector("img#continueArrowCallKarinPage").addEventListener("click", () => {
                 renderFirstCheckpoint();
             });
 
             clearInterval(speechBubbleInterval);
         } else {
-            speechBubble.innerHTML += lasseAndMajaText[i] + " ";
+            document.querySelector("p#textAfterKarinVoiceMessage").innerHTML += lasseAndMajaText[i] + " ";
         }
         i++;
     }, 100);
+}
+
+function explainHowToFindNumber(event) {
+    if(!document.querySelector("div#overlayAfterKarinVoiceMessage")) {
+        let overlay = document.createElement("div");
+        overlay.setAttribute("id", "overlayAfterKarinVoiceMessage");
+        document.querySelector("div#callKarinPageContainer").appendChild(overlay);
+        event.currentTarget.style.color = "#353535";
+        event.currentTarget.style.borderColor = "#353535";
+
+        let infoContainer = document.createElement("div");
+        infoContainer.setAttribute("id", "infoContainerAfterKarinVoiceMessage");
+        overlay.appendChild(infoContainer);
+    
+        infoContainer.innerHTML = 
+        `
+        <p id="textInfoBoxAfterKarinVoiceMessage">Titta på affischen <br>för att hitta en <br>ledtråd!  
+        </p> 
+        `;
+    
+    } else {
+        document.querySelector("div#overlayAfterKarinVoiceMessage").remove();
+        event.currentTarget.style.color = "#FBF8F4";
+        event.currentTarget.style.borderColor = "#FBF8F4";
+    }
 }

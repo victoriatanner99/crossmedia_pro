@@ -45,8 +45,8 @@ function renderPoliceAudioFilePage() {
 
             let policeCall1 = document.createElement("audio");
             policeCall1.setAttribute("id", "audioPlayer");
-            policeCall1.setAttribute("type", "audio/mpeg");
-            policeCall1.setAttribute("src", "audio/Polis 1.mp3");
+            policeCall1.setAttribute("type", "audio/x-m4a");
+            policeCall1.setAttribute("src", "audio/Polismästaren1.mp3");
             blueBackground.appendChild(policeCall1);
 
             startPoliceCall(policeCall1);
@@ -75,10 +75,10 @@ function startPoliceCall(audio) {
 
     function showTextContinuously() {
         
-        audio.addEventListener("loadedmetadata", function() {
+        //audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
-          
+
             let currentWordIndex = 0;
             const intervalId = setInterval(() => {
                 if (currentWordIndex === words.length) {
@@ -92,7 +92,7 @@ function startPoliceCall(audio) {
                     
                 }
             }, 220);
-        });
+        //});
     }
 }
 
@@ -103,8 +103,8 @@ function secondPartOfPoliceCall(event) {
 
     let policeCall2 = document.createElement("audio");
     policeCall2.setAttribute("id", "audioPlayer");
-    policeCall2.setAttribute("type", "audio/mpeg");
-    policeCall2.setAttribute("src", "audio/Polis 2.mp3");
+    policeCall2.setAttribute("type", "audio/x-m4a");
+    policeCall2.setAttribute("src", "audio/Polismästaren2.m4a");
     document.querySelector("div#backgroundPoliceCallPage").appendChild(policeCall2);
 
     let audio = policeCall2;
@@ -118,7 +118,7 @@ function secondPartOfPoliceCall(event) {
 
     function showTextContinuously() {
         
-        audio.addEventListener("loadedmetadata", function() {
+        //audio.addEventListener("loadedmetadata", function() {
             audio.volume = 0.8;
             audio.play();
           
@@ -140,6 +140,6 @@ function secondPartOfPoliceCall(event) {
                     
                 }
             }, 220);
-        });
+        //});
     }
 }

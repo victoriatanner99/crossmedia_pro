@@ -11,7 +11,9 @@ div#backgroundPoliceCallPage {
     display: grid;
     grid-template-columns: 100%;
     /*grid-template-rows: 30vh 27vh 43vh;*/
-    grid-template-rows: 2fr 2fr 3fr
+    grid-template-rows: 2fr 2fr 3fr;
+
+    overflow: hidden;
 }
 
 div#backgroundOverlayPoliceCallPage {
@@ -19,6 +21,8 @@ div#backgroundOverlayPoliceCallPage {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0; 
+    bottom: 0;
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -58,6 +62,7 @@ img#chefOfPolicePoliceCallPage {
 
 div#speechBubble1PoliceCallPage {
     grid-row: 2 / 3;
+    align-self: flex-end;
 
     width: 68.96vw;
     height: min-content;
@@ -85,6 +90,7 @@ div#speechBubble1PoliceCallPage {
 
 div#speechBubble1PoliceCallPage2 {
     grid-row: 2 / 3;
+    align-self: flex-end;
 
     width:  73.54vw;
     height: min-content;

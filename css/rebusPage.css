@@ -8,60 +8,85 @@ div#rebusPageBackground {
 @media screen and (orientation: landscape) {
     div#rebusPageBackground {
         background-color: #D6E5E7;
-        height: 100%;
+        height: 110%;
         width: 100%;
+
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        /*display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 2fr 0.8fr;*/
     }
 
     img#rightFacingFlowersRebusPage {
         width: 57.16vw;
         height: 81.42vh;
-        position: fixed;
+        position: absolute;
         top: -18.32vh;
         left: -8.45vw;
+
+        grid-row: 1;
     }
 
     img#leftFacingFlowersRebusPage {
         width: 62.09vw;
         height: 81.42vh;
-        position: fixed;
+        position: absolute;
         top: -12.98vh;
         left: 48.71vw;
+        grid-row: 1;
+
     }
 
     img#clotheslineRebusPage {
         width: 99.85vw;
         height: 19.5vh;
 
-        position: fixed;
+        position: absolute;
         top: 8.94vh;
         left: 1px;
+        grid-row: 1;
+
     }
 
     img#frogPictureRebusPage {
-        height: 180px;
-        width: 126px;
+        height: 45.80vh;
+        width: 14.79vw;
 
-        position: fixed;
-        top: 22.95vh;
+        position: absolute;
+        top: 23.5vh;
         left: 17.72vw;
+        grid-row: 1;
+
     }
 
     img#tentPictureRebusPage {
-        height: 172.93px;
-        width: 139px;
+        height: 44.00vh;
+        width: 29.51vw;
 
-        position: fixed;
+        position: absolute;
         top: 27.78vh;
-        left: 44.49vw;
+        left: 37.5vw;
+        grid-row: 1;
+
     }
 
     img#bubblesPictureRebusPage {
-        height: 180.93px;
-        width: 128.91px;
+        height: 46.04vh;
+        width: 15.13vw;
 
-        position: fixed;
+        position: absolute;
         top: 23.41vh;
         left: 71.48vw;
+        grid-row: 1;
+
     }
 
     input#rebusInputField {
@@ -77,9 +102,11 @@ div#rebusPageBackground {
         letter-spacing: calc(1.5 * .01em);
 
 
-        position: fixed;
+        position: absolute;
         top: 78.63vh;
         left: 27.82vw;
+        grid-row: 2;
+
     }
 
     input#rebusInputField:focus {
@@ -95,9 +122,11 @@ div#rebusPageBackground {
        box-sizing: border-box;
        cursor: pointer;
 
-       position: fixed;
+       position: absolute;
        top: 78.63vh;
        left: 63.27vw;
+       grid-row: 2;
+
     }
 
     img#arrowImageRebusPage {
@@ -105,20 +134,21 @@ div#rebusPageBackground {
         width: 74px;
         cursor: pointer;
 
-        position: fixed;
-        top: 73.25vh;
-        left: 63.59vw;
+        position: relative;
+        top: -23px;
+        left: -4px;
+        z-index: 1;
     }
 
     div#firstPlusSignRebusPage {
-        position: fixed;
+        position: absolute;
         top: 49.68vh;
         left: 38.28vw;
         rotate: 3.63deg;
     }
 
     div#secondPlusSignRebusPage {
-        position: fixed;
+        position: absolute;
         top: 47.15vh;
         left: 65.66vw;
         rotate: 1.26deg;
