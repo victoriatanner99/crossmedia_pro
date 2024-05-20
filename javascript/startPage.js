@@ -76,7 +76,6 @@ function saveUsername(event) {
             if(nameOfUser === "") {
                 return;
             }
-            console.log(localStorage.getItem("username"));
         } else {
             let fullNameToSave = nameOfUser.trim() + " " + potentialLastName.trim();
             if(fullNameToSave === " ") {

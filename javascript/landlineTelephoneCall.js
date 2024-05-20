@@ -127,6 +127,8 @@ function telephoneStartsToRing(audio) {
     }); */
 
     vibratingIcon.addEventListener('click', () => {
+        audio.setAttribute("src", "");
+
         vibratingIcon.classList.remove("vibratingTelephone");
         //audio.setAttribute("src", "audio/Karin1.mp3");
         audio.removeEventListener("ended", stopAudio);
@@ -137,6 +139,7 @@ function telephoneStartsToRing(audio) {
 }
 
 function startLibrarianVoiceMessage(audio) {
+    
     let fullText = "";
     let words = [];
     let textContainer;

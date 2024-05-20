@@ -61,7 +61,6 @@ function dynamicSpeechBubble(paragraph) {
 }
 
 function nextIntroPage(event) {
-    console.log(event.currentTarget);
     if(event.currentTarget.parentNode.id === "speechBubbleIntroPage") {
         document.querySelector("div#speechBubbleIntroPage").setAttribute("id", "speechBubbleIntroPage2");
         document.querySelector("p#textIntroPages").innerHTML = "";

@@ -127,6 +127,7 @@ div#backgroundConversationPrologues {
 
     position: relative;
     overflow-x: hidden;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 100vw;

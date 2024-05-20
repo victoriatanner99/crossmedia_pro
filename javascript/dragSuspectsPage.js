@@ -227,7 +227,6 @@ function drop(event) {
 
 
     } else if(dropZone.id === "draggableImages") {
-        console.log(data);
         dropZone.appendChild(document.getElementById(data));
         document.getElementById(data).classList.remove("suspectDraggedToFrame");
         document.getElementById(data).classList.add(data);
@@ -297,9 +296,6 @@ function rightOrWrongSuspects(event) {
 
     function checkSelection() {
         const dropAreas = document.querySelectorAll('.dropArea img');
-        console.log(dropAreas);
-       
-        console.log(dropAreas[1].attributes);
 
         let suspectImagesArray = [];
         for(let i = 0; i < dropAreas.length; i++) {
