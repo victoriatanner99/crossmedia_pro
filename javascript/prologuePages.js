@@ -327,6 +327,13 @@ function confrontThePriest() {
     startConversation();
 
     function startConversation() {
+        let audio = document.createElement("audio");
+        audio.setAttribute("id", "audioPlayer");
+        audio.setAttribute("type", "audio/mpeg");
+        audio.setAttribute("src", "audio/Prasten 1.mp3");
+        background.appendChild(audio);
+        audio.play();
+
         let fullText = "Åh nej, ni kom på mig! Jag är så ledsen att det blev såhär. Min nya orgel var för dyr och jag trodde jag kunde sälja boken för att lösa problemet.";
         let words = fullText.split(' ');
         let textContainer = document.getElementById('textProloguePages');
@@ -345,17 +352,19 @@ function confrontThePriest() {
                 index++;
                 
             }
-        }, 150);
+        }, 350);
     }
 
     function secondPartOfPriestConversation() {
+        document.querySelector("audio#audioPlayer").setAttribute("src", "audio/Prasten 2.mp3");
+        document.querySelector("audio#audioPlayer").play();
         document.querySelector("img#arrowPriestPrologue1").setAttribute("id", "arrowPriestPrologue2");
         document.querySelector("img#arrowPriestPrologue2").removeEventListener("click", secondPartOfPriestConversation);
         document.querySelector("img#arrowPriestPrologue2").style.visibility = "collapse";
 
         document.querySelector("div#speechBubblePriestConversation1").setAttribute("id", "speechBubblePriestConversation2");
 
-        let fullText = "Jag är ledsen och jag lovar att lämna tillbaka boken till Karin omedelbart.";
+        let fullText = "Jag lovar att lämna tillbaka boken till Karin omedelbart.";
         let words = fullText.split(' ');
         let textContainer = document.getElementById('textProloguePages');
 
@@ -371,6 +380,6 @@ function confrontThePriest() {
                 textContainer.textContent += words[index] + ' ';
                 index++;
             }
-        }, 150);
+        }, 300);
     }
 }
