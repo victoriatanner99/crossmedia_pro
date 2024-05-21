@@ -1,7 +1,7 @@
 "use strict";
 
 
-//renderStartPage();
+renderStartPage();
 
 //renderIntroPage();
 
@@ -20,7 +20,7 @@
 //renderFinalPage();
 
 //renderFinalPage();
-renderLoginInfo();
+//renderLoginInfo();
 
 //renderRebusPage();
 
