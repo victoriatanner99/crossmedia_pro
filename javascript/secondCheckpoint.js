@@ -95,7 +95,7 @@ function checkAnswerSecondCheckpointPage() {
     for (let i = 0; i < 4; i++) {
         digits += document.getElementById(`input${i+1}SecondCheckpointPage`).value;
     }
-    if (digits === '1000') {
+    if (digits === '1705') {
         renderProloguePage();
     } 
 }
