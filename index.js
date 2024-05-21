@@ -4,6 +4,7 @@
 renderStartPage();
 
 //renderIntroPage();
+
 //renderTelephonePage();
 
 //renderRebusPage();
@@ -23,6 +24,7 @@ renderStartPage();
 //renderLoginInfo();
 
 //renderRebusPage();
+
 //renderFirstCheckpoint();
 
 //renderLoginInfo();
