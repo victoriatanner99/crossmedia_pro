@@ -123,7 +123,7 @@
 
     }
 
-    div#webAddressLoginInfoPage {
+    a#webAddressLoginInfoPage {
         height: 73px;
         width: 58%;
 
@@ -144,6 +144,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding: 0 10px;
     }
 
     button#doneButtonLoginInfoPage {

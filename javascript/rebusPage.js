@@ -149,7 +149,7 @@ function renderLoginInfo() {
             <h3 id="loginInfoHeadingLoginInfoPage">Inloggnings-<br>uppgifter</h3>
             <div id="usernameLoginInfoPage">ap9849@mau.se</div>
             <div id="passwordLoginInfoPage">Ilovebooks4ever!</div>
-            <div id="webAddressLoginInfoPage">students.maumt.se/<br>WDU22/victoria/<br>biblioteketsloggbok/</div>
+            <a id="webAddressLoginInfoPage" target="_blank" href="http://students.maumt.se/WDU22/victoria/biblioteketsloggbok/">students.maumt.se/WDU22/victoria/biblioteketsloggbok/</a>
             <button id="doneButtonLoginInfoPage" type="button">Klar</button>
             `;
 
