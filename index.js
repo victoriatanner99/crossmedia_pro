@@ -1,7 +1,7 @@
 "use strict";
 
 
-renderStartPage();
+//renderStartPage();
 
 //renderIntroPage();
 
@@ -15,12 +15,9 @@ renderStartPage();
 
 //renderSecondCheckpoint();
 
-//renderProloguePage();
+renderProloguePage();
 
 //renderFinalPage();
-
-//renderFinalPage();
-//renderLoginInfo();
 
 //renderRebusPage();
 

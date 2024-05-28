@@ -36,6 +36,7 @@ function renderAddOnCheckpoint() {
         input.classList.add("inputFirstCheckpointPage");
         input.setAttribute("id", `input${i+1}FirstCheckpointPage`);
         input.setAttribute("maxlength", "1");
+        input.setAttribute("type", "number");
         firstCheckpointBackground.appendChild(input);
 
         if(i !== 3) {

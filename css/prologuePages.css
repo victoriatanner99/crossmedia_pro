@@ -9,13 +9,13 @@ div#backgroundProloguePage {
   width: 100%;
   overflow-x: hidden;
 
-  /*display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5vh 5vh 20vh 20vh 20vh 30vh*/
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.2fr 0.8fr 0.8fr 0.8fr 1.1fr;
+  /*grid-template-rows: 15*/
+  /*display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;*/
 }
 
 img#lightsProloguePage {
@@ -24,7 +24,7 @@ img#lightsProloguePage {
   position: absolute;
   top: -0.47vh;
   left: -60.31vw;
-  /*grid-row: 1;*/
+  grid-row: 1;
 }
 
 h1#headingProloguePage {
@@ -37,7 +37,8 @@ h1#headingProloguePage {
   top: 20.19vh;
   /*left: 13.23vw;*/
 
-  /*grid-row: 2;*/
+  grid-row: 1;
+  justify-self: center;
 }
 
 button#guessButtonProloguePage {
@@ -56,11 +57,14 @@ button#guessButtonProloguePage {
   letter-spacing: calc(13 * 0.01em);
 
   position: absolute;
-  top: 84.74vh;
+  /*top: 84.74vh;*/
   /*left: 33.33vw;*/
   z-index: 2;
 
-  /*grid-row: 6;*/
+  grid-row: 5;
+  justify-self: center;
+  align-self: center;
+
 }
 
 div.priestInfoProloguePage {
@@ -71,13 +75,17 @@ div.priestInfoProloguePage {
   cursor: pointer;
 
   position: absolute;
-  top: 26.17vh;
-  /*left: 8.40vw;*/
-  width: 81.93vw;
-  height: 16%;
+  /*top: 26.17vh;
+  left: 8.40vw;*/
+  /*width: 81.93vw;
+  height: 16%;*/
   border-radius: 6px;
+  height: 34vw;
+  width: 80vw;
 
-  /*grid-row: 3;*/
+  grid-row: 2;
+  justify-self: center;
+
 }
 
 div.welmerFriskInfoProloguePage {
@@ -88,13 +96,17 @@ div.welmerFriskInfoProloguePage {
   cursor: pointer;
 
   position: absolute;
-  top: 43.9vh;
-  /*left: 8.40vw;*/
-  width: 81.93%;
-  height: 16%;
+  /*top: 43.9vh;
+  left: 8.40vw;*/
+  /*width: 81.93%;
+  height: 16%;*/
   border-radius: 6px;
+  height: 34vw;
+  width: 80vw;
 
-  /*grid-row: 4;*/
+  grid-row: 3;
+  justify-self: center;
+
 }
 
 div.beatriceHolmInfoProloguePage {
@@ -105,13 +117,17 @@ div.beatriceHolmInfoProloguePage {
   cursor: pointer;
 
   position: absolute;
-  top: 61.62vh;
-  /*left: 8.40vw;*/
-  width: 81.93%;
-  height: 16%;
+  /*top: 61.62vh;
+  left: 8.40vw;*/
+  /*width: 81.93%;
+  height: 16%;*/
   border-radius: 6px;
+  height: 34vw;
+  width: 80vw;
 
-  /*grid-row: 5;*/
+  grid-row: 4;
+  justify-self: center;
+
 }
 
 div#clickedSuspectProloguePage {

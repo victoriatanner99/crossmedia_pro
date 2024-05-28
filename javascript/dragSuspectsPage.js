@@ -11,10 +11,7 @@ const images = [
 function renderDragSuspectsPage() {
   let body = document.querySelector("body");
 
-  window.addEventListener("resize", (event) => {
-    showContentForOrientation();
-  });
-
+  window.addEventListener("resize", showContentForOrientation);
   showContentForOrientation();
 
   function showContentForOrientation() {
@@ -323,22 +320,18 @@ function rightOrWrongSuspects(event) {
 
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");
-        document
-          .querySelector("div#dragSuspectsBackground")
-          .appendChild(overlay);
+        document.querySelector("div#dragSuspectsBackground").appendChild(overlay);
 
         let infoContainer = document.createElement("div");
-        infoContainer.setAttribute(
-          "id",
-          "infoContainerRightOrWrongDragSuspectsPage"
-        );
+        infoContainer.setAttribute("id", "infoContainerRightOrWrongDragSuspectsPage");
         overlay.appendChild(infoContainer);
 
-        infoContainer.innerHTML = `
-                Bra jobbat! Du lyckades gissa <br> 
-                rätt på alla misstänkta. Nu är det <br> 
-                dags att gå vidare i utredningen.
-                `;
+        infoContainer.innerHTML = 
+        `
+          Bra jobbat! Du lyckades gissa <br> 
+          rätt på alla misstänkta. Nu är det <br> 
+          dags att gå vidare i utredningen.
+        `;
 
         document.querySelector("img#arrowDragSuspectsPage").remove();
         let newArrow = document.createElement("img");
@@ -352,8 +345,7 @@ function rightOrWrongSuspects(event) {
       }
     } else {
       if (!document.querySelector("div#notifyUserIfRightOrWrongOverlay")) {
-        document.querySelector("div#infoButtonDragSuspectsPage").style.zIndex =
-          "3";
+        document.querySelector("div#infoButtonDragSuspectsPage").style.zIndex = "3";
 
         let overlay = document.createElement("div");
         overlay.setAttribute("id", "notifyUserIfRightOrWrongOverlay");

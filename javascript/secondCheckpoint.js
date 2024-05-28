@@ -1,4 +1,5 @@
 function renderSecondCheckpoint() {
+
     document.querySelector("body").innerHTML = "";
     let checkpointBackground = document.createElement("div");
     checkpointBackground.setAttribute("id", "secondCheckpointBackground");
@@ -44,6 +45,8 @@ function renderSecondCheckpoint() {
         input.classList.add("inputSecondCheckpointPage");
         input.setAttribute("id", `input${i+1}SecondCheckpointPage`);
         input.setAttribute("maxlength", "1");
+        input.setAttribute("type", "number");
+
         checkpointBackground.appendChild(input);
 
         if(i !== 3) {
