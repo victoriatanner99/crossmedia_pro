@@ -3,7 +3,9 @@
 function renderRebusPage() {
   let body = document.querySelector("body");
 
-  window.addEventListener("resize", showContentForOrientation);
+  window.addEventListener("resize", (event) => {
+    showContentForOrientation();
+  });
 
   showContentForOrientation();
 
@@ -18,8 +20,14 @@ function renderRebusPage() {
       let leftFacingFlowers = document.createElement("img");
       rightFacingFlowers.setAttribute("id", "rightFacingFlowersRebusPage");
       leftFacingFlowers.setAttribute("id", "leftFacingFlowersRebusPage");
-      rightFacingFlowers.setAttribute("src", "images/purpleFlowersRightFacing_512w.png");
-      leftFacingFlowers.setAttribute("src", "images/purpleFlowersLeftFacing_512w.png");
+      rightFacingFlowers.setAttribute(
+        "src",
+        "images/purpleFlowersRightFacing_512w.png"
+      );
+      leftFacingFlowers.setAttribute(
+        "src",
+        "images/purpleFlowersLeftFacing_512w.png"
+      );
 
       let clothesline = document.createElement("img");
       clothesline.setAttribute("id", "clotheslineRebusPage");
@@ -66,7 +74,10 @@ function renderRebusPage() {
     } else {
       body.innerHTML = "";
       let turnMobileDeviceBackground = document.createElement("div");
-      turnMobileDeviceBackground.setAttribute("id", "turnMobileDeviceBackgroundBefore");
+      turnMobileDeviceBackground.setAttribute(
+        "id",
+        "turnMobileDeviceBackgroundBefore"
+      );
       document.querySelector("body").appendChild(turnMobileDeviceBackground);
       let turnMobileDeviceSign = document.createElement("img");
       turnMobileDeviceSign.setAttribute("id", "turnMobileDeviceSignBefore");
@@ -117,8 +128,10 @@ function checkRebus(event) {
 }
 
 function renderLoginInfo() {
+  window.addEventListener("resize", (event) => {
+    showContentForOrientation();
+  });
 
-  window.addEventListener("resize", showContentForOrientation);
   showContentForOrientation();
 
   function showContentForOrientation() {
@@ -147,13 +160,15 @@ function renderLoginInfo() {
       topQuestionButton.addEventListener("click", explainHowToFindWebsite);
 
       document.querySelector("button#doneButtonLoginInfoPage").addEventListener("click", (event) => {
-        renderAddOnCheckpoint();
-      });
-
+          renderAddOnCheckpoint();
+        });
     } else {
       document.querySelector("body").innerHTML = "";
       let turnMobileDeviceBackground = document.createElement("div");
-      turnMobileDeviceBackground.setAttribute("id", "turnMobileDeviceBackgroundAfter");
+      turnMobileDeviceBackground.setAttribute(
+        "id",
+        "turnMobileDeviceBackgroundAfter"
+      );
       document.querySelector("body").appendChild(turnMobileDeviceBackground);
       let turnMobileDeviceSign = document.createElement("img");
       turnMobileDeviceSign.setAttribute("id", "turnMobileDeviceSignAfter");

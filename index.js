@@ -19,6 +19,9 @@ renderStartPage();
 
 //renderFinalPage();
 
+//renderFinalPage();
+//renderLoginInfo();
+
 //renderRebusPage();
 
 //renderFirstCheckpoint();

@@ -1,10 +1,13 @@
 function renderPoliceAudioFilePage() {
     let body = document.querySelector("body");
 
-    window.addEventListener("resize", showContentForOrientation);
+    window.addEventListener("resize", (event) => {
+        showContentForOrientation();
+    });
+
     showContentForOrientation();
 
-    function showContentForOrientation(event) {
+    function showContentForOrientation() {
 
         if(window.matchMedia("(orientation: portrait)").matches) { 
             body.innerHTML = "";
@@ -134,7 +137,6 @@ function secondPartOfPoliceCall(event) {
                     
                     document.querySelector("img#arrowPoliceCallPage2").addEventListener("click", (event) => {
                         renderSecondCheckpoint();
-                        
                     });
                           
                 } else {
