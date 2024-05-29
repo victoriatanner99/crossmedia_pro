@@ -1,7 +1,7 @@
 "use strict";
 
 
-//renderStartPage();
+renderStartPage();
 
 //renderIntroPage();
 
@@ -15,7 +15,7 @@
 
 //renderSecondCheckpoint();
 
-renderProloguePage();
+//renderProloguePage();
 
 //renderFinalPage();
 
