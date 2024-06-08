@@ -11,7 +11,7 @@ div#backgroundProloguePage {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.2fr 0.8fr 0.8fr 0.8fr 1.1fr;
+  grid-template-rows: 24vh 37vw 37vw 37vw 1fr;
   /*grid-template-rows: 15*/
   /*display: flex;
   flex-direction: column;
@@ -32,13 +32,14 @@ h1#headingProloguePage {
   font-size: 30px;
   text-align: center;
 
-  margin: 0;
-  position: absolute;
-  top: 20.19vh;
-  /*left: 13.23vw;*/
+  margin: 0 0 0.8vh 0;
+  position: relative;
+  /*top: 20.19vh;
+  left: 13.23vw;*/
 
   grid-row: 1;
   justify-self: center;
+  align-self: flex-end;
 }
 
 button#guessButtonProloguePage {
@@ -56,15 +57,15 @@ button#guessButtonProloguePage {
   font-size: 22px;
   letter-spacing: calc(13 * 0.01em);
 
-  position: absolute;
+  position: relative;
   /*top: 84.74vh;*/
   /*left: 33.33vw;*/
+  top: -2vh;
   z-index: 2;
 
   grid-row: 5;
   justify-self: center;
   align-self: center;
-
 }
 
 div.priestInfoProloguePage {
@@ -131,8 +132,8 @@ div.beatriceHolmInfoProloguePage {
 }
 
 div#clickedSuspectProloguePage {
-  width: 89%;
-  height: 17.2%;
+  width: 86vw;
+  height: 36vw;
 }
 
 /*Prologues Priest, Beatrice and Welmer below*/
