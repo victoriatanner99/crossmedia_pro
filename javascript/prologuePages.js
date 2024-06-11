@@ -439,6 +439,6 @@ function confrontThePriest() {
                 textContainer.textContent += words[index] + ' ';
                 index++;
             }
-        }, 300);
+        }, 450);
     }
 }

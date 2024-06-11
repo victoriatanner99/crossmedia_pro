@@ -41,10 +41,11 @@ h1#headingFinalPage {
     background-color: black;
     border-radius: 15px;
     border: solid 6px #888586;
-    padding: 4px 8px;
+    padding: 4px 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 img#lasseAndMajaFinalPage {
